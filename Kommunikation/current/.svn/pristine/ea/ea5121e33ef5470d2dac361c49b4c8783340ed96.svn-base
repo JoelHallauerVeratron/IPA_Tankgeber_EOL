@@ -1,0 +1,77 @@
+/*******************************************************************
+ *
+ *    PROJECT:     LibDutCom
+ *
+ *    EQUIPMENT:   UDS
+ *
+ *    FILE:        Uds_StoredData.c
+ *
+ *    DESCRIPTION:
+ *
+ *    AUTHOR:      $Author$
+ *
+ *    ENVIRONMENT: CVI 7.1
+ *
+ *    DATE:        $Date$
+ *
+ *    HISTORY:
+ *      $Log$
+ *
+ *******************************************************************/
+
+
+#include <windows.h>
+#ifdef _CVI_
+  #include <formatio.h>
+  #include <utility.h>
+  #include <ansi_c.h>
+#else // !_CVI_
+  #include <stdlib.h>
+  #include <stdio.h>
+#endif // !_CVI_
+
+#include "Uds_StoredData.h"
+
+/**
+ * Statische Daten:
+ * Eepromdaten oder Konstanten
+ */
+TagStoredDataInfo atagStoredData_m[]=
+{
+  /*
+  +--- iId
+  |                                +--- iAccessLevelRead
+  |                                |    +--- iAccessLevelWrite
+  |                                |    |  +--- iSize
+  |                                |    |  |                                 +--- bValid
+  |                                |    |  |                                 |      +--- pcLidValue
+  |                                |    |  |                                 |      |      +--- pcDescription
+  |                                |    |  |                                 |      |      |                     */
+  //DID_VM_ECU_SOFTWARE_NUMBER,      0,   5, DID_VM_ECU_SOFTWARE_NUMBER_LEN,   FALSE, NULL, "Vehicle Manuf. SW Number",
+  DID_SOFTWARE_VERSION,            0,   5, DID_SOFTWARE_VERSION_LEN,         FALSE, NULL, "SW Version",
+  DID_SERIAL_NUMBER,               0,   5, DID_SERIAL_NUMBER_LEN,            FALSE, NULL, "Serial Number",
+  DID_A2C_NR_UNPACKED,             0,   5, 4,                                FALSE, NULL, "Part Number",
+  DID_PROD_INTRLOCK,               0,   5, DID_PROD_INTRLOCK_LEN,            FALSE, NULL, "Prod.Interlock",
+  DID_NMEA_PROD_CODE,              0,   5, DID_NMEA_PROD_CODE_LEN,           FALSE, NULL, "NMEA Prod Code",
+  DID_DIAL_SCALE_VALUES,           0,   5, DID_DIAL_SCALE_VALUES_LEN,        FALSE, NULL, "Dial Scale Values",
+  DID_GAUGE_TYPE,                  0,   5, DID_GAUGE_TYPE_LEN,               FALSE, NULL, "Gauge type",
+
+  DID_GAUGE_OFFSET,                0,   5, DID_GAUGE_OFFSET_LEN,             FALSE, NULL, "Gauge offset",
+  DID_CALIBRATION,                 0,   5, DID_CALIBRATION_LEN,              FALSE, NULL, "Calibration",
+
+  // restliche DIDs nicht verwendet
+  DID_ECU_MANUFACTURING_DATE,      0,   5, DID_ECU_MANUFACTURING_DATE_LEN,   FALSE, NULL, "ECU Manufacturing Date",
+  DID_VM_ECU_HARDWARE_NUMBER,      0,   5, DID_VM_ECU_HARDWARE_NUMBER_LEN,   FALSE, NULL, "Vehicule Manufacturer ECU Hardware Number",
+  DID_SS_ECU_HARDWARE_NUMBER,      0,   5, DID_SS_ECU_HARDWARE_NUMBER_LEN,   FALSE, NULL, "System Supplier ECU Hardware Number",
+  DID_ECU_HARDWARE_VERSION,        0,   5, DID_ECU_HARDWARE_VERSION_LEN,     FALSE, NULL, "ECU Hardware Version",
+  DID_ECU_SOFTWARE_NUMBER,         0,   5, DID_ECU_SOFTWARE_NUMBER_LEN,      FALSE, NULL, "ECU Software Number",
+  DID_ECU_SOFTWARE_VERSION,        0,   5, DID_ECU_SOFTWARE_VERSION_LEN,     FALSE, NULL, "ECU Software Version",
+  DID_ECU_PROGRAMMING_DATE,        0,   5, DID_ECU_PROGRAMMING_DATE_LEN,     FALSE, NULL, "ECU Programming Date",
+  DID_INSPECTION_STATUS,           0,   5, DID_INSPECTION_STATUS_LEN,        FALSE, NULL, "Inspection status",
+  DID_PRODUCT_INSPECTION_DATE,     0,   5, DID_PRODUCT_INSPECTION_DATE_LEN,  FALSE, NULL, "Product Inspection Date",
+
+  0,                               0,   0, 0,                                0,     0,    0
+};
+
+
+

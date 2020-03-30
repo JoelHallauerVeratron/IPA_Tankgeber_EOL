@@ -1,0 +1,239 @@
+[Workspace Header]
+Version = 711
+Pathname = "/c/Projects/Libraries/LibDutCom/0055/current/00_LibDutCom_0055.cws"
+CVI Dir = "/c/program files/ni/cvi71"
+IVI Standard Root Dir = "/C/Program Files/IVI"
+VXIplug&play Framework Dir = "/C/VXIPNP/winnt"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "LibDutCom_0055.prj"
+Drag Bar Left = 263
+Window Top = 91
+Window Left = 111
+Window Bottom = 1005
+Window Right = 1339
+Maximized = False
+Maximized Children = True
+Max Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win For Warnings = True
+Show Build Dialog = False
+Save Changes Before Running = "Always"
+Hide Windows = False
+Global Hot Key = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 0
+Window Confinement Region Enabled = True
+MainColumnWidth = 244
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+StatusColumnWidth = 70
+
+[Project Header 0001]
+Version = 711
+Platform Code = 4
+Build Configuration = "Release"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = False
+
+[File 0001]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/DeviceSpecific.c"
+File Type = "CSource"
+Disk Date = 3576546788
+In Projects = "1,"
+Window Top = 146
+Window Left = 72
+Source Window State = "1,21,21,21,0,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,271,676,1,0,"
+
+[File 0002]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/LibDutCom.c"
+File Type = "CSource"
+Disk Date = 3612408906
+In Projects = "1,"
+Window Top = 26
+Window Left = 7
+Source Window State = "1,144,144,144,28,33,28,0,0,0,0,0,0,0,0,0,133,0,145,31,349,676,1,0,"
+
+[File 0003]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/LibDutCom_private.c"
+File Type = "CSource"
+Disk Date = 3629698409
+In Projects = "1,"
+Window Top = 30
+Source Window State = "1,637,637,637,42,65,65,1,0,0,0,0,0,0,0,0,625,0,637,42,349,676,1,0,"
+
+[File 0004]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/ProdInterlock.c"
+File Type = "CSource"
+Disk Date = 3573044992
+In Projects = "1,"
+Window Top = 32
+Window Left = 10
+Source Window State = "1,104,104,104,21,28,28,0,0,0,0,0,0,0,0,0,93,0,112,27,271,715,1,0,"
+
+[File 0005]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/Queue.c"
+File Type = "CSource"
+Disk Date = 3467803439
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0006]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/SvnIds.c"
+File Type = "CSource"
+Disk Date = 3655095943
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0007]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/Trace.c"
+File Type = "CSource"
+Disk Date = 3521435769
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0008]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS.c"
+File Type = "CSource"
+Disk Date = 3604554535
+In Projects = "1,"
+Window Top = 117
+Window Left = 54
+Source Window State = "1,1271,1271,1271,20,33,33,0,0,0,0,0,0,0,0,0,1231,0,1239,47,258,676,1,0,"
+
+[File 0009]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_IoControl.c"
+File Type = "CSource"
+Disk Date = 3576496995
+In Projects = "1,"
+Window Top = 32
+Window Left = 10
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,0,56,110,258,715,1,0,"
+
+[File 0010]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_private.c"
+File Type = "CSource"
+Disk Date = 3604554535
+In Projects = "1,"
+Window Top = 30
+Window Left = 6
+Source Window State = "1,1624,1624,1624,39,41,39,0,0,0,0,0,0,0,0,0,666,0,679,30,323,676,1,0,"
+
+[File 0011]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_StoredData.c"
+File Type = "CSource"
+Disk Date = 3629698184
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0012]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/DeviceSpecific.h"
+File Type = "Include"
+Disk Date = 3655095844
+In Projects = "1,"
+Window Top = 30
+Source Window State = "1,29,29,29,42,49,42,0,0,0,0,0,0,0,0,0,11,0,33,30,349,676,1,0,"
+
+[File 0013]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/LibDutCom.h"
+File Type = "Include"
+Disk Date = 3603973507
+In Projects = "1,"
+Source Window State = "1,31,36,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,349,676,1,0,"
+
+[File 0014]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/ProdInterlock.h"
+File Type = "Include"
+Disk Date = 3573044992
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0015]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/Queue.h"
+File Type = "Include"
+Disk Date = 3456909810
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0016]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/SvnIds.h"
+File Type = "Include"
+Disk Date = 3573045231
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0017]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/Trace.h"
+File Type = "Include"
+Disk Date = 3456909810
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0018]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS.h"
+File Type = "Include"
+Disk Date = 3573551768
+In Projects = "1,"
+Source Window State = "1,32,34,32,0,0,0,0,0,0,0,0,0,0,0,0,20,0,52,16,0,0,0,0,"
+
+[File 0019]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_IoControl.h"
+File Type = "Include"
+Disk Date = 3573551768
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0020]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_private.h"
+File Type = "Include"
+Disk Date = 3604554535
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0021]
+Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_StoredData.h"
+File Type = "Include"
+Disk Date = 3573044992
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0022]
+Path = "/c/Program Files (x86)/Kvaser/Canlib/Lib/MS/canlib32.lib"
+File Type = "Library"
+Disk Date = 0
+In Projects = "1,"
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+Enable Remote Debugging = False
+Remote Debugger Address = "localhost"
+Remote Target Address = ""
+Remote Debugging Port = 3291
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = True
+Suppress CVI Error Messages = False
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[Command Line Args 0001]
+Command Line Args = ""
+

@@ -1,0 +1,97 @@
+/*******************************************************************
+ *
+ *    PROJECT:     LibDutCom
+ *
+ *    EQUIPMENT:   UDS
+ *
+ *    FILE:        Uds_IoControl.h
+ *
+ *    DESCRIPTION:
+ *
+ *    AUTHOR:      $Author$
+ *
+ *    ENVIRONMENT: CVI 7.1
+ *
+ *    DATE:        $Date$
+ *
+ *    HISTORY:
+ *      $Log$
+ *
+ *******************************************************************/
+
+#ifndef UDS_IOCONTROL_H_INCLUDED
+  #define UDS_IOCONTROL_H_INCLUDED
+
+  #include <windows.h>
+  #ifdef _CVI_
+    #include <toolbox.h>
+    #include "cvidef.h"
+  #else // !_CVI_
+    #include <stdlib.h>
+    #include <stdio.h>
+  #endif // !_CVI_
+
+/**
+ * Achtung:
+ *
+ * Reihenfolge der struct-Member muss mit der Initialisierung von atagIoCtrlInfo_m[] übereinstimmen!
+ *
+ * @author uidc9013 (15.03.2010)
+ */
+typedef struct
+{
+  int   iId;
+  BOOL  bWrite;
+  BOOL  bRead;
+  int   iSize;
+  BOOL  bValid;
+  char *pcIoCtrlValue;
+  char *pcDescription;
+} TagIoCtrlInfo;
+
+
+/**
+ * I/O Control specifiers
+ */
+  #define CID_PWM_ILLUMINATION            0x0502
+  #define CID_POINTER_OVERRIDE            0x0500
+  #define CID_LCD_OVERRIDE                0x0503
+
+
+
+  #define CID_PWM_ILLUMINATION_LEN        4
+  #define CID_POINTER_OVERRIDE_LEN        4
+  #define CID_LCD_OVERRIDE_LEN            1
+
+
+  #define CID_OUT_PWM_DC                  0x0154
+  #define CID_OUT_DIG_OUT                 0x0501
+
+  #define CID_IN_ANA                      0x0201
+  #define CID_IN_FREQ                     0x0202
+  #define CID_IN_DIG                      0x0204
+  #define CID_IN_ANA_STEPPER_MOTOR        0x0207
+
+
+
+
+#if 0
+  // restliche CIDs nicht verwendet
+  #define CID_ALL_TELLTALES_CONTROL       0x0   // TODO: which ID?
+
+
+  //#define CID_OUT_PWM_02_DC               0x0155
+  //#define CID_OUT_PWM_03_DC               0x0156
+
+
+  #define CID_LOW_SIDE_SWITCH_1           0x0130
+  #define CID_LOW_SIDE_SWITCH_2           0x0131
+  #define CID_LOW_SIDE_SWITCH_3           0x0132
+  #define CID_LOW_SIDE_SWITCH_4           0x0133
+  #define CID_LOW_SIDE_SWITCH_5           0x0134
+#endif
+
+  #define CID_IN_LOCAL_TIME               0x017C
+
+#endif // !UDS_IOCONTROL_H_INCLUDED
+

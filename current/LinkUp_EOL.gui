@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GUIData>
+    <Global>
+        <GUIVersion>1.0</GUIVersion>
+        <StructGUIData>tagUIElements_m</StructGUIData>
+        <PanelID>iPanelMain_m</PanelID>
+    </Global>
+    <GUIs>
+        <GUI>
+            <GUIType>0007</GUIType>
+            <Title>Produktionsdaten lesen</Title>
+            <CodeDefines>ProdDataRead</CodeDefines>
+            <DisplayCondition></DisplayCondition>
+        </GUI>
+        <GUI>
+            <GUIType>0003</GUIType>
+            <Title>Stromaufnahme messen</Title>
+            <CodeDefines>CurrentIdle</CodeDefines>
+            <DisplayCondition></DisplayCondition>
+        </GUI>
+        <GUI>
+            <GUIType>0001</GUIType>
+            <Title>LED pr&amp;uuml;fen</Title>
+            <CodeDefines>CheckLed</CodeDefines>
+            <DisplayCondition>tagAppStatus_g.tagTest.bLed</DisplayCondition>
+        </GUI>
+        <GUI>
+            <GUIType>0007</GUIType>
+            <Title>ADC-Wert pr&amp;uuml;fen</Title>
+            <CodeDefines>CheckAdc</CodeDefines>
+            <DisplayCondition>tagAppStatus_g.tagTest.bAnInputs</DisplayCondition>
+        </GUI>
+        <GUI>
+            <GUIType>0007</GUIType>
+            <Title>NFC pr&amp;uuml;fen</Title>
+            <CodeDefines>CheckNfc</CodeDefines>
+            <DisplayCondition>tagAppStatus_g.tagTest.bNfc</DisplayCondition>
+        </GUI>
+        <GUI>
+            <GUIType>0007</GUIType>
+            <Title>Produktionsdaten schreiben</Title>
+            <CodeDefines>ProdDataWrite</CodeDefines>
+            <DisplayCondition></DisplayCondition>
+        </GUI>
+</GUIs>
+</GUIData>
