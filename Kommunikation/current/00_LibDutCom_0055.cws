@@ -9,10 +9,10 @@ Active Project = 1
 Project 0001 = "LibDutCom_0055.prj"
 Drag Bar Left = 263
 Window Top = 91
-Window Left = 111
-Window Bottom = 1005
-Window Right = 1339
-Maximized = False
+Window Left = 6
+Window Bottom = 581
+Window Right = 667
+Maximized = True
 Maximized Children = True
 Max Number Of Errors = 20
 Track Include File Dependencies = True
@@ -25,7 +25,7 @@ Hide Windows = False
 Global Hot Key = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 0
+Number of Opened Files = 3
 Window Confinement Region Enabled = True
 MainColumnWidth = 244
 FileDateColumnWidth = 70
@@ -43,7 +43,7 @@ Batch Build Debug = False
 [File 0001]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/DeviceSpecific.c"
 File Type = "CSource"
-Disk Date = 3576546788
+Disk Date = 3667756003
 In Projects = "1,"
 Window Top = 146
 Window Left = 72
@@ -52,24 +52,26 @@ Source Window State = "1,21,21,21,0,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,271,676,1,0,"
 [File 0002]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/LibDutCom.c"
 File Type = "CSource"
-Disk Date = 3612408906
+Disk Date = 3667965426
 In Projects = "1,"
 Window Top = 26
 Window Left = 7
-Source Window State = "1,144,144,144,28,33,28,0,0,0,0,0,0,0,0,0,133,0,145,31,349,676,1,0,"
+Window Z-Order = 2
+Source Window State = "1,151,151,151,0,13,0,0,0,76,0,0,0,0,0,25,127,0,149,2,349,676,1,0,"
 
 [File 0003]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/LibDutCom_private.c"
 File Type = "CSource"
-Disk Date = 3629698409
+Disk Date = 3667965392
 In Projects = "1,"
 Window Top = 30
-Source Window State = "1,637,637,637,42,65,65,1,0,0,0,0,0,0,0,0,625,0,637,42,349,676,1,0,"
+Window Z-Order = 1
+Source Window State = "1,737,760,737,4,9,4,0,0,139,0,0,0,0,0,46,1077,0,1104,54,349,676,1,0,"
 
 [File 0004]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/ProdInterlock.c"
 File Type = "CSource"
-Disk Date = 3573044992
+Disk Date = 3655893078
 In Projects = "1,"
 Window Top = 32
 Window Left = 10
@@ -78,37 +80,38 @@ Source Window State = "1,104,104,104,21,28,28,0,0,0,0,0,0,0,0,0,93,0,112,27,271,
 [File 0005]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/Queue.c"
 File Type = "CSource"
-Disk Date = 3467803439
+Disk Date = 3655893078
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0006]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/SvnIds.c"
 File Type = "CSource"
-Disk Date = 3655095943
+Disk Date = 3667965481
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0007]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/Trace.c"
 File Type = "CSource"
-Disk Date = 3521435769
+Disk Date = 3655893077
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0008]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS.c"
 File Type = "CSource"
-Disk Date = 3604554535
+Disk Date = 3667965236
 In Projects = "1,"
 Window Top = 117
 Window Left = 54
-Source Window State = "1,1271,1271,1271,20,33,33,0,0,0,0,0,0,0,0,0,1231,0,1239,47,258,676,1,0,"
+Window Z-Order = 3
+Source Window State = "1,1271,1271,1271,20,33,33,0,0,76,0,0,0,0,0,18,1568,0,1586,21,258,676,1,0,"
 
 [File 0009]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_IoControl.c"
 File Type = "CSource"
-Disk Date = 3576496995
+Disk Date = 3666590485
 In Projects = "1,"
 Window Top = 32
 Window Left = 10
@@ -117,7 +120,7 @@ Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,0,56,110,258,715,1,0,"
 [File 0010]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_private.c"
 File Type = "CSource"
-Disk Date = 3604554535
+Disk Date = 3655893078
 In Projects = "1,"
 Window Top = 30
 Window Left = 6
@@ -126,14 +129,14 @@ Source Window State = "1,1624,1624,1624,39,41,39,0,0,0,0,0,0,0,0,0,666,0,679,30,
 [File 0011]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_StoredData.c"
 File Type = "CSource"
-Disk Date = 3629698184
+Disk Date = 3666322508
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0012]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/DeviceSpecific.h"
 File Type = "Include"
-Disk Date = 3655095844
+Disk Date = 3667755970
 In Projects = "1,"
 Window Top = 30
 Source Window State = "1,29,29,29,42,49,42,0,0,0,0,0,0,0,0,0,11,0,33,30,349,676,1,0,"
@@ -141,70 +144,70 @@ Source Window State = "1,29,29,29,42,49,42,0,0,0,0,0,0,0,0,0,11,0,33,30,349,676,
 [File 0013]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/LibDutCom.h"
 File Type = "Include"
-Disk Date = 3603973507
+Disk Date = 3666343385
 In Projects = "1,"
 Source Window State = "1,31,36,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,349,676,1,0,"
 
 [File 0014]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/ProdInterlock.h"
 File Type = "Include"
-Disk Date = 3573044992
+Disk Date = 3655893078
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0015]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/Queue.h"
 File Type = "Include"
-Disk Date = 3456909810
+Disk Date = 3655893078
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0016]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/SvnIds.h"
 File Type = "Include"
-Disk Date = 3573045231
+Disk Date = 3610089805
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0017]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/Trace.h"
 File Type = "Include"
-Disk Date = 3456909810
+Disk Date = 3655893077
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0018]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS.h"
 File Type = "Include"
-Disk Date = 3573551768
+Disk Date = 3667965231
 In Projects = "1,"
 Source Window State = "1,32,34,32,0,0,0,0,0,0,0,0,0,0,0,0,20,0,52,16,0,0,0,0,"
 
 [File 0019]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_IoControl.h"
 File Type = "Include"
-Disk Date = 3573551768
+Disk Date = 3667755910
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0020]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_private.h"
 File Type = "Include"
-Disk Date = 3604554535
+Disk Date = 3655893078
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0021]
 Path = "/c/Projects/Libraries/LibDutCom/0055/current/UDS_StoredData.h"
 File Type = "Include"
-Disk Date = 3573044992
+Disk Date = 3666336213
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [File 0022]
-Path = "/c/Program Files (x86)/Kvaser/Canlib/Lib/MS/canlib32.lib"
+Path = "/c/Program Files/Kvaser/CANLIB/Lib/canlib32.lib"
 File Type = "Library"
-Disk Date = 0
+Disk Date = 3294739202
 In Projects = "1,"
 
 [Build Options 0001]
@@ -233,6 +236,9 @@ Suppress CVI Error Messages = False
 
 [DLL Debugging Support 0001]
 External Process Path = ""
+
+[DLLs Used By Executable 0001]
+DLL 0001 = "/C/WINDOWS/system32/canlib32.dll"
 
 [Command Line Args 0001]
 Command Line Args = ""

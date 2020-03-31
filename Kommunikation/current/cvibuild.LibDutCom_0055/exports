@@ -1,0 +1,755 @@
+[_bDutCom_AnalogInputsInitialized@0]
+callConv = 101
+name = bDutCom_AnalogInputsInitialized
+paramSize = 0
+
+[_bDutCom_AnalogInputsReadAll@4]
+callConv = 101
+name = bDutCom_AnalogInputsReadAll
+paramSize = 4
+
+[_bDutCom_AnalogInputsReadSingle@4]
+callConv = 101
+name = bDutCom_AnalogInputsReadSingle
+paramSize = 4
+
+[_bDutCom_AnalogOutputsAllWritten@0]
+callConv = 101
+name = bDutCom_AnalogOutputsAllWritten
+paramSize = 0
+
+[_bDutCom_AnalogOutputsInitialized@0]
+callConv = 101
+name = bDutCom_AnalogOutputsInitialized
+paramSize = 0
+
+[_bDutCom_AnalogOutputsSingleWritten@0]
+callConv = 101
+name = bDutCom_AnalogOutputsSingleWritten
+paramSize = 0
+
+[_bDutCom_BackLightCtrlInitialized@0]
+callConv = 101
+name = bDutCom_BackLightCtrlInitialized
+paramSize = 0
+
+[_bDutCom_BackLightCtrlIsSet@0]
+callConv = 101
+name = bDutCom_BackLightCtrlIsSet
+paramSize = 0
+
+[_bDutCom_ClockGetTime@12]
+callConv = 101
+name = bDutCom_ClockGetTime
+paramSize = 12
+
+[_bDutCom_ClockSetTimeDone@0]
+callConv = 101
+name = bDutCom_ClockSetTimeDone
+paramSize = 0
+
+[_bDutCom_CommunicationStarted@0]
+callConv = 101
+name = bDutCom_CommunicationStarted
+paramSize = 0
+
+[_bDutCom_CommunicationStopped@0]
+callConv = 101
+name = bDutCom_CommunicationStopped
+paramSize = 0
+
+[_bDutCom_DataEepromBulkRead@12]
+callConv = 101
+name = bDutCom_DataEepromBulkRead
+paramSize = 12
+
+[_bDutCom_DataEepromBulkWritten@0]
+callConv = 101
+name = bDutCom_DataEepromBulkWritten
+paramSize = 0
+
+[_bDutCom_DataEepromByteRead@4]
+callConv = 101
+name = bDutCom_DataEepromByteRead
+paramSize = 4
+
+[_bDutCom_DataEepromByteWritten@0]
+callConv = 101
+name = bDutCom_DataEepromByteWritten
+paramSize = 0
+
+[_bDutCom_DataProductionInterlockRead@36]
+callConv = 101
+name = bDutCom_DataProductionInterlockRead
+paramSize = 36
+
+[_bDutCom_DataProductionInterlockWritten@0]
+callConv = 101
+name = bDutCom_DataProductionInterlockWritten
+paramSize = 0
+
+[_bDutCom_DataSerialNumberRead@4]
+callConv = 101
+name = bDutCom_DataSerialNumberRead
+paramSize = 4
+
+[_bDutCom_DataSerialNumberWritten@0]
+callConv = 101
+name = bDutCom_DataSerialNumberWritten
+paramSize = 0
+
+[_bDutCom_DataStringRead@4]
+callConv = 101
+name = bDutCom_DataStringRead
+paramSize = 4
+
+[_bDutCom_DataStringWritten@0]
+callConv = 101
+name = bDutCom_DataStringWritten
+paramSize = 0
+
+[_bDutCom_DeviceSpecificTestEnded@4]
+callConv = 101
+name = bDutCom_DeviceSpecificTestEnded
+paramSize = 4
+
+[_bDutCom_DiagModeIsSet@0]
+callConv = 101
+name = bDutCom_DiagModeIsSet
+paramSize = 0
+
+[_bDutCom_DiagModeStarted@0]
+callConv = 101
+name = bDutCom_DiagModeStarted
+paramSize = 0
+
+[_bDutCom_DiagModeStopped@0]
+callConv = 101
+name = bDutCom_DiagModeStopped
+paramSize = 0
+
+[_bDutCom_DigInputsInitialized@0]
+callConv = 101
+name = bDutCom_DigInputsInitialized
+paramSize = 0
+
+[_bDutCom_DigInputsReadAll@4]
+callConv = 101
+name = bDutCom_DigInputsReadAll
+paramSize = 4
+
+[_bDutCom_DigInputsReadSingle@4]
+callConv = 101
+name = bDutCom_DigInputsReadSingle
+paramSize = 4
+
+[_bDutCom_DigOutputsAllWritten@0]
+callConv = 101
+name = bDutCom_DigOutputsAllWritten
+paramSize = 0
+
+[_bDutCom_DigOutputsInitialized@0]
+callConv = 101
+name = bDutCom_DigOutputsInitialized
+paramSize = 0
+
+[_bDutCom_DigOutputsSingleWritten@0]
+callConv = 101
+name = bDutCom_DigOutputsSingleWritten
+paramSize = 0
+
+[_bDutCom_FreqInputsInitialized@0]
+callConv = 101
+name = bDutCom_FreqInputsInitialized
+paramSize = 0
+
+[_bDutCom_FreqInputsReadAll@4]
+callConv = 101
+name = bDutCom_FreqInputsReadAll
+paramSize = 4
+
+[_bDutCom_FreqInputsReadSingle@4]
+callConv = 101
+name = bDutCom_FreqInputsReadSingle
+paramSize = 4
+
+[_bDutCom_FreqOutputsAllWritten@0]
+callConv = 101
+name = bDutCom_FreqOutputsAllWritten
+paramSize = 0
+
+[_bDutCom_FreqOutputsInitialized@0]
+callConv = 101
+name = bDutCom_FreqOutputsInitialized
+paramSize = 0
+
+[_bDutCom_FreqOutputsSingleWritten@0]
+callConv = 101
+name = bDutCom_FreqOutputsSingleWritten
+paramSize = 0
+
+[_bDutCom_GetErrorMessage@8]
+callConv = 101
+name = bDutCom_GetErrorMessage
+paramSize = 8
+
+[_bDutCom_LcdCtrlInitialized@0]
+callConv = 101
+name = bDutCom_LcdCtrlInitialized
+paramSize = 0
+
+[_bDutCom_LcdCtrlPatternIsSet@0]
+callConv = 101
+name = bDutCom_LcdCtrlPatternIsSet
+paramSize = 0
+
+[_bDutCom_PointerAdjustGainIsSet@0]
+callConv = 101
+name = bDutCom_PointerAdjustGainIsSet
+paramSize = 0
+
+[_bDutCom_PointerAdjustInitialized@0]
+callConv = 101
+name = bDutCom_PointerAdjustInitialized
+paramSize = 0
+
+[_bDutCom_PointerAdjustOffsetIsSet@0]
+callConv = 101
+name = bDutCom_PointerAdjustOffsetIsSet
+paramSize = 0
+
+[_bDutCom_PointerAdjustOffsetIsStored@0]
+callConv = 101
+name = bDutCom_PointerAdjustOffsetIsStored
+paramSize = 0
+
+[_bDutCom_PointerControlInitialized@0]
+callConv = 101
+name = bDutCom_PointerControlInitialized
+paramSize = 0
+
+[_bDutCom_PointerControlPositionAllIsSet@0]
+callConv = 101
+name = bDutCom_PointerControlPositionAllIsSet
+paramSize = 0
+
+[_bDutCom_PointerControlPositionSingleIsSet@4]
+callConv = 101
+name = bDutCom_PointerControlPositionSingleIsSet
+paramSize = 4
+
+[_bDutCom_SetParam@4]
+callConv = 101
+name = bDutCom_SetParam
+paramSize = 4
+
+[_bDutCom_TellTaleCtrlBitmapIsSet@0]
+callConv = 101
+name = bDutCom_TellTaleCtrlBitmapIsSet
+paramSize = 0
+
+[_bDutCom_TellTaleCtrlInitialized@0]
+callConv = 101
+name = bDutCom_TellTaleCtrlInitialized
+paramSize = 0
+
+[_bDutCom_TellTaleCtrlTellTaleIsSet@0]
+callConv = 101
+name = bDutCom_TellTaleCtrlTellTaleIsSet
+paramSize = 0
+
+[_eDutCom_SecurityGetCurrentAccess@0]
+callConv = 101
+name = eDutCom_SecurityGetCurrentAccess
+paramSize = 0
+
+[_iDutCom_GetOneTraceLine@8]
+callConv = 101
+name = iDutCom_GetOneTraceLine
+paramSize = 8
+
+[_pcDutCom_AnalogInputsGetText@4]
+callConv = 101
+name = pcDutCom_AnalogInputsGetText
+paramSize = 4
+
+[_pcDutCom_AnalogOutputsGetText@4]
+callConv = 101
+name = pcDutCom_AnalogOutputsGetText
+paramSize = 4
+
+[_pcDutCom_BacklightGetText@4]
+callConv = 101
+name = pcDutCom_BacklightGetText
+paramSize = 4
+
+[_pcDutCom_DataProductionInterlockGetText@4]
+callConv = 101
+name = pcDutCom_DataProductionInterlockGetText
+paramSize = 4
+
+[_pcDutCom_DeviceSpecificTestGetText@4]
+callConv = 101
+name = pcDutCom_DeviceSpecificTestGetText
+paramSize = 4
+
+[_pcDutCom_DigInputsGetText@4]
+callConv = 101
+name = pcDutCom_DigInputsGetText
+paramSize = 4
+
+[_pcDutCom_DigOutputsGetText@4]
+callConv = 101
+name = pcDutCom_DigOutputsGetText
+paramSize = 4
+
+[_pcDutCom_FreqInputsGetText@4]
+callConv = 101
+name = pcDutCom_FreqInputsGetText
+paramSize = 4
+
+[_pcDutCom_FreqOutputsGetText@4]
+callConv = 101
+name = pcDutCom_FreqOutputsGetText
+paramSize = 4
+
+[_pcDutCom_GetTraceHeader@0]
+callConv = 101
+name = pcDutCom_GetTraceHeader
+paramSize = 0
+
+[_pcDutCom_LcdCtrlGetText@4]
+callConv = 101
+name = pcDutCom_LcdCtrlGetText
+paramSize = 4
+
+[_pcDutCom_PointerGetText@4]
+callConv = 101
+name = pcDutCom_PointerGetText
+paramSize = 4
+
+[_pcDutCom_TellTaleGetText@4]
+callConv = 101
+name = pcDutCom_TellTaleGetText
+paramSize = 4
+
+[_pcSvnGetAuthor@0]
+callConv = 101
+name = pcSvnGetAuthor
+paramSize = 0
+
+[_pcSvnGetDate@0]
+callConv = 101
+name = pcSvnGetDate
+paramSize = 0
+
+[_pcSvnGetRepoName@0]
+callConv = 101
+name = pcSvnGetRepoName
+paramSize = 0
+
+[_pcSvnGetRevision@0]
+callConv = 101
+name = pcSvnGetRevision
+paramSize = 0
+
+[_pcSvnGetUrl@0]
+callConv = 101
+name = pcSvnGetUrl
+paramSize = 0
+
+[_uiDutCom_AnalogInputsGetCount@0]
+callConv = 101
+name = uiDutCom_AnalogInputsGetCount
+paramSize = 0
+
+[_uiDutCom_AnalogOutputsGetCount@0]
+callConv = 101
+name = uiDutCom_AnalogOutputsGetCount
+paramSize = 0
+
+[_uiDutCom_BackLightCtrlGetColorCount@4]
+callConv = 101
+name = uiDutCom_BackLightCtrlGetColorCount
+paramSize = 4
+
+[_uiDutCom_BackLightCtrlGetCount@0]
+callConv = 101
+name = uiDutCom_BackLightCtrlGetCount
+paramSize = 0
+
+[_uiDutCom_ClockGetHours@0]
+callConv = 101
+name = uiDutCom_ClockGetHours
+paramSize = 0
+
+[_uiDutCom_ClockGetMinutes@0]
+callConv = 101
+name = uiDutCom_ClockGetMinutes
+paramSize = 0
+
+[_uiDutCom_ClockGetSeconds@0]
+callConv = 101
+name = uiDutCom_ClockGetSeconds
+paramSize = 0
+
+[_uiDutCom_DataProductionInterlockGetCount@0]
+callConv = 101
+name = uiDutCom_DataProductionInterlockGetCount
+paramSize = 0
+
+[_uiDutCom_DeviceSpecificTestGetCount@0]
+callConv = 101
+name = uiDutCom_DeviceSpecificTestGetCount
+paramSize = 0
+
+[_uiDutCom_DigInputsGetCount@0]
+callConv = 101
+name = uiDutCom_DigInputsGetCount
+paramSize = 0
+
+[_uiDutCom_DigOutputsGetCount@0]
+callConv = 101
+name = uiDutCom_DigOutputsGetCount
+paramSize = 0
+
+[_uiDutCom_FreqInputsGetCount@0]
+callConv = 101
+name = uiDutCom_FreqInputsGetCount
+paramSize = 0
+
+[_uiDutCom_FreqOutputsGetCount@0]
+callConv = 101
+name = uiDutCom_FreqOutputsGetCount
+paramSize = 0
+
+[_uiDutCom_LcdCtrlGetCount@0]
+callConv = 101
+name = uiDutCom_LcdCtrlGetCount
+paramSize = 0
+
+[_uiDutCom_LcdCtrlPatternGetCount@4]
+callConv = 101
+name = uiDutCom_LcdCtrlPatternGetCount
+paramSize = 4
+
+[_uiDutCom_PointerGetCount@0]
+callConv = 101
+name = uiDutCom_PointerGetCount
+paramSize = 0
+
+[_uiDutCom_TellTaleCtrlGetCount@0]
+callConv = 101
+name = uiDutCom_TellTaleCtrlGetCount
+paramSize = 0
+
+[_vDutCom_AnalogInputsInit@0]
+callConv = 101
+name = vDutCom_AnalogInputsInit
+paramSize = 0
+
+[_vDutCom_AnalogInputsRequestAll@0]
+callConv = 101
+name = vDutCom_AnalogInputsRequestAll
+paramSize = 0
+
+[_vDutCom_AnalogInputsRequestSingle@4]
+callConv = 101
+name = vDutCom_AnalogInputsRequestSingle
+paramSize = 4
+
+[_vDutCom_AnalogOutputsInit@0]
+callConv = 101
+name = vDutCom_AnalogOutputsInit
+paramSize = 0
+
+[_vDutCom_AnalogOutputsWriteAll@4]
+callConv = 101
+name = vDutCom_AnalogOutputsWriteAll
+paramSize = 4
+
+[_vDutCom_AnalogOutputsWriteSingle@8]
+callConv = 101
+name = vDutCom_AnalogOutputsWriteSingle
+paramSize = 8
+
+[_vDutCom_BackLightCtrlInit@0]
+callConv = 101
+name = vDutCom_BackLightCtrlInit
+paramSize = 0
+
+[_vDutCom_BackLightCtrlSet@8]
+callConv = 101
+name = vDutCom_BackLightCtrlSet
+paramSize = 8
+
+[_vDutCom_ClockRequestTime@0]
+callConv = 101
+name = vDutCom_ClockRequestTime
+paramSize = 0
+
+[_vDutCom_ClockReset@0]
+callConv = 101
+name = vDutCom_ClockReset
+paramSize = 0
+
+[_vDutCom_ClockSetHours@4]
+callConv = 101
+name = vDutCom_ClockSetHours
+paramSize = 4
+
+[_vDutCom_ClockSetMinutes@4]
+callConv = 101
+name = vDutCom_ClockSetMinutes
+paramSize = 4
+
+[_vDutCom_ClockSetSeconds@4]
+callConv = 101
+name = vDutCom_ClockSetSeconds
+paramSize = 4
+
+[_vDutCom_ClockSetTime@12]
+callConv = 101
+name = vDutCom_ClockSetTime
+paramSize = 12
+
+[_vDutCom_CommunicationStart@0]
+callConv = 101
+name = vDutCom_CommunicationStart
+paramSize = 0
+
+[_vDutCom_CommunicationStop@0]
+callConv = 101
+name = vDutCom_CommunicationStop
+paramSize = 0
+
+[_vDutCom_DataEepromBulkRequest@8]
+callConv = 101
+name = vDutCom_DataEepromBulkRequest
+paramSize = 8
+
+[_vDutCom_DataEepromBulkWrite@12]
+callConv = 101
+name = vDutCom_DataEepromBulkWrite
+paramSize = 12
+
+[_vDutCom_DataEepromByteRequest@4]
+callConv = 101
+name = vDutCom_DataEepromByteRequest
+paramSize = 4
+
+[_vDutCom_DataEepromByteWrite@8]
+callConv = 101
+name = vDutCom_DataEepromByteWrite
+paramSize = 8
+
+[_vDutCom_DataProductionInterlockRequest@4]
+callConv = 101
+name = vDutCom_DataProductionInterlockRequest
+paramSize = 4
+
+[_vDutCom_DataProductionInterlockWrite@16]
+callConv = 101
+name = vDutCom_DataProductionInterlockWrite
+paramSize = 16
+
+[_vDutCom_DataSerialNumberRequest@0]
+callConv = 101
+name = vDutCom_DataSerialNumberRequest
+paramSize = 0
+
+[_vDutCom_DataSerialNumberWrite@4]
+callConv = 101
+name = vDutCom_DataSerialNumberWrite
+paramSize = 4
+
+[_vDutCom_DataStringGetDataInfo@12]
+callConv = 101
+name = vDutCom_DataStringGetDataInfo
+paramSize = 12
+
+[_vDutCom_DataStringRequest@4]
+callConv = 101
+name = vDutCom_DataStringRequest
+paramSize = 4
+
+[_vDutCom_DataStringWrite@8]
+callConv = 101
+name = vDutCom_DataStringWrite
+paramSize = 8
+
+[_vDutCom_DeviceSpecificTestAssignInput@16]
+callConv = 101
+name = vDutCom_DeviceSpecificTestAssignInput
+paramSize = 16
+
+[_vDutCom_DeviceSpecificTestAssignOutput@16]
+callConv = 101
+name = vDutCom_DeviceSpecificTestAssignOutput
+paramSize = 16
+
+[_vDutCom_DeviceSpecificTestStart@4]
+callConv = 101
+name = vDutCom_DeviceSpecificTestStart
+paramSize = 4
+
+[_vDutCom_DiagModeSet@4]
+callConv = 101
+name = vDutCom_DiagModeSet
+paramSize = 4
+
+[_vDutCom_DiagModeStart@0]
+callConv = 101
+name = vDutCom_DiagModeStart
+paramSize = 0
+
+[_vDutCom_DiagModeStop@0]
+callConv = 101
+name = vDutCom_DiagModeStop
+paramSize = 0
+
+[_vDutCom_DigInputsInit@0]
+callConv = 101
+name = vDutCom_DigInputsInit
+paramSize = 0
+
+[_vDutCom_DigInputsRequestAll@0]
+callConv = 101
+name = vDutCom_DigInputsRequestAll
+paramSize = 0
+
+[_vDutCom_DigInputsRequestSingle@4]
+callConv = 101
+name = vDutCom_DigInputsRequestSingle
+paramSize = 4
+
+[_vDutCom_DigOutputsInit@0]
+callConv = 101
+name = vDutCom_DigOutputsInit
+paramSize = 0
+
+[_vDutCom_DigOutputsWriteAll@4]
+callConv = 101
+name = vDutCom_DigOutputsWriteAll
+paramSize = 4
+
+[_vDutCom_DigOutputsWriteSingle@8]
+callConv = 101
+name = vDutCom_DigOutputsWriteSingle
+paramSize = 8
+
+[_vDutCom_FreqInputsInit@0]
+callConv = 101
+name = vDutCom_FreqInputsInit
+paramSize = 0
+
+[_vDutCom_FreqInputsRequestAll@0]
+callConv = 101
+name = vDutCom_FreqInputsRequestAll
+paramSize = 0
+
+[_vDutCom_FreqInputsRequestSingle@4]
+callConv = 101
+name = vDutCom_FreqInputsRequestSingle
+paramSize = 4
+
+[_vDutCom_FreqOutputsInit@0]
+callConv = 101
+name = vDutCom_FreqOutputsInit
+paramSize = 0
+
+[_vDutCom_FreqOutputsWriteAll@8]
+callConv = 101
+name = vDutCom_FreqOutputsWriteAll
+paramSize = 8
+
+[_vDutCom_FreqOutputsWriteSingle@12]
+callConv = 101
+name = vDutCom_FreqOutputsWriteSingle
+paramSize = 12
+
+[_vDutCom_GetInfo@20]
+callConv = 101
+name = vDutCom_GetInfo
+paramSize = 20
+
+[_vDutCom_LcdCtrlInit@0]
+callConv = 101
+name = vDutCom_LcdCtrlInit
+paramSize = 0
+
+[_vDutCom_LcdCtrlSetPattern@8]
+callConv = 101
+name = vDutCom_LcdCtrlSetPattern
+paramSize = 8
+
+[_vDutCom_PointerAdjustInit@0]
+callConv = 101
+name = vDutCom_PointerAdjustInit
+paramSize = 0
+
+[_vDutCom_PointerAdjustSetGain@12]
+callConv = 101
+name = vDutCom_PointerAdjustSetGain
+paramSize = 12
+
+[_vDutCom_PointerAdjustSetOffset@8]
+callConv = 101
+name = vDutCom_PointerAdjustSetOffset
+paramSize = 8
+
+[_vDutCom_PointerAdjustStoreOffset@4]
+callConv = 101
+name = vDutCom_PointerAdjustStoreOffset
+paramSize = 4
+
+[_vDutCom_PointerControlInit@0]
+callConv = 101
+name = vDutCom_PointerControlInit
+paramSize = 0
+
+[_vDutCom_PointerControlSetPositionAll@4]
+callConv = 101
+name = vDutCom_PointerControlSetPositionAll
+paramSize = 4
+
+[_vDutCom_PointerControlSetPositionSingle@8]
+callConv = 101
+name = vDutCom_PointerControlSetPositionSingle
+paramSize = 8
+
+[_vDutCom_Reset@0]
+callConv = 101
+name = vDutCom_Reset
+paramSize = 0
+
+[_vDutCom_SecurityAccess@4]
+callConv = 101
+name = vDutCom_SecurityAccess
+paramSize = 4
+
+[_vDutCom_TellTaleCtrlInit@0]
+callConv = 101
+name = vDutCom_TellTaleCtrlInit
+paramSize = 0
+
+[_vDutCom_TellTaleCtrlSetBitmap@4]
+callConv = 101
+name = vDutCom_TellTaleCtrlSetBitmap
+paramSize = 4
+
+[_vDutCom_TellTaleCtrlSetTellTale@8]
+callConv = 101
+name = vDutCom_TellTaleCtrlSetTellTale
+paramSize = 8
+
+[_vDutCom_TraceClear@0]
+callConv = 101
+name = vDutCom_TraceClear
+paramSize = 0
+
+[_vDutCom_TraceEnable@4]
+callConv = 101
+name = vDutCom_TraceEnable
+paramSize = 4
+

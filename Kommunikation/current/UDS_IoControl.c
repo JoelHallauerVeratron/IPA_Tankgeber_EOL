@@ -56,7 +56,7 @@ TagIoCtrlInfo atagIoCtrlInfo_m[]=
 
   CID_IN_ANA,                  FALSE, TRUE,  CID_IN_ANA_LEN,              FALSE, 0,    "IN_AnaInp",
   //CID_IN_FREQ,                 FALSE, TRUE,  2,                           FALSE, 0,    "IN_FreqInp",
-  //CID_IN_DIG,                  FALSE, TRUE,  2,                           FALSE, 0,    "IN_DigInp",
+  CID_IN_DIG,                  FALSE, TRUE,  4,                           FALSE, 0,    "IN_DigInp",
   //CID_IN_ANA_STEPPER_MOTOR,    FALSE, TRUE,  1,                           FALSE, 0,    "stepper motor state",
 
   CID_LIN_210,                 FALSE, TRUE,  CID_LIN_210_LEN,             FALSE, 0,    "LIN 210",   // TODO: implement this

@@ -147,9 +147,9 @@ MYDLL_API void WINAPI vDutCom_GetInfo(char *pcDutInfo,
     sprintf(pcBuild,"%s, %s cvi",__TIME__,__DATE__);
   #else
     // CVI < Version 8.00
-    strcpy(pcBuild,
-#include "Build_Date.h"
-           );
+//    strcpy(pcBuild,
+//#include "Build_Date.h"
+//           );
   #endif
 #ifdef _CVI_DEBUG_
     strcat(pcBuild," (Debug)");

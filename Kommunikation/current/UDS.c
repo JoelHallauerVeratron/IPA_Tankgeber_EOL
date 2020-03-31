@@ -43,6 +43,7 @@
 #include "ProdInterlock.h"
 #include "DeviceSpecific.h"
 #define PROD_INTERLOCK_SIZE  10
+#define CHECK_BIT(var,pos) ((var) & (1<<(pos)))
 
 /**
  * Modulglobale-Variablen
@@ -1283,35 +1284,19 @@ BOOL bUds_IoCtrlGetDigitalInput_g(unsigned char ucInput,
     return(FALSE);
   }
 
-  // Time    <ID>  0  1  2  3  4  5  6  7
-  // 4.92 Tx 0560 03 22 02 04               request IN_DigInp
-  // 0.08 Rx 07c2 10 08 62 02 04 01 01 00
-  // 0.00 Tx 0560 30 00 0a                  Flow Control
-  // 0.10 Rx 07c2 21 00 00 00 00 00 00 00   consecutive frame
-
-  // 0.08 Rx 07c2 10 08 62 02 04 01 01 00 00 00
-  //                             ==--> 0: IGN
-  //                                ==--> 1: Illum
-  //                                   ==--> 2: GPS module
-  //                                      ==--> (GPS SNR)
-  //                                         ==--> 3: Trip Switch
-
-  switch(ucInput)
-  {
-    case 0:
-    case 1:
-    case 2:
-    default:
-      break;
-    case 3:
-      ucInput=4;
-      break;
-  }
-
   usLocalIdentifier=CID_IN_DIG;
   if(!bUds_IOControlByCommonIdentifierGetCtrlValue_m(usLocalIdentifier,ucaStatus,&iBytes))
     return(FALSE);
-  *bInputState=(ucaStatus[ucInput]>0);
+
+  // Erstes Byte erhält Informationen über die ersten 4 Digitalen Inputs!
+  if(ucInput < 4)
+  {
+    *bInputState = CHECK_BIT(ucaStatus[0],ucInput);
+  }
+  else
+  {
+    *bInputState=(ucaStatus[ucInput]>0);
+  }
 
   return(TRUE);
 } // bUds_IoCtrlGetDigitalInput_g()
@@ -1353,7 +1338,24 @@ BOOL bUds_IoCtrlGetAnalogInput_g(unsigned char ucInput,
     return(FALSE);
   }
 
-  iAnalogInputValue=(ucaValue[ucInput*2]*256) + (ucaValue[(ucInput*2)+1]);
+  switch(ucInput)
+  {
+    case 0: // Batterie Voltage
+      iAnalogInputValue = ucaValue[0];
+      iAnalogInputValue <<=8;
+      iAnalogInputValue += ucaValue[1];
+      break;
+
+    case 1: // Chip Temperature
+      iAnalogInputValue = ucaValue[2];
+      break;
+
+    case 2: // Liquid Level
+      iAnalogInputValue = ucaValue[3];
+      break;
+  }
+
+  //iAnalogInputValue=(ucaValue[ucInput*2]*256) + (ucaValue[(ucInput*2)+1]);
   if(puiAnalogInput)
     *puiAnalogInput=iAnalogInputValue;
 

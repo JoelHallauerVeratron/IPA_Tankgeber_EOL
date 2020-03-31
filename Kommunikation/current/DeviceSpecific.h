@@ -66,17 +66,17 @@
 /**
  * Number of digital Inputs.
  */
-  #define NUM_DIG_INPUTS     1
+  #define NUM_DIG_INPUTS     4
 
 /**
  * Number of digital Outputs.
  */
-  #define NUM_DIG_OUTPUTS     0
+  #define NUM_DIG_OUTPUTS     1
 
 /**
  * Number of analog Inputs.
  */
-  #define NUM_ANALOG_INPUTS     1
+  #define NUM_ANALOG_INPUTS     3
 
 /**
  * Number of analog Outputs.
@@ -135,7 +135,7 @@
 /**
  * Number of device specific self running tests
  */
-  #define NUM_DEV_SPEC_TESTS     0
+  #define NUM_DEV_SPEC_TESTS     1
 
 
 #endif // DEVICE_SPECIFIC_H_INCLUDED

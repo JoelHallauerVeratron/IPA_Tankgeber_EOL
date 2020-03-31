@@ -720,45 +720,45 @@ DWORD WINAPI dwDutCom_SenderThread_m(LPVOID lpParam)
 
 
     // backlight control
-    if(tagComSendData_m.tagBackLightControl.bInit)
-    {
-      tagComRecvData_m.tagBackLightControl.bInitialized=TRUE;   // TODO: remove this if implemented
-    }
-
-    if(tagComSendData_m.tagBackLightControl.bSetBackLight)
-    {
-      pbAck=pbUds_IoCtrlSetBacklight_g((tagComSendData_m.tagBackLightControl.uiBackLightBitmap&0x01),
-                                       (tagComSendData_m.tagBackLightControl.uiBackLightBitmap&0x02),
-                                       (tagComSendData_m.tagBackLightControl.uiBackLightBitmap&0x04),
-                                       (tagComSendData_m.tagBackLightControl.uiBackLightBitmap&0x08));
-    }
-
+//  if(tagComSendData_m.tagBackLightControl.bInit)
+//  {
+//    tagComRecvData_m.tagBackLightControl.bInitialized=TRUE;   // TODO: remove this if implemented
+//  }
+//
+//  if(tagComSendData_m.tagBackLightControl.bSetBackLight)
+//  {
+//    pbAck=pbUds_IoCtrlSetBacklight_g((tagComSendData_m.tagBackLightControl.uiBackLightBitmap&0x01),
+//                                     (tagComSendData_m.tagBackLightControl.uiBackLightBitmap&0x02),
+//                                     (tagComSendData_m.tagBackLightControl.uiBackLightBitmap&0x04),
+//                                     (tagComSendData_m.tagBackLightControl.uiBackLightBitmap&0x08));
+//  }
+//
 
     // lcd control
-    if(tagComSendData_m.tagLcdControl.bInit)
-    {
-      pbAck=pbUds_IoCtrlSetBacklight_g(FALSE,   // Pointer
-                                       FALSE,   // Dial
-                                       TRUE,    // LCD
-                                       FALSE);  // EasyLink
-    }
-
-    if(tagComSendData_m.tagLcdControl.bSetPattern)
-    {
-      //tagComSendData_m.tagLcdControl.uiLcd
-      switch(tagComSendData_m.tagLcdControl.eLcdPattern)
-      {
-        case eLcdPatternA:
-          pbAck=pbUds_IoCtrlLcdSetPattern_g(5);
-          break;
-        case eLcdPatternAll:
-          pbAck=pbUds_IoCtrlLcdSetPattern_g(8);
-          break;
-        default:
-          printf("LibDutCom: invalid lcd pattern %d specified\n",tagComSendData_m.tagLcdControl.eLcdPattern);
-          break;
-      }
-    }
+//  if(tagComSendData_m.tagLcdControl.bInit)
+//  {
+//    pbAck=pbUds_IoCtrlSetBacklight_g(FALSE,   // Pointer
+//                                     FALSE,   // Dial
+//                                     TRUE,    // LCD
+//                                     FALSE);  // EasyLink
+//  }
+//
+//  if(tagComSendData_m.tagLcdControl.bSetPattern)
+//  {
+//    //tagComSendData_m.tagLcdControl.uiLcd
+//    switch(tagComSendData_m.tagLcdControl.eLcdPattern)
+//    {
+//      case eLcdPatternA:
+//        pbAck=pbUds_IoCtrlLcdSetPattern_g(5);
+//        break;
+//      case eLcdPatternAll:
+//        pbAck=pbUds_IoCtrlLcdSetPattern_g(8);
+//        break;
+//      default:
+//        printf("LibDutCom: invalid lcd pattern %d specified\n",tagComSendData_m.tagLcdControl.eLcdPattern);
+//        break;
+//    }
+//  }
 
     // read digital inputs
     if(tagComSendData_m.tagDigInputs.bInit)
@@ -842,11 +842,10 @@ DWORD WINAPI dwDutCom_SenderThread_m(LPVOID lpParam)
     {
       switch(tagComSendData_m.iComStep)
       {
-        case 0:   // Battery voltage
+        case 0:
+        case 1:
+        case 2:
           pbAck=pbUds_IoCtrlRequestAnalogInputs_g();
-          break;
-        case 1:   // SNR GPS
-          pbAck=pbUds_IoCtrlRequestDigitalInput_g();
           break;
         default:
           printf("LibDutCom: request all analog inputs: invalid iComStep=%d\n",tagComSendData_m.iComStep);
@@ -858,11 +857,10 @@ DWORD WINAPI dwDutCom_SenderThread_m(LPVOID lpParam)
     {
       switch(tagComSendData_m.tagAnalogInputs.uiAnalogInput)
       {
-        case 0:   // Battery voltage
+        case 0:
+        case 1:
+        case 2:
           pbAck=pbUds_IoCtrlRequestAnalogInputs_g();
-          break;
-        case 1:   // SNR GPS
-          pbAck=pbUds_IoCtrlRequestDigitalInput_g();
           break;
       }
     }
@@ -1427,27 +1425,20 @@ DWORD WINAPI dwDutCom_SenderThread_m(LPVOID lpParam)
         vResetComSendData_m();
       }
 
+      // request analog inputs
       if(tagComSendData_m.tagAnalogInputs.bRequestAll)
       {
         unsigned int uiAnalogInputValue;
 
-        switch(tagComSendData_m.iComStep)
+        if(bUds_IoCtrlGetAnalogInput_g((UCHAR)(tagComSendData_m.iComStep),&uiAnalogInputValue))
         {
-          case 0:   // Battery voltage
-            if(bUds_IoCtrlGetAnalogInput_g((UCHAR)(tagComSendData_m.iComStep),&uiAnalogInputValue))
-            {
-              tagComRecvData_m.tagAnalogInputs.uiaAnalogInputValues[tagComSendData_m.iComStep]=uiAnalogInputValue;
-              ++tagComSendData_m.iComStep;
-            }
-            break;
-          case 1:   // SNR GPS
-            if(bUds_IoCtrlGetGpsSnr_g(&uiAnalogInputValue))
-            {
-              tagComRecvData_m.tagAnalogInputs.uiaAnalogInputValues[tagComSendData_m.iComStep]=uiAnalogInputValue;
-              tagComRecvData_m.tagAnalogInputs.bReceivedAll=TRUE;
-              vResetComSendData_m();
-            }
-            break;
+          tagComRecvData_m.tagAnalogInputs.uiaAnalogInputValues[tagComSendData_m.iComStep]=uiAnalogInputValue;
+          ++tagComSendData_m.iComStep;
+        }
+
+        if(tagComSendData_m.iComStep > NUM_ANALOG_INPUTS-1)
+        {
+          tagComSendData_m.iComStep = 0;
         }
       }
 
@@ -1455,23 +1446,11 @@ DWORD WINAPI dwDutCom_SenderThread_m(LPVOID lpParam)
       {
         if(pbAck)
         {
-          switch(tagComSendData_m.tagAnalogInputs.uiAnalogInput)
-          {
-            case 0:   // Battery voltage
-              if(bUds_IoCtrlGetAnalogInput_g((UCHAR)(tagComSendData_m.tagAnalogInputs.uiAnalogInput),
+          if(bUds_IoCtrlGetAnalogInput_g((UCHAR)(tagComSendData_m.tagAnalogInputs.uiAnalogInput),
                                              &tagComRecvData_m.tagAnalogInputs.uiAnalogInputValue))
-              {
-                tagComRecvData_m.tagAnalogInputs.bReceivedSingle=TRUE;
-                vResetComSendData_m();
-              }
-              break;
-            case 1:   // SNR GPS
-              if(bUds_IoCtrlGetGpsSnr_g(&tagComRecvData_m.tagAnalogInputs.uiAnalogInputValue))
-              {
-                tagComRecvData_m.tagAnalogInputs.bReceivedSingle=TRUE;
-                vResetComSendData_m();
-              }
-              break;
+          {
+            tagComRecvData_m.tagAnalogInputs.bReceivedSingle=TRUE;
+            vResetComSendData_m();
           }
         }
       }

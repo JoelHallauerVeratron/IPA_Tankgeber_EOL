@@ -282,10 +282,10 @@ char *pcDevSpec_DigInputsGetText_m(UINT uiInput)
   char *pcInputName;
   switch(uiInput)
   {
-    case  0: pcInputName="CPU Idle Time";  break;
-    case  1: pcInputName="DIP Switches";  break;
-    case  2: pcInputName="reserved";  break;
-    //case  3: pcInputName="Trip switch";  break;
+    case  0: pcInputName="DIP Switches (00)";  break;
+    case  1: pcInputName="DIP Switches (01)";  break;
+    case  2: pcInputName="DIP Switches (10)";  break;
+    case  3: pcInputName="DIP Switches (11)";  break;
     //case  4: pcInputName="dig. Input 5";  break;
     //case  5: pcInputName="dig. Input 6";  break;
     //case  6: pcInputName="dig. Input 7";  break;
@@ -324,7 +324,7 @@ char *pcDevSpec_DigOutputsGetText_m(UINT uiOutput)
   char *pcOutputName;
   switch(uiOutput)
   {
-    //case 0: pcOutputName="Alarm"; break;
+    case 0: pcOutputName="LED"; break;
     //case 1: pcOutputName="Alarm"; break;
     //case 2: pcOutputName="dig. Output 2"; break;   // @@@
     //case 3: pcOutputName="dig. Output 3"; break;   // @@@
@@ -349,9 +349,9 @@ char *pcDevSpec_AnalogInputsGetText_m(UINT uiInput)
   char *pcInputName;
   switch(uiInput)
   {
-    case 0: pcInputName="Level [%]"; break;
-    //case 1: pcInputName="GPS signal SNR"; break;
-    //case 2: pcInputName="ANI3 U-Ign [10mV]"; break;
+    case 0: pcInputName="Battery Voltage"; break;
+    case 1: pcInputName="Chip Temperature"; break;
+    case 2: pcInputName="Liquid Level"; break;
     //case 3: pcInputName="ANI4 U-Illum [10mV]"; break;
     //case 4: pcInputName="ANI5 R-Pin8 [ohm]"; break;
     //case 5: pcInputName="ANI6 R-Pin9 [ohm]"; break;
@@ -398,7 +398,7 @@ char *pcDevSpec_FreqInputsGetText_m(UINT uiInput)
   char *pcInputName;
   switch(uiInput)
   {
-    case 0: pcInputName="Freq. Pin 4"; break;
+//  case 0: pcInputName="Freq. Pin 4"; break;
     //case 1: pcInputName="Freq. Input 2"; break;
     //case 2: pcInputName="Freq. Input 4"; break;
     //case 3: pcInputName="Freq. Input 4"; break;
@@ -443,7 +443,7 @@ char *pcDevSpec_DeviceSpecificTestGetText_m(UINT uiTestNumber)
   char *pcTestName;
   switch(uiTestNumber)
   {
-    //case 0: pcTestName="inspection state aktivieren (0x81)"; break;
+    case 0: pcTestName="Write Fact. defaults"; break;
     //case 1: pcTestName="inspection state deaktivieren (0x01)"; break;
     //case 2: pcTestName="EasyLink-Bus testen"; break;
     //case 3: pcTestName="Lin-Bus testen"; break;
