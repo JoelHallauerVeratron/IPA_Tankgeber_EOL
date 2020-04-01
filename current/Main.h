@@ -50,11 +50,10 @@
 #define  PNL_MENU                        2
 #define  PNL_MENU_BTN_ABOUT              2       /* callback function: TouchMenuCB */
 #define  PNL_MENU_BTN_EXIT               3       /* callback function: TouchMenuCB */
-#define  PNL_MENU_BTN_DIAG_PRT9          4       /* callback function: TouchMenuCB */
-#define  PNL_MENU_BTN_DIAG_IO            5       /* callback function: TouchMenuCB */
-#define  PNL_MENU_BTN_TEST_FKT           6       /* callback function: TouchMenuCB */
-#define  PNL_MENU_BTN_DIAG_CAN           7       /* callback function: TouchMenuCB */
-#define  PNL_MENU_TEXTMSG                8
+#define  PNL_MENU_BTN_DIAG_IO            4       /* callback function: TouchMenuCB */
+#define  PNL_MENU_BTN_TEST_FKT           5       /* callback function: TouchMenuCB */
+#define  PNL_MENU_BTN_DIAG_CAN           6       /* callback function: TouchMenuCB */
+#define  PNL_MENU_TEXTMSG                7
 
 #define  PNL_TESTS                       3
 #define  PNL_TESTS_SW_TEST_LED           2       /* callback function: SwitchCB */

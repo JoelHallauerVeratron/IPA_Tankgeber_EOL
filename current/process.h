@@ -106,90 +106,85 @@ typedef enum
   mess_current_idle_eval               = mess_current_idle+14,
 
   /**
-   * Stromaufnahme messen
+   * Wasserstand auf 100%
    */
-  led_test                             = 1100,
-  led_test_init                        = led_test+10,
-
-  led_test_set                         = led_test+20,
-  led_test_wait                        = led_test+21,
-
-  led_test_reset                       = led_test+30,
-
-  led_test_end                         = led_test+99,
+  LiquidLevelToFull_start             = 2000,
+  LiquidLevelToFull_fill              = LiquidLevelToFull_start+10,
+  LiquidLevelToFull_wait              = LiquidLevelToFull_start+20,
+  LiquidLevelToFull_end               = LiquidLevelToFull_start+99,
 
 
   /**
-   * analog Inputs testen
+   * Prüfen des Wasserstandes an den Tankgebern
    */
-  ai_test                              = 2000,
-
-  ai_test_init                         = ai_test+10,
-  ai_test_init_wait                    = ai_test+11,
-
-  ai_test_set                          = ai_test+30,
-  ai_test_set_wait                     = ai_test+31,
-
-  ai_test_req                          = ai_test+40,
-  ai_test_read                         = ai_test+41,
-  ai_test_next                         = ai_test+42,
-
-  ai_test_end                          = ai_test+99,
-
+  CheckLiquidLevelFull_start         = 3000,
+  CheckLiquidLevelFull_WaitForDut    = CheckLiquidLevelFull_start+10
+  CheckLiquidLevelFull_check         = CheckLiquidLevelFull_start+20
+  CheckLiquidLevelFull_end           = CheckLiquidLevelFull_start+99
 
   /**
-   * NFC testen
+   * Wasserstand auf 50%
    */
-  nfc_test                              = 2100,
+  LiquidLevelToHalf_start             = 4000,
+  LiquidLevelToHalf_fill              = LiquidLevelToHalf_start+10,
+  LiquidLevelToHalf_wait              = LiquidLevelToHalf_start+20
+  LiquidLevelToHalf_end               = LiquidLevelToHalf_start+99
 
-  nfc_test_init                         = nfc_test+10,
-  nfc_test_init_wait                    = nfc_test+11,
+  /**
+  * Prüfen des Wasserstandes an den Tankgebern
+   */
+  CheckLiquidLevelHalf_start          = 5000,
+  CheckLiquidLevelHalf_WaitForDut     = CheckLiquidLevelHalf_start+10
+  CheckLiquidLevelHalf_check          = CheckLiquidLevelHalf_start+20
+  CheckLiquidLevelHalf_end            = CheckLiquidLevelHalf_start+99
 
-  nfc_test_set                          = nfc_test+30,
-  nfc_test_set_wait                     = nfc_test+31,
+  /**
+   * Wasserstand auf 0%
+   */
+  LiquidLevelToEmpty_start             = 6000,
+  LiquidLevelToEmpty_fill              = LiquidLevelToEmpty_start+10,
+  LiquidLevelToEmpty_wait              = LiquidLevelToEmpty_start+20
+  LiquidLevelToEmpty_end               = LiquidLevelToEmpty_start+99
 
-  nfc_test_req                          = nfc_test+40,
-  nfc_test_read                         = nfc_test+41,
-
-  nfc_test_end                          = nfc_test+99,
-
+  /**
+  * Prüfen des Wasserstandes an den Tankgebern
+   */
+  CheckLiquidLevelEmpty_start          = 7000,
+  CheckLiquidLevelEmpty_WaitForDut     = CheckLiquidLevelEmpty_start+10
+  CheckLiquidLevelEmpty_check          = CheckLiquidLevelEmpty_start+20
+  CheckLiquidLevelEmpty_end            = CheckLiquidLevelEmpty_start+99
 
 
   /* Bearbeitung abgeschlossen */
-  process_end                          = 3000,
+  process_end                          = 8000,
 
 
-  prod_data_start                      = 3100,
-  prod_data_write                      = 3110,
-  prod_data_write_wait                 = 3111,
-  prod_data_write_next                 = 3112,
+  prod_data_start                      = 8100,
+  prod_data_write                      = 8110,
+  prod_data_write_wait                 = 8111,
+  prod_data_write_next                 = 8112,
 
-#ifdef USE_LABEL_PRINTER
-  printer_test                         = 3150,
-  print_label                          = 3151,
-#endif // USE_LABEL_PRINTER
+  ignition_reset                       = 8240,
+  ignition_reset2                      = 8241,
+  interface_reset                      = 8245,
 
-  ignition_reset                       = 3240,
-  ignition_reset2                      = 3241,
-  interface_reset                      = 3245,
+  spannen_reset_taste                  = 8250,
+  spannen_reset                        = 8251,
 
-  spannen_reset_taste                  = 3250,
-  spannen_reset                        = 3251,
+  kontakt_aus                          = 8260,
+  kontakt_aus_wait                     = 8261,
 
-  kontakt_aus                          = 3260,
-  kontakt_aus_wait                     = 3261,
-
-  wait_pruefling_weg                   = 3270,
+  wait_pruefling_weg                   = 8270,
 
 
-  fehler                               = 3280,
-  fehler_taste                         = 3281,
-  fehler_auswertung                    = 3290,
+  fehler                               = 8280,
+  fehler_taste                         = 8281,
+  fehler_auswertung                    = 8290,
 
 
 
-  network_wait_for_reconnect           = 6000,
-  network_wait_for_reconnect_wait      = 6001,
+  network_wait_for_reconnect           = 9000,
+  network_wait_for_reconnect_wait      = 8001,
 
   /**
    * Sub-State-Machine

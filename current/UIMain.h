@@ -112,14 +112,14 @@ typedef struct
   } tagNetworkError;
 
 //@TESTER_GUI_GENERATED_STRUCT_VARS_START@
-//Generated: 14:02 @ 20.03.2020
+//Generated: 15:48 @ 01.04.2020
 //Variables for Struct
-TagGuiTest0007 *ptagGuiProdDataRead;
-TagGuiTest0003 *ptagGuiCurrentIdle;
-TagGuiTest0001 *ptagGuiCheckLed;
-TagGuiTest0007 *ptagGuiCheckAdc;
-TagGuiTest0007 *ptagGuiCheckNfc;
-TagGuiTest0007 *ptagGuiProdDataWrite;
+TagGuiTest0001 *ptagGuiWaitForLiquidLevelFull;
+TagGuiTest0004 *ptagGuiCheckLiquidLevelFull;
+TagGuiTest0001 *ptagGuiWaitForLiquidLevelHalf;
+TagGuiTest0004 *ptagGuiCheckLiquidLevelHalf;
+TagGuiTest0001 *ptagGuiWaitForLiquidLevelEmpty;
+TagGuiTest0004 *ptagGuiCheckLiquidLevelEmpty;
 //@TESTER_GUI_GENERATED_STRUCT_VARS_END@
 
 } tagUIElements;
@@ -189,7 +189,7 @@ void vUISetNetworkState_g(BOOL bAvailable, BOOL bNetworkNeeded);
 
 
 //@TESTER_GUI_GENERATED_PROTOTYPES_START@
-//Generated: 14:02 @ 20.03.2020
+//Generated: 15:48 @ 01.04.2020
 //General Functions
 void vLibTesterGui_Init_g(void);
 void vLibTesterGui_Discard_g(void);
@@ -197,41 +197,62 @@ void vLibTesterGui_VisualUpdate_g(void);
 int iUiAll_SetState_g(EPanelStatus eState);
 int iUiGuiX_SetState_g(int iCurrentState,EPanelStatus eState);
 
-//Prototypes of ProdDataRead, GUI: 0007
-int iUiProdDataRead_SetState_g(EPanelStatus eState);
-void vUiProdDataRead_SetTitle_g(char *pcTitle,...);
-void vUiProdDataRead_SetText_g(char *pcText,...);
+//Prototypes of WaitForLiquidLevelFull, GUI: 0001
+int iUiWaitForLiquidLevelFull_SetState_g(EPanelStatus eState);
+BOOL bUiWaitForLiquidLevelFull_SetWorkOrder_g(char *pcWorkOrder);
+void vUiWaitForLiquidLevelFull_SetTitle_g(char *pcTitle, ...);
+BOOL bUiWaitForLiquidLevelFull_SetFixMode_g(EFixMode eFixMode);
+int iUiWaitForLiquidLevelFull_InsertPicture_g(const char *pcPath, TagPictureSize *ptagImagesize);
+BOOL bUiWaitForLiquidLevelFull_RemovePicture_g(int iPictureID);
+BOOL bUiWaitForLiquidLevelFull_ReplacePicture_g(const char *pcPath, int iPictureID);
 
-//Prototypes of CurrentIdle, GUI: 0003
-int iUiCurrentIdle_SetState_g(EPanelStatus eState);
-void vUiCurrentIdle_SetTitle_g(char *pcTitle, ...);
-void vUiCurrentIdle_SetMinMax_g(double dIMin, double dIMax);
-void vUiCurrentIdle_SetCurrent_g(double dICurrent);
-void vUiCurrentIdle_SetUnit_g(char *pcUnit);
+//Prototypes of CheckLiquidLevelFull, GUI: 0004
+int iUiCheckLiquidLevelFull_SetState_g(EPanelStatus eState);
+void vUiCheckLiquidLevelFull_SetTitle_g(char *pcTitle, ...);
+void vUiCheckLiquidLevelFull_SetMinMax_g(double dIMin, double dIMax);
+void vUiCheckLiquidLevelFull_SetValue_g(double dValue);
+void vUiCheckLiquidLevelFull_SetUnit_g(char *pcUnit);
+void vUiCheckLiquidLevelFull_SetTolerance_g(double dTolerance);
+void vUiCheckLiquidLevelFull_SetSoll_g(double dSoll);
+void vUiCheckLiquidLevelFull_SetPrecision_g(int iPrecision);
 
-//Prototypes of CheckLed, GUI: 0001
-int iUiCheckLed_SetState_g(EPanelStatus eState);
-BOOL bUiCheckLed_SetWorkOrder_g(char *pcWorkOrder);
-void vUiCheckLed_SetTitle_g(char *pcTitle, ...);
-BOOL bUiCheckLed_SetFixMode_g(EFixMode eFixMode);
-int iUiCheckLed_InsertPicture_g(const char *pcPath, TagPictureSize *ptagImagesize);
-BOOL bUiCheckLed_RemovePicture_g(int iPictureID);
-BOOL bUiCheckLed_ReplacePicture_g(const char *pcPath, int iPictureID);
+//Prototypes of WaitForLiquidLevelHalf, GUI: 0001
+int iUiWaitForLiquidLevelHalf_SetState_g(EPanelStatus eState);
+BOOL bUiWaitForLiquidLevelHalf_SetWorkOrder_g(char *pcWorkOrder);
+void vUiWaitForLiquidLevelHalf_SetTitle_g(char *pcTitle, ...);
+BOOL bUiWaitForLiquidLevelHalf_SetFixMode_g(EFixMode eFixMode);
+int iUiWaitForLiquidLevelHalf_InsertPicture_g(const char *pcPath, TagPictureSize *ptagImagesize);
+BOOL bUiWaitForLiquidLevelHalf_RemovePicture_g(int iPictureID);
+BOOL bUiWaitForLiquidLevelHalf_ReplacePicture_g(const char *pcPath, int iPictureID);
 
-//Prototypes of CheckAdc, GUI: 0007
-int iUiCheckAdc_SetState_g(EPanelStatus eState);
-void vUiCheckAdc_SetTitle_g(char *pcTitle,...);
-void vUiCheckAdc_SetText_g(char *pcText,...);
+//Prototypes of CheckLiquidLevelHalf, GUI: 0004
+int iUiCheckLiquidLevelHalf_SetState_g(EPanelStatus eState);
+void vUiCheckLiquidLevelHalf_SetTitle_g(char *pcTitle, ...);
+void vUiCheckLiquidLevelHalf_SetMinMax_g(double dIMin, double dIMax);
+void vUiCheckLiquidLevelHalf_SetValue_g(double dValue);
+void vUiCheckLiquidLevelHalf_SetUnit_g(char *pcUnit);
+void vUiCheckLiquidLevelHalf_SetTolerance_g(double dTolerance);
+void vUiCheckLiquidLevelHalf_SetSoll_g(double dSoll);
+void vUiCheckLiquidLevelHalf_SetPrecision_g(int iPrecision);
 
-//Prototypes of CheckNfc, GUI: 0007
-int iUiCheckNfc_SetState_g(EPanelStatus eState);
-void vUiCheckNfc_SetTitle_g(char *pcTitle,...);
-void vUiCheckNfc_SetText_g(char *pcText,...);
+//Prototypes of WaitForLiquidLevelEmpty, GUI: 0001
+int iUiWaitForLiquidLevelEmpty_SetState_g(EPanelStatus eState);
+BOOL bUiWaitForLiquidLevelEmpty_SetWorkOrder_g(char *pcWorkOrder);
+void vUiWaitForLiquidLevelEmpty_SetTitle_g(char *pcTitle, ...);
+BOOL bUiWaitForLiquidLevelEmpty_SetFixMode_g(EFixMode eFixMode);
+int iUiWaitForLiquidLevelEmpty_InsertPicture_g(const char *pcPath, TagPictureSize *ptagImagesize);
+BOOL bUiWaitForLiquidLevelEmpty_RemovePicture_g(int iPictureID);
+BOOL bUiWaitForLiquidLevelEmpty_ReplacePicture_g(const char *pcPath, int iPictureID);
 
-//Prototypes of ProdDataWrite, GUI: 0007
-int iUiProdDataWrite_SetState_g(EPanelStatus eState);
-void vUiProdDataWrite_SetTitle_g(char *pcTitle,...);
-void vUiProdDataWrite_SetText_g(char *pcText,...);
+//Prototypes of CheckLiquidLevelEmpty, GUI: 0004
+int iUiCheckLiquidLevelEmpty_SetState_g(EPanelStatus eState);
+void vUiCheckLiquidLevelEmpty_SetTitle_g(char *pcTitle, ...);
+void vUiCheckLiquidLevelEmpty_SetMinMax_g(double dIMin, double dIMax);
+void vUiCheckLiquidLevelEmpty_SetValue_g(double dValue);
+void vUiCheckLiquidLevelEmpty_SetUnit_g(char *pcUnit);
+void vUiCheckLiquidLevelEmpty_SetTolerance_g(double dTolerance);
+void vUiCheckLiquidLevelEmpty_SetSoll_g(double dSoll);
+void vUiCheckLiquidLevelEmpty_SetPrecision_g(int iPrecision);
 
 //@TESTER_GUI_GENERATED_PROTOTYPES_END@
 

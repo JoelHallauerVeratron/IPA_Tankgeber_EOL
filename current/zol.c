@@ -22,28 +22,28 @@
 //                                 |  |           |        +----------- .pcTxt (Beschreibung)
 //                                 |  |           |        |
 tagDigInp  eNotausOk            = {1, MODUL(0,0), &eInp00, "Notaus quittiert"};
-tagDigInp  eTasteStart          = {1, MODUL(0,1), &eInp01, "Taste: Start"};
-tagDigInp  eTasteQuittierung    = {1, MODUL(0,2), &eInp02, "Taste: Quittierung"};
-tagDigInp  eNotausEntriegelt    = {1, MODUL(0,3), &eInp03, "Notaustaste entriegelt"};
-// E0.4 Reserve
-// E0.5 Reserve
-tagDigInp  eTeilEingelegt       = {1, MODUL(0,6), &eInp06, "Teil eingelegt"};
-// E0.7 Reserve
+tagDigInp  eAlarmDut            = {1, MODUL(0,1), &eInp01, "Alarm DUT"};
+// E0.2 Reserve
+// E0.3 Reserve
+tagDigInp  eBCDBit0             = {1, MODUL(0,4), &eInp20, "BCDBit0"};
+tagDigInp  eBCDBit1             = {1, MODUL(0,5), &eInp21, "BCDBit1"};
+tagDigInp  eBCDBit2             = {1, MODUL(0,6), &eInp22, "BCDBit2"};
+tagDigInp  eBCDBit3             = {1, MODUL(0,7), &eInp23, "BCDBit3"};
 //==========================
 //tagDigInp  eVerriegelungRS      = {1, MODUL(1,0), &eInp10, "Verriegelung offen"};
 //tagDigInp  eVerriegelungAS      = {1, MODUL(1,1), &eInp11, "Verriegelung zu"};
 //tagDigInp  eKontaktAS           = {1, MODUL(1,2), &eInp12, "Kontakt. Arbeitspos."};
 //tagDigInp  eKontaktRS           = {1, MODUL(1,3), &eInp13, "Kontakt. Ruhepos."};
-tagDigInp  eHaubeInAS             = {1, MODUL(1,4), &eInp14, "Haube Arbeitspos."};
+//tagDigInp  eHaubeInAS             = {1, MODUL(1,4), &eInp14, "Haube Arbeitspos."};
 // E1.5 Reserve
 // E1.6 Reserve
 // E1.7 Reserve
 //==========================
-tagDigInp  eTasteIo             = {1, MODUL(2,0), &eInp20, "Taste IO"};
-tagDigInp  eTasteNio            = {1, MODUL(2,1), &eInp21, "Taste NIO"};
-tagDigInp  eTasteEnter          = {1, MODUL(2,2), &eInp22, "Taste Enter"};
-tagDigInp  eTastePrev           = {1, MODUL(2,3), &eInp23, "Taste <<"};
-tagDigInp  eTasteNext           = {1, MODUL(2,4), &eInp24, "Taste >>"};
+//tagDigInp  eTasteIo             = {1, MODUL(2,0), &eInp20, "Taste IO"};
+//tagDigInp  eTasteNio            = {1, MODUL(2,1), &eInp21, "Taste NIO"};
+//tagDigInp  eTasteEnter          = {1, MODUL(2,2), &eInp22, "Taste Enter"};
+//tagDigInp  eTastePrev           = {1, MODUL(2,3), &eInp23, "Taste <<"};
+//tagDigInp  eTasteNext           = {1, MODUL(2,4), &eInp24, "Taste >>"};
 // E2.5 Reserve
 // E2.6 Reserve
 //tagDigInp  eTTOilPress          = {1, MODUL(2,7), &eInp27, "Oil Pressure"};
@@ -62,29 +62,29 @@ tagDigInp  eTasteNext           = {1, MODUL(2,4), &eInp24, "Taste >>"};
 
 tagDigInp *apDigInpList_g[] =
 {
-  &eNotausOk,
-  &eTasteStart,
-  &eTasteQuittierung,
-  &eNotausEntriegelt,
-// E0.4 Reserve
-// E0.5 Reserve
-  &eTeilEingelegt,
-// E0.7 Reserve
+  eNotausOk
+  eAlarmDut
+// E0.2 Reserve
+// E0.3 Reserve
+  eBCDBit0
+  eBCDBit1
+  eBCDBit2
+  eBCDBit3
 //==========================
   //&eVerriegelungRS,
   //&eVerriegelungAS,
   //&eKontaktAS,
   //&eKontaktRS,
-  &eHaubeInAS,
+//&eHaubeInAS,
 // E1.5 Reserve
 // E1.6 Reserve
 // E1.7 Reserve
 //==========================
-  &eTasteIo,
-  &eTasteNio,
-  &eTasteEnter,
-  &eTastePrev,
-  &eTasteNext,
+//&eTasteIo,
+//&eTasteNio,
+//&eTasteEnter,
+//&eTastePrev,
+//&eTasteNext,
 // E2.5 Reserve
 // E2.6 Reserve
   //&eTTOilPress,
@@ -110,26 +110,26 @@ tagDigInp *apDigInpList_g[] =
 //                                     |  |           +----------- .IBS_Node (Eingangsvariable)
 //                                     |  |           |        +----------- .pcTxt (Beschreibung)
 //                                     |  |           |        |
-tagDigOut  aLampeStart              = {1, MODUL(0,0), &aOut00, "Lampe: Start"};
-tagDigOut  aLampeFehler             = {1, MODUL(0,1), &aOut01, "Lampe: Störung"};
-tagDigOut  aLampePass               = {1, MODUL(0,2), &aOut02, "Lampe: PASS"};
-tagDigOut  aLampeFail               = {1, MODUL(0,3), &aOut03, "Lampe: FAIL"};
-tagDigOut  aSteuerungBereit         = {1, MODUL(0,4), &aOut04, "Steuerung bereit"};
-// A0.5 Reserve
-// A0.6 Reserve
-// A0.7 Reserve
+tagDigOut aUbattDutt                = {1, MODUL(0,0), &aOut00, "Ubatt DUT"};
+tagDigOut aUmschalterVolt           = {1, MODUL(0,1), &aOut01, "Umschaltung 12/->24V"};
+// A0.2 Reserve                     = {1, MODUL(0,2), &aOut02, "Lampe: PASS"};
+// A0.3 Reserve                     = {1, MODUL(0,3), &aOut03, "Lampe: FAIL"};
+// A0.4 Reserve                     = {1, MODUL(0,4), &aOut04, "Steuerung bereit"};
+tagDigOut aVentilTankDruck          = {1, MODUL(0,5), &aOut04, "Ventil Tank Druck>"};
+tagDigOut aVentilWasserAblassen     = {1, MODUL(0,6), &aOut04, "Ventil Wasser ablassen"};
+tagDigOut aVentilWasserhahn         = {1, MODUL(0,7), &aOut04, "Ventil Wasserhahn"};
 //==========================
-//tagDigOut  aVentilVerrieglungZu     = {1, MODUL(1,0), &aOut10, "-Y312 Verriegelung zu"};
+tagDigOut  aDUTSourceSink           = {1, MODUL(1,0), &aOut10, "DUT Source/->Sink"};
 //tagDigOut  aVentilKontakt           = {1, MODUL(1,1), &aOut11, "-Y322 Kontaktierung"};
 //tagDigOut  aSignierung              = {1, MODUL(1,2), &aOut12, "-K133 Signierung"};
 //tagDigOut  aVentilFill              = {1, MODUL(1,3), &aOut13, "-Y344 Füll-Ventil"};
 //tagDigOut  aVentilDichten           = {1, MODUL(1,4), &aOut14, "-Y346 Dicht-Ventil"};
-tagDigOut  aK506Reserve               = {1, MODUL(1,5), &aOut15, "-K506 (Reserve)"};
-tagDigOut  aK507Reserve               = {1, MODUL(1,6), &aOut16, "-K507 (Reserve)"};
+//tagDigOut  aK506Reserve               = {1, MODUL(1,5), &aOut15, "-K506 (Reserve)"};
+//tagDigOut  aK507Reserve               = {1, MODUL(1,6), &aOut16, "-K507 (Reserve)"};
 // A1.7 Reserve
 //==========================
 //tagDigOut  aUmschVGND               = {1, MODUL(2,0), &aOut20, "-K412 Umschaltung GND -> +V"};
-tagDigOut  aDutVccBatt              = {1, MODUL(2,1), &aOut21, "-K413/-K414 Batterie"};
+//tagDigOut  aDutVccBatt              = {1, MODUL(2,1), &aOut21, "-K413/-K414 Batterie"};
 //tagDigOut  aDutIgnition             = {1, MODUL(2,2), &aOut22, "-K415 Ignition"};
 //tagDigOut  aDutFuel                 = {1, MODUL(2,3), &aOut23, "-K416 Fuel"};
 //tagDigOut  aDUT_Pin4_high           = {1, MODUL(2,4), &aOut24, "-K417 Pin 4 high (ABS)"};
@@ -141,10 +141,10 @@ tagDigOut  aDutVccBatt              = {1, MODUL(2,1), &aOut21, "-K413/-K414 Batt
 //tagDigOut  aDUT_Pin8_high           = {1, MODUL(3,1), &aOut31, "-K426 Pin 4 high"};
 //tagDigOut  aSwitchToJ1850           = {1, MODUL(3,2), &aOut32, "-K134 Umschaltung auf J1850"};
 //tagDigOut  aTripSwToGnd             = {1, MODUL(3,3), &aOut33, "-K427 TripSwitch auf GND"};
-tagDigOut  aK502DutR500             = {1, MODUL(3,4), &aOut34, "-K502 Rxx an DUT"};
-tagDigOut  aK503Reserve             = {1, MODUL(3,5), &aOut35, "-K503 (Reserve)"};
-tagDigOut  aK504Reserve             = {1, MODUL(3,6), &aOut36, "-K504 (Reserve)"};
-tagDigOut  aK505Reserve             = {1, MODUL(3,7), &aOut37, "-K505 (Reserve)"};
+//tagDigOut  aK502DutR500             = {1, MODUL(3,4), &aOut34, "-K502 Rxx an DUT"};
+//tagDigOut  aK503Reserve             = {1, MODUL(3,5), &aOut35, "-K503 (Reserve)"};
+//tagDigOut  aK504Reserve             = {1, MODUL(3,6), &aOut36, "-K504 (Reserve)"};
+//tagDigOut  aK505Reserve             = {1, MODUL(3,7), &aOut37, "-K505 (Reserve)"};
 //==========================
 
 #if 0
@@ -161,26 +161,26 @@ tagDigOut  aDUT_Pin12_high          = {1, MODUL(x,y), &aOut27, "-K104: Pin 12 hi
 
 tagDigOut *apDigOutList_g[] =
 {
-  &aLampeStart,
-  &aLampeFehler,
-  &aLampePass,
-  &aLampeFail,
-  &aSteuerungBereit,
-// A0.5 Reserve
-// A0.6 Reserve
-// A0.7 Reserve
+  &aUbattDutt
+  &aUmschalterVolt
+// A0.2 Reserve
+// A0.3 Reserve
+// A0.4 Reserve
+  &aVentilTankDruck
+  &aVentilWasserAblassen
+  &aVentilWasserhahn
 //==========================
-  //&aVentilVerrieglungZu,
+  &aDUTSourceSink
   //&aVentilKontakt,
   //&aSignierung,
   //&aVentilFill,
   //&aVentilDichten,
-  &aK506Reserve,
-  &aK507Reserve,
+//&aK506Reserve,
+//&aK507Reserve,
 // A1.7 Reserve
 //==========================
   //&aUmschVGND,
-  &aDutVccBatt,
+//&aDutVccBatt,
   //&aDutIgnition,
   //&aDutFuel,
   //&aDUT_Pin4_high,
@@ -192,10 +192,10 @@ tagDigOut *apDigOutList_g[] =
   //&aDUT_Pin8_high,
   //&aSwitchToJ1850,
   //&aTripSwToGnd,
-  &aK502DutR500,
-  &aK503Reserve,
-  &aK504Reserve,
-  &aK505Reserve,
+//&aK502DutR500,
+//&aK503Reserve,
+//&aK504Reserve,
+//&aK505Reserve,
 //==========================
   NULL
 };
@@ -210,7 +210,7 @@ tagDigOut *apDigOutList_g[] =
 //               |  |               |         +----------- .IBS_Node (Eingangsvariable)
 //               |  |               |         |      +----------- .pcTxt (Beschreibung)
 //               |  |               |         |      |
-tagAInp eADC1 = {1, PNL_DIAGIO_AI1, 0.033333, &eAI1, "Ivcc [mA]"};   // 30000 entspr. 1A (10V)
+tagAInp eADC1 = {1, PNL_DIAGIO_AI1, 0,        &eAI1, "Ivcc [mA]"};   // 30000 entspr. 1A (10V)
 //tagAInp eADC2 = {1, PNL_DIAGIO_AI2, 0.333333, &eAI2, "U-CAN [mV]"};   // 3000 entspr. 1000mV (1V)
 //tagAInp eADC3 = {2, PNL_DIAGIO_AI3, 0.065769, &eAI3, "Druck [mB]"};   // 3429 entspr. 227.8mb
 
@@ -252,28 +252,26 @@ tagAOut *apAOutList_g[] =
 void vResAllOutputs_g(void)
 //  ------------------------------------------------------------------------------------------------
 {
-  vSetDO_g(&aLampeStart,FALSE);
-  vSetDO_g(&aLampeStart,FALSE);
-  vSetDO_g(&aLampeStart,FALSE);
-  vSetDO_g(&aLampeFehler,FALSE);
-  vSetDO_g(&aLampePass,FALSE);
-  vSetDO_g(&aLampeFail,FALSE);
-  //vSetDO_g(&aSteuerungBereit,FALSE);
-// A0.5 Reserve
-// A0.6 Reserve
-// A0.7 Reserve
+  vSetDO_g(&aUbattDutt,            FALSE);
+  vSetDO_g(&aUmschalterVolt,       FALSE);
+// A0.2 Reserve
+// A0.3 Reserve
+// A0.4 Reserve
+  vSetDO_g(&aVentilTankDruck,      FALSE);
+  vSetDO_g(&aVentilWasserAblassen, FALSE);
+  vSetDO_g(&aVentilWasserhahn,     FALSE);
 //==========================
-  //vSetDO_g(&aVentilVerrieglungZu,FALSE);
+  vSetDO_g(&aDUTSourceSink,FALSE);
   //vSetDO_g(&aVentilKontakt,FALSE);
   //vSetDO_g(&aSignierung,FALSE);
   //vSetDO_g(&aVentilFill,FALSE);
   //vSetDO_g(&aVentilDichten,FALSE);
-  vSetDO_g(&aK506Reserve,FALSE);
-  vSetDO_g(&aK507Reserve,FALSE);
+//vSetDO_g(&aK506Reserve,FALSE);
+//vSetDO_g(&aK507Reserve,FALSE);
 // A1.7 Reserve
 //==========================
   //vSetDO_g(&aUmschVGND,FALSE);
-  vSetDO_g(&aDutVccBatt,FALSE);
+//vSetDO_g(&aDutVccBatt,FALSE);
   //vSetDO_g(&aDutIgnition,FALSE);
   //vSetDO_g(&aDutFuel,FALSE);
   //vSetDO_g(&aDUT_Pin4_high,FALSE);
@@ -285,10 +283,10 @@ void vResAllOutputs_g(void)
   //vSetDO_g(&aDUT_Pin8_high,FALSE);
   //vSetDO_g(&aSwitchToJ1850,FALSE);
   //vSetDO_g(&aTripSwToGnd,FALSE);
-  vSetDO_g(&aK502DutR500,FALSE);
-  vSetDO_g(&aK503Reserve,FALSE);
-  vSetDO_g(&aK504Reserve,FALSE);
-  vSetDO_g(&aK505Reserve,FALSE);
+//vSetDO_g(&aK502DutR500,FALSE);
+//vSetDO_g(&aK503Reserve,FALSE);
+//vSetDO_g(&aK504Reserve,FALSE);
+//vSetDO_g(&aK505Reserve,FALSE);
 //==========================
 } // vResAllOutputs_g()
 

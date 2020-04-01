@@ -56,14 +56,14 @@ extern int iPanelTests_m;
 
 
 //@TESTER_GUI_GENERATED_GUI_VARS_START@
-//Generated: 14:02 @ 20.03.2020
+//Generated: 15:48 @ 01.04.2020
 //Gui Variables
-int iGui0007_ProdDataRead_m;
-int iGui0003_CurrentIdle_m;
-int iGui0001_CheckLed_m;
-int iGui0007_CheckAdc_m;
-int iGui0007_CheckNfc_m;
-int iGui0007_ProdDataWrite_m;
+int iGui0001_WaitForLiquidLevelFull_m;
+int iGui0004_CheckLiquidLevelFull_m;
+int iGui0001_WaitForLiquidLevelHalf_m;
+int iGui0004_CheckLiquidLevelHalf_m;
+int iGui0001_WaitForLiquidLevelEmpty_m;
+int iGui0004_CheckLiquidLevelEmpty_m;
 BOOL bTesterGuiInitialized_m=FALSE;
 //@TESTER_GUI_GENERATED_GUI_VARS_END@
 
@@ -139,7 +139,7 @@ void vUIDiscard_g(void)
 }
 
 //@TESTER_GUI_GENERATED_GENERAL_FUNCS_START@
-//Generated: 14:02 @ 20.03.2020
+//Generated: 15:48 @ 01.04.2020
 /**
  * Init Function for LibTesterGuis
  */
@@ -150,44 +150,23 @@ void vLibTesterGui_Init_g(void)
     vLibTesterGui_Discard_g();
   }
 
-  iGui0007_ProdDataRead_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0007);
-  tagUIElements_m.ptagGuiProdDataRead = ptagLibTesterGui_0007_Init(iPanelMain_m,"Produktionsdaten lesen");
+  iGui0001_WaitForLiquidLevelFull_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0001);
+  tagUIElements_m.ptagGuiWaitForLiquidLevelFull = ptagLibTesterGui_0001_Init(iPanelMain_m,"Wasserstand auf 100%");
 
-  iGui0003_CurrentIdle_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0003);
-  tagUIElements_m.ptagGuiCurrentIdle = ptagLibTesterGui_0003_Init(iPanelMain_m,"Stromaufnahme messen");
+  iGui0004_CheckLiquidLevelFull_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0004);
+  tagUIElements_m.ptagGuiCheckLiquidLevelFull = ptagLibTesterGui_0004_Init(iPanelMain_m,"Prüfe Sensor 100%");
 
-  if(tagAppStatus_g.tagTest.bLed)
-  {
-    iGui0001_CheckLed_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0001);
-    tagUIElements_m.ptagGuiCheckLed = ptagLibTesterGui_0001_Init(iPanelMain_m,"LED prüfen");
-  }
-  else
-  {
-    tagUIElements_m.ptagGuiCheckLed = NULL;
-  }
+  iGui0001_WaitForLiquidLevelHalf_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0001);
+  tagUIElements_m.ptagGuiWaitForLiquidLevelHalf = ptagLibTesterGui_0001_Init(iPanelMain_m,"Wasserstand auf 100");
 
-  if(tagAppStatus_g.tagTest.bAnInputs)
-  {
-    iGui0007_CheckAdc_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0007);
-    tagUIElements_m.ptagGuiCheckAdc = ptagLibTesterGui_0007_Init(iPanelMain_m,"ADC-Wert prüfen");
-  }
-  else
-  {
-    tagUIElements_m.ptagGuiCheckAdc = NULL;
-  }
+  iGui0004_CheckLiquidLevelHalf_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0004);
+  tagUIElements_m.ptagGuiCheckLiquidLevelHalf = ptagLibTesterGui_0004_Init(iPanelMain_m,"Prüfe Sensor 50%");
 
-  if(tagAppStatus_g.tagTest.bNfc)
-  {
-    iGui0007_CheckNfc_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0007);
-    tagUIElements_m.ptagGuiCheckNfc = ptagLibTesterGui_0007_Init(iPanelMain_m,"NFC prüfen");
-  }
-  else
-  {
-    tagUIElements_m.ptagGuiCheckNfc = NULL;
-  }
+  iGui0001_WaitForLiquidLevelEmpty_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0001);
+  tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty = ptagLibTesterGui_0001_Init(iPanelMain_m,"Wasserstand auf 0%");
 
-  iGui0007_ProdDataWrite_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0007);
-  tagUIElements_m.ptagGuiProdDataWrite = ptagLibTesterGui_0007_Init(iPanelMain_m,"Produktionsdaten schreiben");
+  iGui0004_CheckLiquidLevelEmpty_m = iLibTesterGuiMgr_AddGui(eLibTesterGui_0004);
+  tagUIElements_m.ptagGuiCheckLiquidLevelEmpty = ptagLibTesterGui_0004_Init(iPanelMain_m,"Prüfe Sensor 0%");
 
   bTesterGuiInitialized_m=TRUE;
   bLibTesterGuiMgr_DisplayAllGuis(TRUE);
@@ -198,21 +177,12 @@ void vLibTesterGui_Init_g(void)
  */
 void vLibTesterGui_Discard_g(void)
 {
-  vLibTesterGui_0007_Discard(tagUIElements_m.ptagGuiProdDataRead,FALSE);
-  vLibTesterGui_0003_Discard(tagUIElements_m.ptagGuiCurrentIdle,FALSE);
-  if(tagUIElements_m.ptagGuiCheckLed)
-  {
-    vLibTesterGui_0001_Discard(tagUIElements_m.ptagGuiCheckLed,FALSE);
-  }
-  if(tagUIElements_m.ptagGuiCheckAdc)
-  {
-    vLibTesterGui_0007_Discard(tagUIElements_m.ptagGuiCheckAdc,FALSE);
-  }
-  if(tagUIElements_m.ptagGuiCheckNfc)
-  {
-    vLibTesterGui_0007_Discard(tagUIElements_m.ptagGuiCheckNfc,FALSE);
-  }
-  vLibTesterGui_0007_Discard(tagUIElements_m.ptagGuiProdDataWrite,FALSE);
+  vLibTesterGui_0001_Discard(tagUIElements_m.ptagGuiWaitForLiquidLevelFull,FALSE);
+  vLibTesterGui_0004_Discard(tagUIElements_m.ptagGuiCheckLiquidLevelFull,FALSE);
+  vLibTesterGui_0001_Discard(tagUIElements_m.ptagGuiWaitForLiquidLevelHalf,FALSE);
+  vLibTesterGui_0004_Discard(tagUIElements_m.ptagGuiCheckLiquidLevelHalf,FALSE);
+  vLibTesterGui_0001_Discard(tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty,FALSE);
+  vLibTesterGui_0004_Discard(tagUIElements_m.ptagGuiCheckLiquidLevelEmpty,FALSE);
   bLibTesterGuiMgr_DeleteAllGuis();
   bTesterGuiInitialized_m=FALSE;
 } // vLibTesterGui_Discard_g()
@@ -249,24 +219,15 @@ int iUiGuiX_SetState_g(int iCurrentState,EPanelStatus eState)
 void vLibTesterGui_VisualUpdate_g(void)
 {
 //@TESTER_GUI_GENERATED_VISUAL_UPDATE_START@
-//Generated: 14:02 @ 20.03.2020
+//Generated: 15:48 @ 01.04.2020
   if(bTesterGuiInitialized_m)
   {
-    vLibTesterGui_0007_VisualUpdate(iGui0007_ProdDataRead_m);
-    vLibTesterGui_0003_VisualUpdate(iGui0003_CurrentIdle_m);
-    if(tagUIElements_m.ptagGuiCheckLed)
-    {
-      vLibTesterGui_0001_VisualUpdate(iGui0001_CheckLed_m);
-    }
-    if(tagUIElements_m.ptagGuiCheckAdc)
-    {
-      vLibTesterGui_0007_VisualUpdate(iGui0007_CheckAdc_m);
-    }
-    if(tagUIElements_m.ptagGuiCheckNfc)
-    {
-      vLibTesterGui_0007_VisualUpdate(iGui0007_CheckNfc_m);
-    }
-    vLibTesterGui_0007_VisualUpdate(iGui0007_ProdDataWrite_m);
+    vLibTesterGui_0001_VisualUpdate(iGui0001_WaitForLiquidLevelFull_m);
+    vLibTesterGui_0004_VisualUpdate(iGui0004_CheckLiquidLevelFull_m);
+    vLibTesterGui_0001_VisualUpdate(iGui0001_WaitForLiquidLevelHalf_m);
+    vLibTesterGui_0004_VisualUpdate(iGui0004_CheckLiquidLevelHalf_m);
+    vLibTesterGui_0001_VisualUpdate(iGui0001_WaitForLiquidLevelEmpty_m);
+    vLibTesterGui_0004_VisualUpdate(iGui0004_CheckLiquidLevelEmpty_m);
   }
 //@TESTER_GUI_GENERATED_VISUAL_UPDATE_END@
 } // vLibTesterGui_Discard_g()
@@ -873,11 +834,11 @@ char *pcGetUserText_g(void)
 
 
 //@TESTER_GUI_GENERATED_FUNCTIONS_START@
-//Generated: 14:02 @ 20.03.2020
+//Generated: 15:48 @ 01.04.2020
 /**************************************************************
  *
  *
- * Funktionen zu ProdDataRead
+ * Funktionen zu WaitForLiquidLevelFull
  *
  *
  **************************************************************/
@@ -885,173 +846,30 @@ char *pcGetUserText_g(void)
 /**
  * Set State
  */
-int iUiProdDataRead_SetState_g(EPanelStatus eState)
+int iUiWaitForLiquidLevelFull_SetState_g(EPanelStatus eState)
 {
-  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0007,iGui0007_ProdDataRead_m,eState,TRUE));
-} // iUiProdDataRead_SetState_g()
-
-/**
- * Set Title
- */
-void vUiProdDataRead_SetTitle_g(char *pcTitle,...)
-{
-  va_list vaArgs;
-  char caBuffer[500];
-
-  va_start(vaArgs,pcTitle);
-  vsprintf(caBuffer,pcTitle,vaArgs);
-  va_end(vaArgs);
-
-  if(   (tagUIElements_m.ptagGuiProdDataRead)
-     && (tagUIElements_m.ptagGuiProdDataRead->pFvSetTitle)
-    )
-  {
-    tagUIElements_m.ptagGuiProdDataRead->pFvSetTitle(iGui0007_ProdDataRead_m,caBuffer);
-    return;
-  }
-  printf("vUiProdDataRead_SetTitle_g(): tagUIElements_m.ptagGuiProdDataRead->pFvSetTitle() == NULL!\n");
-} // vUiProdDataRead_SetTitle_g()
-
-/**
- * Set Text
- */
-void vUiProdDataRead_SetText_g(char *pcText,...)
-{
-  va_list vaArgs;
-  char caBuffer[500];
-
-  va_start(vaArgs,pcText);
-  vsprintf(caBuffer,pcText,vaArgs);
-  va_end(vaArgs);
-
-  if(   (tagUIElements_m.ptagGuiProdDataRead)
-     && (tagUIElements_m.ptagGuiProdDataRead->pFvSetText)
-    )
-  {
-    tagUIElements_m.ptagGuiProdDataRead->pFvSetText(iGui0007_ProdDataRead_m,caBuffer);
-    return;
-  }
-  printf("vUiProdDataRead_SetText_g(): tagUIElements_m.ptagGuiProdDataRead->pFvSetText() == NULL!\n");
-} // vUiProdDataRead_SetText_g()
-
-/**************************************************************
- *
- *
- * Funktionen zu CurrentIdle
- *
- *
- **************************************************************/
-
-/**
- * Set State
- */
-int iUiCurrentIdle_SetState_g(EPanelStatus eState)
-{
-  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0003,iGui0003_CurrentIdle_m,eState,TRUE));
-} // iUiCurrentIdle_SetState_g()
-
-/**
- * Set Title
- */
-void vUiCurrentIdle_SetTitle_g(char *pcTitle, ...)
-{
-  char caBuffer[500];
-  va_list vaArgs;
-
-  va_start(vaArgs,pcTitle);
-  vsprintf(caBuffer,pcTitle,vaArgs);
-  va_end(vaArgs);
-
-  if(   (tagUIElements_m.ptagGuiCurrentIdle)
-     && (tagUIElements_m.ptagGuiCurrentIdle->pFvSetTitle)
-    )
-  {
-    tagUIElements_m.ptagGuiCurrentIdle->pFvSetTitle(iGui0003_CurrentIdle_m,caBuffer);
-    return;
-  }
-  printf("vUiCurrentIdle_SetTitle_g(): tagUIElements_m.ptagGuiCurrentIdle->pFvSetTitle() == NULL!\n");
-} // vUiCurrentIdle_SetTitle_g()
-
-/**
- * Set Min/Max
- */
-void vUiCurrentIdle_SetMinMax_g(double dIMin, double dIMax)
-{
-  if(   (tagUIElements_m.ptagGuiCurrentIdle)
-     && (tagUIElements_m.ptagGuiCurrentIdle->pFvSetMinMax)
-    )
-  {
-    tagUIElements_m.ptagGuiCurrentIdle->pFvSetMinMax(iGui0003_CurrentIdle_m,dIMin,dIMax);
-    return;
-  }
-  printf("vUiCurrentIdle_SetTitle_g(): tagUIElements_m.ptagGuiCurrentIdle->pFvSetMinMax() == NULL!\n");
-} // vUiCurrentIdle_SetMinMax_g()
-
-/**
- * Set current
- */
-void vUiCurrentIdle_SetCurrent_g(double dICurrent)
-{
-  if(   (tagUIElements_m.ptagGuiCurrentIdle)
-     && (tagUIElements_m.ptagGuiCurrentIdle->pFvSetCurrent)
-    )
-  {
-    tagUIElements_m.ptagGuiCurrentIdle->pFvSetCurrent(iGui0003_CurrentIdle_m,dICurrent);
-    return;
-  }
-  printf("vUiCurrentIdle_SetCurrent_g(): tagUIElements_m.ptagGuiCurrentIdle->pFvSetCurrent() == NULL!\n");
-} // vUiCurrentIdle_SetCurrent_g()
-
-/**
- * Set Unit
- */
-void vUiCurrentIdle_SetUnit_g(char *pcUnit)
-{
-  if(   (tagUIElements_m.ptagGuiCurrentIdle)
-     && (tagUIElements_m.ptagGuiCurrentIdle->pFvSetUnit)
-    )
-  {
-    tagUIElements_m.ptagGuiCurrentIdle->pFvSetUnit(iGui0003_CurrentIdle_m,pcUnit);
-    return;
-  }
-  printf("vUiCurrentIdle_SetUnit_g(): tagUIElements_m.ptagGuiCurrentIdle->pFvSetUnit() == NULL!\n");
-} // vUiCurrentIdle_SetUnit_g()
-
-/**************************************************************
- *
- *
- * Funktionen zu CheckLed
- *
- *
- **************************************************************/
-
-/**
- * Set State
- */
-int iUiCheckLed_SetState_g(EPanelStatus eState)
-{
-  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0001,iGui0001_CheckLed_m,eState,TRUE));
-} // iUiCheckLed_SetState_g()
+  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0001,iGui0001_WaitForLiquidLevelFull_m,eState,TRUE));
+} // iUiWaitForLiquidLevelFull_SetState_g()
 
 /**
  * Set Work Order
  */
-BOOL bUiCheckLed_SetWorkOrder_g(char *pcWorkOrder)
+BOOL bUiWaitForLiquidLevelFull_SetWorkOrder_g(char *pcWorkOrder)
 {
-  if(   (tagUIElements_m.ptagGuiCheckLed)
-     && (tagUIElements_m.ptagGuiCheckLed->pFbSetWorkOrder)
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pFbSetWorkOrder)
     )
   {
-    return(tagUIElements_m.ptagGuiCheckLed->pFbSetWorkOrder(iGui0001_CheckLed_m,pcWorkOrder));
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pFbSetWorkOrder(iGui0001_WaitForLiquidLevelFull_m,pcWorkOrder));
   }
-  printf("bUiCheckLed_SetWorkOrder_g(): tagUIElements_m.ptagGuiCheckLed->pFbSetWorkOrder() == NULL!\n");
+  printf("bUiWaitForLiquidLevelFull_SetWorkOrder_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pFbSetWorkOrder() == NULL!\n");
   return(FALSE);
-} // bUiCheckLed_SetWorkOrder_g()
+} // bUiWaitForLiquidLevelFull_SetWorkOrder_g()
 
 /**
  * Set Title
  */
-void vUiCheckLed_SetTitle_g(char *pcTitle, ...)
+void vUiWaitForLiquidLevelFull_SetTitle_g(char *pcTitle, ...)
 {
   char caBuffer[500];
   va_list vaArgs;
@@ -1060,80 +878,80 @@ void vUiCheckLed_SetTitle_g(char *pcTitle, ...)
   vsprintf(caBuffer,pcTitle,vaArgs);
   va_end(vaArgs);
 
-  if(   (tagUIElements_m.ptagGuiCheckLed)
-     && (tagUIElements_m.ptagGuiCheckLed->pFvSetTitle)
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pFvSetTitle)
     )
   {
-    tagUIElements_m.ptagGuiCheckLed->pFvSetTitle(iGui0001_CheckLed_m,caBuffer);
+    tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pFvSetTitle(iGui0001_WaitForLiquidLevelFull_m,caBuffer);
     return;
   }
-  printf("vUiCheckLed_SetTitle_g(): tagUIElements_m.ptagGuiCheckLed->pFvSetTitle() == NULL!\n");
-} // vUiCheckLed_SetTitle_g()
+  printf("vUiWaitForLiquidLevelFull_SetTitle_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pFvSetTitle() == NULL!\n");
+} // vUiWaitForLiquidLevelFull_SetTitle_g()
 
 /**
  * Set Fix Mode
  */
-BOOL bUiCheckLed_SetFixMode_g(EFixMode eFixMode)
+BOOL bUiWaitForLiquidLevelFull_SetFixMode_g(EFixMode eFixMode)
 {
-  if(   (tagUIElements_m.ptagGuiCheckLed)
-     && (tagUIElements_m.ptagGuiCheckLed->pFbSetFixMode)
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pFbSetFixMode)
     )
   {
-    return(tagUIElements_m.ptagGuiCheckLed->pFbSetFixMode(iGui0001_CheckLed_m,eFixMode));
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pFbSetFixMode(iGui0001_WaitForLiquidLevelFull_m,eFixMode));
   }
-  printf("bUiCheckLed_SetFixMode_g(): tagUIElements_m.ptagGuiCheckLed->pFbSetFixMode() == NULL!\n");
+  printf("bUiWaitForLiquidLevelFull_SetFixMode_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pFbSetFixMode() == NULL!\n");
   return(FALSE);
-} // bUiCheckLed_SetFixMode_g()
+} // bUiWaitForLiquidLevelFull_SetFixMode_g()
 
 /**
  * Insert Picture
  */
-int iUiCheckLed_InsertPicture_g(const char *pcPath, TagPictureSize *ptagImagesize)
+int iUiWaitForLiquidLevelFull_InsertPicture_g(const char *pcPath, TagPictureSize *ptagImagesize)
 {
-  if(   (tagUIElements_m.ptagGuiCheckLed)
-     && (tagUIElements_m.ptagGuiCheckLed->pfiInsertPicture)
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pfiInsertPicture)
     )
   {
-    return(tagUIElements_m.ptagGuiCheckLed->pfiInsertPicture(iGui0001_CheckLed_m,pcPath,ptagImagesize));
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pfiInsertPicture(iGui0001_WaitForLiquidLevelFull_m,pcPath,ptagImagesize));
   }
-  printf("iUiCheckLed_InsertPicture_g(): tagUIElements_m.ptagGuiCheckLed->pfiInsertPicture() == NULL!\n");
+  printf("iUiWaitForLiquidLevelFull_InsertPicture_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pfiInsertPicture() == NULL!\n");
   return(-1);
-} // iUiCheckLed_InsertPicture_g()
+} // iUiWaitForLiquidLevelFull_InsertPicture_g()
 
 /**
  * Remove Picture
  */
-BOOL bUiCheckLed_RemovePicture_g(int iPictureID)
+BOOL bUiWaitForLiquidLevelFull_RemovePicture_g(int iPictureID)
 {
-  if(   (tagUIElements_m.ptagGuiCheckLed)
-     && (tagUIElements_m.ptagGuiCheckLed->pfbRemovePicture)
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pfbRemovePicture)
     )
   {
-    return(tagUIElements_m.ptagGuiCheckLed->pfbRemovePicture(iGui0001_CheckLed_m,iPictureID));
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pfbRemovePicture(iGui0001_WaitForLiquidLevelFull_m,iPictureID));
   }
-  printf("bUiCheckLed_RemovePicture_g(): tagUIElements_m.ptagGuiCheckLed->pfbRemovePicture() == NULL!\n");
+  printf("bUiWaitForLiquidLevelFull_RemovePicture_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pfbRemovePicture() == NULL!\n");
   return(FALSE);
-} // bUiCheckLed_RemovePicture_g()
+} // bUiWaitForLiquidLevelFull_RemovePicture_g()
 
 /**
  * Replace Picture
  */
-BOOL bUiCheckLed_ReplacePicture_g(const char *pcPath, int iPictureID)
+BOOL bUiWaitForLiquidLevelFull_ReplacePicture_g(const char *pcPath, int iPictureID)
 {
-  if(   (tagUIElements_m.ptagGuiCheckLed)
-     && (tagUIElements_m.ptagGuiCheckLed->pfbReplacePicture)
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pfbReplacePicture)
     )
   {
-    return(tagUIElements_m.ptagGuiCheckLed->pfbReplacePicture(iGui0001_CheckLed_m,pcPath,iPictureID));
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pfbReplacePicture(iGui0001_WaitForLiquidLevelFull_m,pcPath,iPictureID));
   }
-  printf("bUiCheckLed_ReplacePicture_g(): tagUIElements_m.ptagGuiCheckLed->pfbReplacePicture() == NULL!\n");
+  printf("bUiWaitForLiquidLevelFull_ReplacePicture_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelFull->pfbReplacePicture() == NULL!\n");
   return(FALSE);
-} // bUiCheckLed_ReplacePicture_g()
+} // bUiWaitForLiquidLevelFull_ReplacePicture_g()
 
 /**************************************************************
  *
  *
- * Funktionen zu CheckAdc
+ * Funktionen zu CheckLiquidLevelFull
  *
  *
  **************************************************************/
@@ -1141,59 +959,126 @@ BOOL bUiCheckLed_ReplacePicture_g(const char *pcPath, int iPictureID)
 /**
  * Set State
  */
-int iUiCheckAdc_SetState_g(EPanelStatus eState)
+int iUiCheckLiquidLevelFull_SetState_g(EPanelStatus eState)
 {
-  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0007,iGui0007_CheckAdc_m,eState,TRUE));
-} // iUiCheckAdc_SetState_g()
+  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0004,iGui0004_CheckLiquidLevelFull_m,eState,TRUE));
+} // iUiCheckLiquidLevelFull_SetState_g()
 
 /**
  * Set Title
  */
-void vUiCheckAdc_SetTitle_g(char *pcTitle,...)
+void vUiCheckLiquidLevelFull_SetTitle_g(char *pcTitle, ...)
 {
-  va_list vaArgs;
   char caBuffer[500];
+  va_list vaArgs;
 
   va_start(vaArgs,pcTitle);
   vsprintf(caBuffer,pcTitle,vaArgs);
   va_end(vaArgs);
 
-  if(   (tagUIElements_m.ptagGuiCheckAdc)
-     && (tagUIElements_m.ptagGuiCheckAdc->pFvSetTitle)
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetTitle)
     )
   {
-    tagUIElements_m.ptagGuiCheckAdc->pFvSetTitle(iGui0007_CheckAdc_m,caBuffer);
+    tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetTitle(iGui0004_CheckLiquidLevelFull_m,caBuffer);
     return;
   }
-  printf("vUiCheckAdc_SetTitle_g(): tagUIElements_m.ptagGuiCheckAdc->pFvSetTitle() == NULL!\n");
-} // vUiCheckAdc_SetTitle_g()
+  printf("vUiCheckLiquidLevelFull_SetTitle_g(): tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetTitle() == NULL!\n");
+} // vUiCheckLiquidLevelFull_SetTitle_g()
 
 /**
- * Set Text
+ * Set Min/Max
  */
-void vUiCheckAdc_SetText_g(char *pcText,...)
+void vUiCheckLiquidLevelFull_SetMinMax_g(double dIMin, double dIMax)
 {
-  va_list vaArgs;
-  char caBuffer[500];
-
-  va_start(vaArgs,pcText);
-  vsprintf(caBuffer,pcText,vaArgs);
-  va_end(vaArgs);
-
-  if(   (tagUIElements_m.ptagGuiCheckAdc)
-     && (tagUIElements_m.ptagGuiCheckAdc->pFvSetText)
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetMinMax)
     )
   {
-    tagUIElements_m.ptagGuiCheckAdc->pFvSetText(iGui0007_CheckAdc_m,caBuffer);
+    tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetMinMax(iGui0004_CheckLiquidLevelFull_m,dIMin,dIMax);
     return;
   }
-  printf("vUiCheckAdc_SetText_g(): tagUIElements_m.ptagGuiCheckAdc->pFvSetText() == NULL!\n");
-} // vUiCheckAdc_SetText_g()
+  printf("vUiCheckLiquidLevelFull_SetTitle_g(): tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetMinMax() == NULL!\n");
+} // vUiCheckLiquidLevelFull_SetMinMax_g()
 
+/**
+ * Set current
+ */
+void vUiCheckLiquidLevelFull_SetValue_g(double dValue)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetValue)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetValue(iGui0004_CheckLiquidLevelFull_m,dValue);
+    return;
+  }
+  printf("vUiCheckLiquidLevelFull_SetCurrent_g(): tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetCurrent() == NULL!\n");
+} // vUiCheckLiquidLevelFull_SetCurrent_g()
+
+/**
+ * Set Unit
+ */
+void vUiCheckLiquidLevelFull_SetUnit_g(char *pcUnit)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetUnit)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetUnit(iGui0004_CheckLiquidLevelFull_m,pcUnit);
+    return;
+  }
+  printf("vUiCheckLiquidLevelFull_SetUnit_g(): tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetUnit() == NULL!\n");
+} // vUiCheckLiquidLevelFull_SetUnit_g()
+
+/**
+ * Set Tolerance
+ */
+void vUiCheckLiquidLevelFull_SetTolerance_g(double dTolerance)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetTolerance)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetTolerance(iGui0004_CheckLiquidLevelFull_m,dTolerance);
+    return;
+  }
+  printf("vUiCheckLiquidLevelFull_SetUnit_g(): tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetTolerance() == NULL!\n");
+} // vUiCheckLiquidLevelFull_SetUnit_g()
+
+/**
+ * Set Soll
+ */
+void vUiCheckLiquidLevelFull_SetSoll_g(double dSoll)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetSoll)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetSoll(iGui0004_CheckLiquidLevelFull_m,dSoll);
+    return;
+  }
+  printf("vUiCheckLiquidLevelFull_SetCurrent_g(): tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetSoll() == NULL!\n");
+} // vUiCheckLiquidLevelFull_SetCurrent_g()
+
+/**
+ * Set Precision
+ */
+void vUiCheckLiquidLevelFull_SetPrecision_g(int iPrecision)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelFull)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetPrecision)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetPrecision(iGui0004_CheckLiquidLevelFull_m,iPrecision);
+    return;
+  }
+  printf("vUiCheckLiquidLevelFull_SetCurrent_g(): tagUIElements_m.ptagGuiCheckLiquidLevelFull->pFvSetPrecision() == NULL!\n");
+} // vUiCheckLiquidLevelFull_SetCurrent_g()
 /**************************************************************
  *
  *
- * Funktionen zu CheckNfc
+ * Funktionen zu WaitForLiquidLevelHalf
  *
  *
  **************************************************************/
@@ -1201,59 +1086,112 @@ void vUiCheckAdc_SetText_g(char *pcText,...)
 /**
  * Set State
  */
-int iUiCheckNfc_SetState_g(EPanelStatus eState)
+int iUiWaitForLiquidLevelHalf_SetState_g(EPanelStatus eState)
 {
-  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0007,iGui0007_CheckNfc_m,eState,TRUE));
-} // iUiCheckNfc_SetState_g()
+  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0001,iGui0001_WaitForLiquidLevelHalf_m,eState,TRUE));
+} // iUiWaitForLiquidLevelHalf_SetState_g()
+
+/**
+ * Set Work Order
+ */
+BOOL bUiWaitForLiquidLevelHalf_SetWorkOrder_g(char *pcWorkOrder)
+{
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pFbSetWorkOrder)
+    )
+  {
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pFbSetWorkOrder(iGui0001_WaitForLiquidLevelHalf_m,pcWorkOrder));
+  }
+  printf("bUiWaitForLiquidLevelHalf_SetWorkOrder_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pFbSetWorkOrder() == NULL!\n");
+  return(FALSE);
+} // bUiWaitForLiquidLevelHalf_SetWorkOrder_g()
 
 /**
  * Set Title
  */
-void vUiCheckNfc_SetTitle_g(char *pcTitle,...)
+void vUiWaitForLiquidLevelHalf_SetTitle_g(char *pcTitle, ...)
 {
-  va_list vaArgs;
   char caBuffer[500];
+  va_list vaArgs;
 
   va_start(vaArgs,pcTitle);
   vsprintf(caBuffer,pcTitle,vaArgs);
   va_end(vaArgs);
 
-  if(   (tagUIElements_m.ptagGuiCheckNfc)
-     && (tagUIElements_m.ptagGuiCheckNfc->pFvSetTitle)
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pFvSetTitle)
     )
   {
-    tagUIElements_m.ptagGuiCheckNfc->pFvSetTitle(iGui0007_CheckNfc_m,caBuffer);
+    tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pFvSetTitle(iGui0001_WaitForLiquidLevelHalf_m,caBuffer);
     return;
   }
-  printf("vUiCheckNfc_SetTitle_g(): tagUIElements_m.ptagGuiCheckNfc->pFvSetTitle() == NULL!\n");
-} // vUiCheckNfc_SetTitle_g()
+  printf("vUiWaitForLiquidLevelHalf_SetTitle_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pFvSetTitle() == NULL!\n");
+} // vUiWaitForLiquidLevelHalf_SetTitle_g()
 
 /**
- * Set Text
+ * Set Fix Mode
  */
-void vUiCheckNfc_SetText_g(char *pcText,...)
+BOOL bUiWaitForLiquidLevelHalf_SetFixMode_g(EFixMode eFixMode)
 {
-  va_list vaArgs;
-  char caBuffer[500];
-
-  va_start(vaArgs,pcText);
-  vsprintf(caBuffer,pcText,vaArgs);
-  va_end(vaArgs);
-
-  if(   (tagUIElements_m.ptagGuiCheckNfc)
-     && (tagUIElements_m.ptagGuiCheckNfc->pFvSetText)
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pFbSetFixMode)
     )
   {
-    tagUIElements_m.ptagGuiCheckNfc->pFvSetText(iGui0007_CheckNfc_m,caBuffer);
-    return;
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pFbSetFixMode(iGui0001_WaitForLiquidLevelHalf_m,eFixMode));
   }
-  printf("vUiCheckNfc_SetText_g(): tagUIElements_m.ptagGuiCheckNfc->pFvSetText() == NULL!\n");
-} // vUiCheckNfc_SetText_g()
+  printf("bUiWaitForLiquidLevelHalf_SetFixMode_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pFbSetFixMode() == NULL!\n");
+  return(FALSE);
+} // bUiWaitForLiquidLevelHalf_SetFixMode_g()
+
+/**
+ * Insert Picture
+ */
+int iUiWaitForLiquidLevelHalf_InsertPicture_g(const char *pcPath, TagPictureSize *ptagImagesize)
+{
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pfiInsertPicture)
+    )
+  {
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pfiInsertPicture(iGui0001_WaitForLiquidLevelHalf_m,pcPath,ptagImagesize));
+  }
+  printf("iUiWaitForLiquidLevelHalf_InsertPicture_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pfiInsertPicture() == NULL!\n");
+  return(-1);
+} // iUiWaitForLiquidLevelHalf_InsertPicture_g()
+
+/**
+ * Remove Picture
+ */
+BOOL bUiWaitForLiquidLevelHalf_RemovePicture_g(int iPictureID)
+{
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pfbRemovePicture)
+    )
+  {
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pfbRemovePicture(iGui0001_WaitForLiquidLevelHalf_m,iPictureID));
+  }
+  printf("bUiWaitForLiquidLevelHalf_RemovePicture_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pfbRemovePicture() == NULL!\n");
+  return(FALSE);
+} // bUiWaitForLiquidLevelHalf_RemovePicture_g()
+
+/**
+ * Replace Picture
+ */
+BOOL bUiWaitForLiquidLevelHalf_ReplacePicture_g(const char *pcPath, int iPictureID)
+{
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pfbReplacePicture)
+    )
+  {
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pfbReplacePicture(iGui0001_WaitForLiquidLevelHalf_m,pcPath,iPictureID));
+  }
+  printf("bUiWaitForLiquidLevelHalf_ReplacePicture_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelHalf->pfbReplacePicture() == NULL!\n");
+  return(FALSE);
+} // bUiWaitForLiquidLevelHalf_ReplacePicture_g()
 
 /**************************************************************
  *
  *
- * Funktionen zu ProdDataWrite
+ * Funktionen zu CheckLiquidLevelHalf
  *
  *
  **************************************************************/
@@ -1261,54 +1199,384 @@ void vUiCheckNfc_SetText_g(char *pcText,...)
 /**
  * Set State
  */
-int iUiProdDataWrite_SetState_g(EPanelStatus eState)
+int iUiCheckLiquidLevelHalf_SetState_g(EPanelStatus eState)
 {
-  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0007,iGui0007_ProdDataWrite_m,eState,TRUE));
-} // iUiProdDataWrite_SetState_g()
+  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0004,iGui0004_CheckLiquidLevelHalf_m,eState,TRUE));
+} // iUiCheckLiquidLevelHalf_SetState_g()
 
 /**
  * Set Title
  */
-void vUiProdDataWrite_SetTitle_g(char *pcTitle,...)
+void vUiCheckLiquidLevelHalf_SetTitle_g(char *pcTitle, ...)
 {
-  va_list vaArgs;
   char caBuffer[500];
+  va_list vaArgs;
 
   va_start(vaArgs,pcTitle);
   vsprintf(caBuffer,pcTitle,vaArgs);
   va_end(vaArgs);
 
-  if(   (tagUIElements_m.ptagGuiProdDataWrite)
-     && (tagUIElements_m.ptagGuiProdDataWrite->pFvSetTitle)
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetTitle)
     )
   {
-    tagUIElements_m.ptagGuiProdDataWrite->pFvSetTitle(iGui0007_ProdDataWrite_m,caBuffer);
+    tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetTitle(iGui0004_CheckLiquidLevelHalf_m,caBuffer);
     return;
   }
-  printf("vUiProdDataWrite_SetTitle_g(): tagUIElements_m.ptagGuiProdDataWrite->pFvSetTitle() == NULL!\n");
-} // vUiProdDataWrite_SetTitle_g()
+  printf("vUiCheckLiquidLevelHalf_SetTitle_g(): tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetTitle() == NULL!\n");
+} // vUiCheckLiquidLevelHalf_SetTitle_g()
 
 /**
- * Set Text
+ * Set Min/Max
  */
-void vUiProdDataWrite_SetText_g(char *pcText,...)
+void vUiCheckLiquidLevelHalf_SetMinMax_g(double dIMin, double dIMax)
 {
-  va_list vaArgs;
-  char caBuffer[500];
-
-  va_start(vaArgs,pcText);
-  vsprintf(caBuffer,pcText,vaArgs);
-  va_end(vaArgs);
-
-  if(   (tagUIElements_m.ptagGuiProdDataWrite)
-     && (tagUIElements_m.ptagGuiProdDataWrite->pFvSetText)
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetMinMax)
     )
   {
-    tagUIElements_m.ptagGuiProdDataWrite->pFvSetText(iGui0007_ProdDataWrite_m,caBuffer);
+    tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetMinMax(iGui0004_CheckLiquidLevelHalf_m,dIMin,dIMax);
     return;
   }
-  printf("vUiProdDataWrite_SetText_g(): tagUIElements_m.ptagGuiProdDataWrite->pFvSetText() == NULL!\n");
-} // vUiProdDataWrite_SetText_g()
+  printf("vUiCheckLiquidLevelHalf_SetTitle_g(): tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetMinMax() == NULL!\n");
+} // vUiCheckLiquidLevelHalf_SetMinMax_g()
 
+/**
+ * Set current
+ */
+void vUiCheckLiquidLevelHalf_SetValue_g(double dValue)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetValue)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetValue(iGui0004_CheckLiquidLevelHalf_m,dValue);
+    return;
+  }
+  printf("vUiCheckLiquidLevelHalf_SetCurrent_g(): tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetCurrent() == NULL!\n");
+} // vUiCheckLiquidLevelHalf_SetCurrent_g()
+
+/**
+ * Set Unit
+ */
+void vUiCheckLiquidLevelHalf_SetUnit_g(char *pcUnit)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetUnit)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetUnit(iGui0004_CheckLiquidLevelHalf_m,pcUnit);
+    return;
+  }
+  printf("vUiCheckLiquidLevelHalf_SetUnit_g(): tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetUnit() == NULL!\n");
+} // vUiCheckLiquidLevelHalf_SetUnit_g()
+
+/**
+ * Set Tolerance
+ */
+void vUiCheckLiquidLevelHalf_SetTolerance_g(double dTolerance)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetTolerance)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetTolerance(iGui0004_CheckLiquidLevelHalf_m,dTolerance);
+    return;
+  }
+  printf("vUiCheckLiquidLevelHalf_SetUnit_g(): tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetTolerance() == NULL!\n");
+} // vUiCheckLiquidLevelHalf_SetUnit_g()
+
+/**
+ * Set Soll
+ */
+void vUiCheckLiquidLevelHalf_SetSoll_g(double dSoll)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetSoll)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetSoll(iGui0004_CheckLiquidLevelHalf_m,dSoll);
+    return;
+  }
+  printf("vUiCheckLiquidLevelHalf_SetCurrent_g(): tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetSoll() == NULL!\n");
+} // vUiCheckLiquidLevelHalf_SetCurrent_g()
+
+/**
+ * Set Precision
+ */
+void vUiCheckLiquidLevelHalf_SetPrecision_g(int iPrecision)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelHalf)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetPrecision)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetPrecision(iGui0004_CheckLiquidLevelHalf_m,iPrecision);
+    return;
+  }
+  printf("vUiCheckLiquidLevelHalf_SetCurrent_g(): tagUIElements_m.ptagGuiCheckLiquidLevelHalf->pFvSetPrecision() == NULL!\n");
+} // vUiCheckLiquidLevelHalf_SetCurrent_g()
+/**************************************************************
+ *
+ *
+ * Funktionen zu WaitForLiquidLevelEmpty
+ *
+ *
+ **************************************************************/
+
+/**
+ * Set State
+ */
+int iUiWaitForLiquidLevelEmpty_SetState_g(EPanelStatus eState)
+{
+  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0001,iGui0001_WaitForLiquidLevelEmpty_m,eState,TRUE));
+} // iUiWaitForLiquidLevelEmpty_SetState_g()
+
+/**
+ * Set Work Order
+ */
+BOOL bUiWaitForLiquidLevelEmpty_SetWorkOrder_g(char *pcWorkOrder)
+{
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pFbSetWorkOrder)
+    )
+  {
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pFbSetWorkOrder(iGui0001_WaitForLiquidLevelEmpty_m,pcWorkOrder));
+  }
+  printf("bUiWaitForLiquidLevelEmpty_SetWorkOrder_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pFbSetWorkOrder() == NULL!\n");
+  return(FALSE);
+} // bUiWaitForLiquidLevelEmpty_SetWorkOrder_g()
+
+/**
+ * Set Title
+ */
+void vUiWaitForLiquidLevelEmpty_SetTitle_g(char *pcTitle, ...)
+{
+  char caBuffer[500];
+  va_list vaArgs;
+
+  va_start(vaArgs,pcTitle);
+  vsprintf(caBuffer,pcTitle,vaArgs);
+  va_end(vaArgs);
+
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pFvSetTitle)
+    )
+  {
+    tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pFvSetTitle(iGui0001_WaitForLiquidLevelEmpty_m,caBuffer);
+    return;
+  }
+  printf("vUiWaitForLiquidLevelEmpty_SetTitle_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pFvSetTitle() == NULL!\n");
+} // vUiWaitForLiquidLevelEmpty_SetTitle_g()
+
+/**
+ * Set Fix Mode
+ */
+BOOL bUiWaitForLiquidLevelEmpty_SetFixMode_g(EFixMode eFixMode)
+{
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pFbSetFixMode)
+    )
+  {
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pFbSetFixMode(iGui0001_WaitForLiquidLevelEmpty_m,eFixMode));
+  }
+  printf("bUiWaitForLiquidLevelEmpty_SetFixMode_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pFbSetFixMode() == NULL!\n");
+  return(FALSE);
+} // bUiWaitForLiquidLevelEmpty_SetFixMode_g()
+
+/**
+ * Insert Picture
+ */
+int iUiWaitForLiquidLevelEmpty_InsertPicture_g(const char *pcPath, TagPictureSize *ptagImagesize)
+{
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pfiInsertPicture)
+    )
+  {
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pfiInsertPicture(iGui0001_WaitForLiquidLevelEmpty_m,pcPath,ptagImagesize));
+  }
+  printf("iUiWaitForLiquidLevelEmpty_InsertPicture_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pfiInsertPicture() == NULL!\n");
+  return(-1);
+} // iUiWaitForLiquidLevelEmpty_InsertPicture_g()
+
+/**
+ * Remove Picture
+ */
+BOOL bUiWaitForLiquidLevelEmpty_RemovePicture_g(int iPictureID)
+{
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pfbRemovePicture)
+    )
+  {
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pfbRemovePicture(iGui0001_WaitForLiquidLevelEmpty_m,iPictureID));
+  }
+  printf("bUiWaitForLiquidLevelEmpty_RemovePicture_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pfbRemovePicture() == NULL!\n");
+  return(FALSE);
+} // bUiWaitForLiquidLevelEmpty_RemovePicture_g()
+
+/**
+ * Replace Picture
+ */
+BOOL bUiWaitForLiquidLevelEmpty_ReplacePicture_g(const char *pcPath, int iPictureID)
+{
+  if(   (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pfbReplacePicture)
+    )
+  {
+    return(tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pfbReplacePicture(iGui0001_WaitForLiquidLevelEmpty_m,pcPath,iPictureID));
+  }
+  printf("bUiWaitForLiquidLevelEmpty_ReplacePicture_g(): tagUIElements_m.ptagGuiWaitForLiquidLevelEmpty->pfbReplacePicture() == NULL!\n");
+  return(FALSE);
+} // bUiWaitForLiquidLevelEmpty_ReplacePicture_g()
+
+/**************************************************************
+ *
+ *
+ * Funktionen zu CheckLiquidLevelEmpty
+ *
+ *
+ **************************************************************/
+
+/**
+ * Set State
+ */
+int iUiCheckLiquidLevelEmpty_SetState_g(EPanelStatus eState)
+{
+  return(iLibTesterGuiMgr_SetPanelStatus(eLibTesterGui_0004,iGui0004_CheckLiquidLevelEmpty_m,eState,TRUE));
+} // iUiCheckLiquidLevelEmpty_SetState_g()
+
+/**
+ * Set Title
+ */
+void vUiCheckLiquidLevelEmpty_SetTitle_g(char *pcTitle, ...)
+{
+  char caBuffer[500];
+  va_list vaArgs;
+
+  va_start(vaArgs,pcTitle);
+  vsprintf(caBuffer,pcTitle,vaArgs);
+  va_end(vaArgs);
+
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetTitle)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetTitle(iGui0004_CheckLiquidLevelEmpty_m,caBuffer);
+    return;
+  }
+  printf("vUiCheckLiquidLevelEmpty_SetTitle_g(): tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetTitle() == NULL!\n");
+} // vUiCheckLiquidLevelEmpty_SetTitle_g()
+
+/**
+ * Set Min/Max
+ */
+void vUiCheckLiquidLevelEmpty_SetMinMax_g(double dIMin, double dIMax)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetMinMax)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetMinMax(iGui0004_CheckLiquidLevelEmpty_m,dIMin,dIMax);
+    return;
+  }
+  printf("vUiCheckLiquidLevelEmpty_SetTitle_g(): tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetMinMax() == NULL!\n");
+} // vUiCheckLiquidLevelEmpty_SetMinMax_g()
+
+/**
+ * Set current
+ */
+void vUiCheckLiquidLevelEmpty_SetValue_g(double dValue)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetValue)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetValue(iGui0004_CheckLiquidLevelEmpty_m,dValue);
+    return;
+  }
+  printf("vUiCheckLiquidLevelEmpty_SetCurrent_g(): tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetCurrent() == NULL!\n");
+} // vUiCheckLiquidLevelEmpty_SetCurrent_g()
+
+/**
+ * Set Unit
+ */
+void vUiCheckLiquidLevelEmpty_SetUnit_g(char *pcUnit)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetUnit)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetUnit(iGui0004_CheckLiquidLevelEmpty_m,pcUnit);
+    return;
+  }
+  printf("vUiCheckLiquidLevelEmpty_SetUnit_g(): tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetUnit() == NULL!\n");
+} // vUiCheckLiquidLevelEmpty_SetUnit_g()
+
+/**
+ * Set Tolerance
+ */
+void vUiCheckLiquidLevelEmpty_SetTolerance_g(double dTolerance)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetTolerance)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetTolerance(iGui0004_CheckLiquidLevelEmpty_m,dTolerance);
+    return;
+  }
+  printf("vUiCheckLiquidLevelEmpty_SetUnit_g(): tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetTolerance() == NULL!\n");
+} // vUiCheckLiquidLevelEmpty_SetUnit_g()
+
+/**
+ * Set Soll
+ */
+void vUiCheckLiquidLevelEmpty_SetSoll_g(double dSoll)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetSoll)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetSoll(iGui0004_CheckLiquidLevelEmpty_m,dSoll);
+    return;
+  }
+  printf("vUiCheckLiquidLevelEmpty_SetCurrent_g(): tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetSoll() == NULL!\n");
+} // vUiCheckLiquidLevelEmpty_SetCurrent_g()
+
+/**
+ * Set Precision
+ */
+void vUiCheckLiquidLevelEmpty_SetPrecision_g(int iPrecision)
+{
+  if(   (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty)
+     && (tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetPrecision)
+    )
+  {
+    tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetPrecision(iGui0004_CheckLiquidLevelEmpty_m,iPrecision);
+    return;
+  }
+  printf("vUiCheckLiquidLevelEmpty_SetCurrent_g(): tagUIElements_m.ptagGuiCheckLiquidLevelEmpty->pFvSetPrecision() == NULL!\n");
+} // vUiCheckLiquidLevelEmpty_SetCurrent_g()
 //@TESTER_GUI_GENERATED_FUNCTIONS_END@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
