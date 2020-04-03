@@ -3,8 +3,7 @@
 @set TARGET=.
 @echo on
 copy %SOURCE%\LibTesterGui_0001* %TARGET%
-copy %SOURCE%\LibTesterGui_0003* %TARGET%
-copy %SOURCE%\LibTesterGui_0007* %TARGET%
+copy %SOURCE%\LibTesterGui_0004* %TARGET%
 
 copy %SOURCE%\LibTesterGui_0009* %TARGET%
 copy %SOURCE%\LibTesterGui_Mgr* %TARGET%
@@ -13,7 +12,7 @@ copy %SOURCE%\LibTesterGui_Mgr* %TARGET%
 @set SOURCE=\Projects\Libraries\LibDutCom\Test\current
 @set TARGET=.
 @echo on
-copy %SOURCE%\LibDutCom_0056.dll %TARGET%
+copy %SOURCE%\LibDutCom_0055.dll %TARGET%
 
 @echo off
 @set SOURCE=\Projects\Libraries\LibDutCom\0000\zz_to_distribute
@@ -62,24 +61,6 @@ copy %SOURCE%\* %TARGET%
 @echo on
 copy %SOURCE%\* %TARGET%
 
-@echo off
-@set LIBRARY=LibNfc
-@set SOURCE=\Projects\Libraries\CVI\%LIBRARY%\current\zz_to_distribute
-@echo on
-copy %SOURCE%\* %TARGET%
-
-@echo off
-@set LIBRARY=LibIntermecPrinter
-@set SOURCE=\Projects\Libraries\CVI\%LIBRARY%\current\zz_to_distribute
-@set TARGET=.
-@echo on
-copy %SOURCE%\* %TARGET%
-
-@echo off
-@set SOURCE=\Projects\OceanLink\OL_D85\Label\PrinterTest\current
-@set TARGET=.
-@echo on
-copy %SOURCE%\LabelPrt09* %TARGET%
 
 @echo off
 @set LIBRARY=LibWin32Prt

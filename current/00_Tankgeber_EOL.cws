@@ -1,0 +1,687 @@
+[Workspace Header]
+Version = 711
+Pathname = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/00_LinkUp_EOL.cws"
+CVI Dir = "/c/program files/ni/cvi71"
+IVI Standard Root Dir = "/C/Program Files/IVI"
+VXIplug&play Framework Dir = "/C/VXIPNP/winnt"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "LinkUp_EOL.prj"
+Drag Bar Left = 263
+Window Top = 95
+Window Left = -312
+Window Bottom = 990
+Window Right = 1341
+Maximized = False
+Maximized Children = True
+Max Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win For Warnings = True
+Show Build Dialog = False
+Save Changes Before Running = "Always"
+Hide Windows = False
+Global Hot Key = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 6
+Window Confinement Region Enabled = True
+MainColumnWidth = 244
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+StatusColumnWidth = 70
+
+[Project Header 0001]
+Version = 711
+Platform Code = 4
+Build Configuration = "Release"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = False
+
+[File 0001]
+Path = "/c/Projects/Libraries/CVI/LibDFUToolProg/current/DFUToolProg.uir"
+File Type = "User Interface Resource"
+Disk Date = 3666774291
+In Projects = ""
+Window Top = 140
+Window Left = 66
+Window Height = 349
+Window Width = 708
+Window Z-Order = 6
+
+[File 0002]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Main.uir"
+File Type = "User Interface Resource"
+Disk Date = 3668594162
+In Projects = "1,"
+Window Top = 32
+Window Left = 10
+Window Height = 349
+Window Width = 715
+Window Z-Order = 1
+
+[File 0003]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/AlphaPanel.lib"
+File Type = "Library"
+Disk Date = 3664350613
+In Projects = "1,"
+
+[File 0004]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/AlphaPanel_Funcs.h"
+File Type = "Include"
+Disk Date = 3571059212
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0005]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Build_Date.h"
+File Type = "Include"
+Disk Date = 3668069996
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0006]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/config.c"
+File Type = "CSource"
+Disk Date = 3667556513
+In Projects = "1,"
+Window Top = 122
+Window Left = 58
+Source Window State = "1,265,277,265,0,0,0,0,0,0,0,0,0,0,0,0,319,0,336,87,349,715,1,0,"
+
+[File 0007]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/config.h"
+File Type = "Include"
+Disk Date = 3667554239
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0008]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/defines.h"
+File Type = "Include"
+Disk Date = 3668067938
+In Projects = "1,"
+Window Top = 152
+Window Left = 74
+Source Window State = "1,4,4,4,19,27,19,0,0,0,0,0,0,0,0,0,0,0,28,2,349,715,1,0,"
+
+[File 0009]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/devicedat.c"
+File Type = "CSource"
+Disk Date = 3666172995
+In Projects = "1,"
+Window Top = 62
+Window Left = 26
+Source Window State = "1,693,698,693,0,0,0,0,0,0,0,0,0,0,0,0,683,0,693,0,349,715,1,0,"
+
+[File 0010]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/devicedat.h"
+File Type = "Include"
+Disk Date = 3666166687
+In Projects = "1,"
+Window Top = 25
+Window Left = 6
+Source Window State = "1,107,114,107,0,0,0,0,0,0,0,0,0,0,0,0,97,0,120,32,349,676,1,0,"
+
+[File 0011]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/EpsStmApi3.h"
+File Type = "Include"
+Disk Date = 3576226724
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0012]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/global.c"
+File Type = "CSource"
+Disk Date = 3665404250
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0013]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/global.h"
+File Type = "Include"
+Disk Date = 3665404251
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0014]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/ibs.c"
+File Type = "CSource"
+Disk Date = 3665552861
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0015]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/ibs.h"
+File Type = "Include"
+Disk Date = 3576226724
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0016]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/ibs_cfg.c"
+File Type = "CSource"
+Disk Date = 3576226727
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0017]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/ibs_cfg.h"
+File Type = "Include"
+Disk Date = 3576226724
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0018]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/DDI/WINNTLIB/IBSETH.lib"
+File Type = "Library"
+Disk Date = 3576226724
+In Projects = "1,"
+
+[File 0019]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/inifile.c"
+File Type = "CSource"
+Disk Date = 3576225912
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0020]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/inifile.h"
+File Type = "Include"
+Disk Date = 3537437038
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0021]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/IODiag.c"
+File Type = "CSource"
+Disk Date = 3576226724
+In Projects = "1,"
+Window Top = 71
+Window Left = 30
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,9,349,676,1,0,"
+
+[File 0022]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/IODiag.h"
+File Type = "Include"
+Disk Date = 3576226724
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0023]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/IODiag.uir"
+File Type = "User Interface Resource"
+Disk Date = 3576226724
+In Projects = "1,"
+Window Top = 94
+Window Left = 42
+Window Height = 349
+Window Width = 708
+Window Z-Order = 2
+
+[File 0024]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/IODiag_funcs.h"
+File Type = "Include"
+Disk Date = 3576226723
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0025]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/KWP2000Diag.c"
+File Type = "CSource"
+Disk Date = 3604396970
+In Projects = "1,"
+Window Top = 94
+Window Left = 42
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,47,17,349,676,1,0,"
+
+[File 0026]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/KWP2000Diag.h"
+File Type = "Include"
+Disk Date = 3657181711
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0027]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/KWP2000Diag.uir"
+File Type = "User Interface Resource"
+Disk Date = 3657181711
+In Projects = "1,"
+Window Top = 117
+Window Left = 54
+Window Height = 349
+Window Width = 708
+Window Z-Order = 5
+
+[File 0028]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/KWP2000Diag_Funcs.h"
+File Type = "Include"
+Disk Date = 3576226724
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0029]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LabelPrt09.c"
+File Type = "CSource"
+Disk Date = 3666934135
+In Projects = "1,"
+Window Top = 117
+Window Left = 54
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,28,9,349,676,1,0,"
+
+[File 0030]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LabelPrt09.h"
+File Type = "Include"
+Disk Date = 3666933978
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0031]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LabelPrt09.uir"
+File Type = "User Interface Resource"
+Disk Date = 3666933978
+In Projects = ""
+Window Top = 140
+Window Left = 66
+Window Height = 349
+Window Width = 708
+Window Z-Order = 3
+
+[File 0032]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LabelPrt09_Funcs.h"
+File Type = "Include"
+Disk Date = 3665398449
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0033]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibDutCom_Import.h"
+File Type = "Include"
+Disk Date = 3603977108
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0034]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibDutCom_Interface.h"
+File Type = "Include"
+Disk Date = 3631684278
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0035]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibIntermecPrinter.h"
+File Type = "Include"
+Disk Date = 3564036313
+In Projects = "1,"
+Window Top = 25
+Window Left = 6
+Source Window State = "1,39,39,39,5,33,33,0,3,0,0,0,0,0,0,0,15,0,39,5,349,676,1,0,"
+
+[File 0036]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibIntermecPrinter.lib"
+File Type = "Library"
+Disk Date = 3662122395
+In Projects = "1,"
+
+[File 0037]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibNetworking.h"
+File Type = "Include"
+Disk Date = 3623132611
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0038]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibNetworking.lib"
+File Type = "Library"
+Disk Date = 3661948973
+In Projects = "1,"
+
+[File 0039]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibNfc.h"
+File Type = "Include"
+Disk Date = 3668064021
+In Projects = "1,"
+Window Top = 94
+Window Left = 42
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,4,323,676,1,0,"
+
+[File 0040]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0001.lib"
+File Type = "Library"
+Disk Date = 3657523663
+In Projects = "1,"
+
+[File 0041]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0001_export.h"
+File Type = "Include"
+Disk Date = 3657523670
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0042]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0003.lib"
+File Type = "Library"
+Disk Date = 3662464243
+In Projects = "1,"
+
+[File 0043]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0003_export.h"
+File Type = "Include"
+Disk Date = 3662464247
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0044]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0007.lib"
+File Type = "Library"
+Disk Date = 3657524495
+In Projects = "1,"
+
+[File 0045]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0007_export.h"
+File Type = "Include"
+Disk Date = 3657524497
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0046]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0009.lib"
+File Type = "Library"
+Disk Date = 3572265576
+In Projects = "1,"
+
+[File 0047]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0009_export.h"
+File Type = "Include"
+Disk Date = 3572265572
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0048]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_Mgr.lib"
+File Type = "Library"
+Disk Date = 3657524879
+In Projects = "1,"
+
+[File 0049]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_Mgr_export.h"
+File Type = "Include"
+Disk Date = 3657524873
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0050]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGuis.h"
+File Type = "Include"
+Disk Date = 3665472085
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0051]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Main.c"
+File Type = "CSource"
+Disk Date = 3667971182
+In Projects = "1,"
+Window Top = 92
+Window Left = 42
+Source Window State = "1,282,285,282,0,0,0,0,0,0,0,0,0,0,0,0,146,0,160,18,349,715,1,0,"
+
+[File 0052]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Main.h"
+File Type = "Include"
+Disk Date = 3668594162
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0053]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Mpr.Lib"
+File Type = "Library"
+Disk Date = 3576226724
+In Projects = "1,"
+
+[File 0054]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NetworkState.c"
+File Type = "CSource"
+Disk Date = 3576226724
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0055]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NetworkState.h"
+File Type = "Include"
+Disk Date = 3576226724
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0056]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NetworkState.uir"
+File Type = "User Interface Resource"
+Disk Date = 3576226724
+In Projects = "1,"
+Window Top = 163
+Window Left = 78
+Window Height = 349
+Window Width = 708
+Window Z-Order = 4
+
+[File 0057]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NetworkState_Funcs.h"
+File Type = "Include"
+Disk Date = 3576226727
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0058]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Nfc.lib"
+File Type = "Library"
+Disk Date = 3668065906
+In Projects = "1,"
+
+[File 0059]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NumPanel.lib"
+File Type = "Library"
+Disk Date = 3662466746
+In Projects = "1,"
+
+[File 0060]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NumPanel_Funcs.h"
+File Type = "Include"
+Disk Date = 3578896605
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0061]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/PnlError.lib"
+File Type = "Library"
+Disk Date = 3666001912
+In Projects = "1,"
+
+[File 0062]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/PnlError_Funcs.h"
+File Type = "Include"
+Disk Date = 3665570385
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0063]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/process.c"
+File Type = "CSource"
+Disk Date = 3668151359
+In Projects = "1,"
+Window Top = 122
+Window Left = 58
+Source Window State = "1,844,844,844,46,62,62,0,0,0,0,0,0,0,0,0,820,0,859,10,323,715,1,0,"
+
+[File 0064]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/process.h"
+File Type = "Include"
+Disk Date = 3667558871
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0065]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SelectorPanel.lib"
+File Type = "Library"
+Disk Date = 3668066529
+In Projects = "1,"
+
+[File 0066]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SelectorPanel_Funcs.h"
+File Type = "Include"
+Disk Date = 3578378153
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0067]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SerialNumber.h"
+File Type = "Include"
+Disk Date = 3564036074
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0068]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SerialNumber.lib"
+File Type = "Library"
+Disk Date = 3661949659
+In Projects = "1,"
+
+[File 0069]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/status.h"
+File Type = "Include"
+Disk Date = 3667553695
+In Projects = "1,"
+Window Top = 48
+Window Left = 18
+Source Window State = "1,66,70,66,0,0,0,0,0,0,0,0,0,0,0,0,49,0,66,0,349,676,1,0,"
+
+[File 0070]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/strftime.c"
+File Type = "CSource"
+Disk Date = 3576226727
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0071]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/strftime.h"
+File Type = "Include"
+Disk Date = 3576226724
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0072]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SvnIds.c"
+File Type = "CSource"
+Disk Date = 3668594165
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0073]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SvnIds.h"
+File Type = "Include"
+Disk Date = 3610097005
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0074]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/TM88.c"
+File Type = "CSource"
+Disk Date = 3592200960
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0075]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/TM88.h"
+File Type = "Include"
+Disk Date = 3521538887
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0076]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/UIMain.c"
+File Type = "CSource"
+Disk Date = 3668594044
+In Projects = "1,"
+Window Top = 152
+Window Left = 74
+Source Window State = "1,365,365,365,16,30,30,0,0,0,0,0,0,0,0,0,349,0,417,10,349,715,1,0,"
+
+[File 0077]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/UIMain.h"
+File Type = "Include"
+Disk Date = 3668593880
+In Projects = "1,"
+Window Top = 232
+Window Left = 114
+Source Window State = "1,118,121,118,0,0,0,0,0,0,0,0,0,0,0,0,106,0,119,0,349,676,1,0,"
+
+[File 0078]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Win32Prt.c"
+File Type = "CSource"
+Disk Date = 3592200742
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0079]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Win32Prt.h"
+File Type = "Include"
+Disk Date = 3519976176
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0080]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/zol.c"
+File Type = "CSource"
+Disk Date = 3668069988
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0081]
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/zol.h"
+File Type = "Include"
+Disk Date = 3668069990
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+Enable Remote Debugging = False
+Remote Debugger Address = "localhost"
+Remote Target Address = ""
+Remote Debugging Port = 3291
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[DLLs Used By Executable 0001]
+DLL 0001 = "/c/WINDOWS/system32/ibseth.dll"
+DLL 0002 = "/c/Projects/LinkUp/EOL/Software/current/LibNetworking.dll"
+DLL 0003 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0001.dll"
+DLL 0004 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0003.dll"
+DLL 0005 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0007.dll"
+DLL 0006 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_Mgr.dll"
+DLL 0007 = "/c/Projects/LinkUp/EOL/Software/current/Nfc.dll"
+DLL 0008 = "/c/Projects/LinkUp/EOL/Software/current/NumPanel.dll"
+DLL 0009 = "/c/Projects/LinkUp/EOL/Software/current/PnlError.dll"
+
+[Command Line Args 0001]
+Command Line Args = ""
+

@@ -1,6 +1,6 @@
 /**************************************************************************/
 /* LabWindows/CVI User Interface Resource (UIR) Include File              */
-/* Copyright (c) National Instruments 2015. All Rights Reserved.          */
+/* Copyright (c) National Instruments 2020. All Rights Reserved.          */
 /*                                                                        */
 /* WARNING: Do not add to, delete from, or otherwise modify the contents  */
 /*          of this include file.                                         */
@@ -99,23 +99,25 @@
 #define  PNL_DIAGIO_DECORATION_5         83
 #define  PNL_DIAGIO_TEXTMSG_3            84
 #define  PNL_DIAGIO_DECORATION_6         85
-#define  PNL_DIAGIO_AI2                  86
-#define  PNL_DIAGIO_DECORATION_8         87
-#define  PNL_DIAGIO_DAC1_IST             88
-#define  PNL_DIAGIO_DAC1_SOLL            89      /* callback function: SwitchOutputCB */
-#define  PNL_DIAGIO_DAC2_IST             90
-#define  PNL_DIAGIO_DAC2_SOLL            91      /* callback function: SwitchOutputCB */
-#define  PNL_DIAGIO_DECORATION_7         92
-#define  PNL_DIAGIO_AI3                  93
-#define  PNL_DIAGIO_AI1                  94
-#define  PNL_DIAGIO_TEXTMSG_2            95
-#define  PNL_DIAGIO_BTN_OUT_UP           96      /* callback function: OutputPageFlipCB */
-#define  PNL_DIAGIO_BTN_INP_UP           97      /* callback function: InputPageFlipCB */
-#define  PNL_DIAGIO_BTN_INP_DOWN         98      /* callback function: InputPageFlipCB */
-#define  PNL_DIAGIO_BTN_OUT_DOWN         99      /* callback function: OutputPageFlipCB */
-#define  PNL_DIAGIO_CHK_AUTO_ENABLE      100     /* callback function: AutoEnableCB */
-#define  PNL_DIAGIO_TEXTMSG              101
-#define  PNL_DIAGIO_TEXTMSG_4            102
+#define  PNL_DIAGIO_AI5                  86
+#define  PNL_DIAGIO_AI6                  87
+#define  PNL_DIAGIO_AI2                  88
+#define  PNL_DIAGIO_DECORATION_8         89
+#define  PNL_DIAGIO_DAC1_IST             90
+#define  PNL_DIAGIO_DAC1_SOLL            91      /* callback function: SwitchOutputCB */
+#define  PNL_DIAGIO_DAC2_IST             92
+#define  PNL_DIAGIO_DAC2_SOLL            93      /* callback function: SwitchOutputCB */
+#define  PNL_DIAGIO_DECORATION_7         94
+#define  PNL_DIAGIO_AI3                  95
+#define  PNL_DIAGIO_AI1                  96
+#define  PNL_DIAGIO_TEXTMSG_2            97
+#define  PNL_DIAGIO_BTN_OUT_UP           98      /* callback function: OutputPageFlipCB */
+#define  PNL_DIAGIO_BTN_INP_UP           99      /* callback function: InputPageFlipCB */
+#define  PNL_DIAGIO_BTN_INP_DOWN         100     /* callback function: InputPageFlipCB */
+#define  PNL_DIAGIO_BTN_OUT_DOWN         101     /* callback function: OutputPageFlipCB */
+#define  PNL_DIAGIO_CHK_AUTO_ENABLE      102     /* callback function: AutoEnableCB */
+#define  PNL_DIAGIO_TEXTMSG              103
+#define  PNL_DIAGIO_TEXTMSG_4            104
 
 
      /* Menu Bars, Menus, and Menu Items: */

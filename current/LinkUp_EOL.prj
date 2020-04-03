@@ -1,10 +1,10 @@
 [Project Header]
 Version = 711
-Pathname = "/c/Projects/LinkUp/EOL/Software/current/LinkUp_EOL.prj"
+Pathname = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LinkUp_EOL.prj"
 CVI Dir = "/c/program files/ni/cvi71"
 IVI Standard Root Dir = "/C/Program Files/IVI"
 VXIplug&play Framework Dir = "/C/VXIPNP/winnt"
-Number of Files = 80
+Number of Files = 79
 Target Type = "Executable"
 Flags = 16
 
@@ -14,7 +14,7 @@ Res Id = 1
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "AlphaPanel.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/AlphaPanel.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/AlphaPanel.lib"
 Exclude = False
 Project Flags = 0
 Folder = "Library Files"
@@ -25,7 +25,7 @@ Res Id = 2
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "AlphaPanel_Funcs.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/AlphaPanel_Funcs.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/AlphaPanel_Funcs.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -36,7 +36,7 @@ Res Id = 3
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Build_Date.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/Build_Date.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Build_Date.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -47,7 +47,7 @@ Res Id = 4
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "config.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/config.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/config.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -59,7 +59,7 @@ Res Id = 5
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "config.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/config.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/config.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -70,7 +70,7 @@ Res Id = 6
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "defines.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/defines.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/defines.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -81,7 +81,7 @@ Res Id = 7
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "devicedat.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/devicedat.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/devicedat.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -93,7 +93,7 @@ Res Id = 8
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "devicedat.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/devicedat.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/devicedat.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -104,7 +104,7 @@ Res Id = 9
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "EpsStmApi3.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/EpsStmApi3.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/EpsStmApi3.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -115,7 +115,7 @@ Res Id = 10
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "global.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/global.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/global.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -127,7 +127,7 @@ Res Id = 11
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "global.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/global.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/global.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -138,7 +138,7 @@ Res Id = 12
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "ibs.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/ibs.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/ibs.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -150,7 +150,7 @@ Res Id = 13
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "ibs.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/ibs.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/ibs.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -161,7 +161,7 @@ Res Id = 14
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "ibs_cfg.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/ibs_cfg.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/ibs_cfg.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -173,7 +173,7 @@ Res Id = 15
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "ibs_cfg.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/ibs_cfg.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/ibs_cfg.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -184,7 +184,7 @@ Res Id = 16
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "DDI/WINNTLIB/IBSETH.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/DDI/WINNTLIB/IBSETH.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/DDI/WINNTLIB/IBSETH.lib"
 Exclude = False
 Project Flags = 0
 Folder = "Library Files"
@@ -195,7 +195,7 @@ Res Id = 17
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "inifile.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/inifile.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/inifile.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -207,7 +207,7 @@ Res Id = 18
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "inifile.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/inifile.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/inifile.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -218,7 +218,7 @@ Res Id = 19
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "IODiag.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/IODiag.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/IODiag.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -230,7 +230,7 @@ Res Id = 20
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "IODiag.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/IODiag.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/IODiag.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -241,7 +241,7 @@ Res Id = 21
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "IODiag.uir"
-Path = "/c/Projects/LinkUp/EOL/Software/current/IODiag.uir"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/IODiag.uir"
 Exclude = False
 Project Flags = 0
 Folder = "User Interface Files"
@@ -252,7 +252,7 @@ Res Id = 22
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "IODiag_funcs.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/IODiag_funcs.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/IODiag_funcs.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -263,7 +263,7 @@ Res Id = 23
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "KWP2000Diag.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/KWP2000Diag.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/KWP2000Diag.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -275,7 +275,7 @@ Res Id = 24
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "KWP2000Diag.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/KWP2000Diag.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/KWP2000Diag.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -286,7 +286,7 @@ Res Id = 25
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "KWP2000Diag.uir"
-Path = "/c/Projects/LinkUp/EOL/Software/current/KWP2000Diag.uir"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/KWP2000Diag.uir"
 Exclude = False
 Project Flags = 0
 Folder = "User Interface Files"
@@ -297,7 +297,7 @@ Res Id = 26
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "KWP2000Diag_Funcs.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/KWP2000Diag_Funcs.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/KWP2000Diag_Funcs.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -308,7 +308,7 @@ Res Id = 27
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LabelPrt09.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LabelPrt09.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LabelPrt09.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -320,29 +320,29 @@ Res Id = 28
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LabelPrt09.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LabelPrt09.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LabelPrt09.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
 [File 0029]
-File Type = "User Interface Resource"
+File Type = "Include"
 Res Id = 29
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LabelPrt09.uir"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LabelPrt09.uir"
+Path Rel Path = "LabelPrt09_Funcs.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LabelPrt09_Funcs.h"
 Exclude = False
 Project Flags = 0
-Folder = "User Interface Files"
+Folder = "Include Files"
 
 [File 0030]
 File Type = "Include"
 Res Id = 30
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LabelPrt09_Funcs.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LabelPrt09_Funcs.h"
+Path Rel Path = "LibDutCom_Import.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibDutCom_Import.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -352,8 +352,8 @@ File Type = "Include"
 Res Id = 31
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibDutCom_Import.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibDutCom_Import.h"
+Path Rel Path = "LibDutCom_Interface.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibDutCom_Interface.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -363,545 +363,534 @@ File Type = "Include"
 Res Id = 32
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibDutCom_Interface.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibDutCom_Interface.h"
+Path Rel Path = "LibIntermecPrinter.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibIntermecPrinter.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
 [File 0033]
-File Type = "Include"
+File Type = "Library"
 Res Id = 33
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibIntermecPrinter.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibIntermecPrinter.h"
+Path Rel Path = "LibIntermecPrinter.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibIntermecPrinter.lib"
 Exclude = False
 Project Flags = 0
-Folder = "Include Files"
+Folder = "Library Files"
 
 [File 0034]
-File Type = "Library"
+File Type = "Include"
 Res Id = 34
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibIntermecPrinter.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibIntermecPrinter.lib"
+Path Rel Path = "LibNetworking.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibNetworking.h"
 Exclude = False
 Project Flags = 0
-Folder = "Library Files"
+Folder = "Include Files"
 
 [File 0035]
-File Type = "Include"
+File Type = "Library"
 Res Id = 35
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibNetworking.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibNetworking.h"
+Path Rel Path = "LibNetworking.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibNetworking.lib"
 Exclude = False
 Project Flags = 0
-Folder = "Include Files"
+Folder = "Library Files"
 
 [File 0036]
-File Type = "Library"
+File Type = "Include"
 Res Id = 36
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibNetworking.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibNetworking.lib"
+Path Rel Path = "LibNfc.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibNfc.h"
 Exclude = False
 Project Flags = 0
-Folder = "Library Files"
+Folder = "Include Files"
 
 [File 0037]
-File Type = "Include"
+File Type = "Library"
 Res Id = 37
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibNfc.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibNfc.h"
+Path Rel Path = "LibTesterGui_0001.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0001.lib"
 Exclude = False
 Project Flags = 0
-Folder = "Include Files"
+Folder = "Library Files"
 
 [File 0038]
-File Type = "Library"
+File Type = "Include"
 Res Id = 38
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0001.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0001.lib"
+Path Rel Path = "LibTesterGui_0001_export.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0001_export.h"
 Exclude = False
 Project Flags = 0
-Folder = "Library Files"
+Folder = "Include Files"
 
 [File 0039]
-File Type = "Include"
+File Type = "Library"
 Res Id = 39
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0001_export.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0001_export.h"
+Path Rel Path = "LibTesterGui_0003.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0003.lib"
 Exclude = False
 Project Flags = 0
-Folder = "Include Files"
+Folder = "Library Files"
 
 [File 0040]
-File Type = "Library"
+File Type = "Include"
 Res Id = 40
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0003.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0003.lib"
+Path Rel Path = "LibTesterGui_0003_export.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0003_export.h"
 Exclude = False
 Project Flags = 0
-Folder = "Library Files"
+Folder = "Include Files"
 
 [File 0041]
-File Type = "Include"
+File Type = "Library"
 Res Id = 41
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0003_export.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0003_export.h"
+Path Rel Path = "LibTesterGui_0007.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0007.lib"
 Exclude = False
 Project Flags = 0
-Folder = "Include Files"
+Folder = "Library Files"
 
 [File 0042]
-File Type = "Library"
+File Type = "Include"
 Res Id = 42
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0007.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0007.lib"
+Path Rel Path = "LibTesterGui_0007_export.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0007_export.h"
 Exclude = False
 Project Flags = 0
-Folder = "Library Files"
+Folder = "Include Files"
 
 [File 0043]
-File Type = "Include"
+File Type = "Library"
 Res Id = 43
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0007_export.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0007_export.h"
+Path Rel Path = "LibTesterGui_0009.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0009.lib"
 Exclude = False
 Project Flags = 0
-Folder = "Include Files"
+Folder = "Library Files"
 
 [File 0044]
-File Type = "Library"
+File Type = "Include"
 Res Id = 44
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0009.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0009.lib"
-Exclude = False
-Project Flags = 0
-Folder = "Library Files"
-
-[File 0045]
-File Type = "Include"
-Res Id = 45
-Path Is Rel = True
-Path Rel To = "Project"
 Path Rel Path = "LibTesterGui_0009_export.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0009_export.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0009_export.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0046]
+[File 0045]
 File Type = "Library"
-Res Id = 46
+Res Id = 45
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibTesterGui_Mgr.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_Mgr.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_Mgr.lib"
 Exclude = False
 Project Flags = 0
 Folder = "Library Files"
+
+[File 0046]
+File Type = "Include"
+Res Id = 46
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "LibTesterGui_Mgr_export.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_Mgr_export.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
 
 [File 0047]
 File Type = "Include"
 Res Id = 47
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_Mgr_export.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_Mgr_export.h"
+Path Rel Path = "LibTesterGuis.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGuis.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
 [File 0048]
-File Type = "Include"
+File Type = "CSource"
 Res Id = 48
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGuis.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGuis.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0049]
-File Type = "CSource"
-Res Id = 49
-Path Is Rel = True
-Path Rel To = "Project"
 Path Rel Path = "Main.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/Main.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Main.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0050]
+[File 0049]
 File Type = "Include"
-Res Id = 50
+Res Id = 49
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Main.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/Main.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Main.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0051]
+[File 0050]
 File Type = "User Interface Resource"
-Res Id = 51
+Res Id = 50
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Main.uir"
-Path = "/c/Projects/LinkUp/EOL/Software/current/Main.uir"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Main.uir"
 Exclude = False
 Project Flags = 0
 Folder = "User Interface Files"
 
-[File 0052]
+[File 0051]
 File Type = "Library"
-Res Id = 52
+Res Id = 51
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Mpr.Lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/Mpr.Lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Mpr.Lib"
 Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0053]
+[File 0052]
 File Type = "CSource"
-Res Id = 53
+Res Id = 52
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "NetworkState.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/NetworkState.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NetworkState.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0054]
+[File 0053]
 File Type = "Include"
-Res Id = 54
+Res Id = 53
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "NetworkState.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/NetworkState.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NetworkState.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0055]
+[File 0054]
 File Type = "User Interface Resource"
-Res Id = 55
+Res Id = 54
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "NetworkState.uir"
-Path = "/c/Projects/LinkUp/EOL/Software/current/NetworkState.uir"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NetworkState.uir"
 Exclude = False
 Project Flags = 0
 Folder = "User Interface Files"
 
-[File 0056]
+[File 0055]
 File Type = "Include"
-Res Id = 56
+Res Id = 55
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "NetworkState_Funcs.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/NetworkState_Funcs.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NetworkState_Funcs.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
+
+[File 0056]
+File Type = "Library"
+Res Id = 56
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "Nfc.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Nfc.lib"
+Exclude = False
+Project Flags = 0
+Folder = "Library Files"
 
 [File 0057]
 File Type = "Library"
 Res Id = 57
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "Nfc.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/Nfc.lib"
+Path Rel Path = "NumPanel.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NumPanel.lib"
 Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
 [File 0058]
-File Type = "Library"
+File Type = "Include"
 Res Id = 58
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "NumPanel.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/NumPanel.lib"
+Path Rel Path = "NumPanel_Funcs.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NumPanel_Funcs.h"
 Exclude = False
 Project Flags = 0
-Folder = "Library Files"
+Folder = "Include Files"
 
 [File 0059]
-File Type = "Include"
+File Type = "Library"
 Res Id = 59
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "NumPanel_Funcs.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/NumPanel_Funcs.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0060]
-File Type = "Library"
-Res Id = 60
-Path Is Rel = True
-Path Rel To = "Project"
 Path Rel Path = "PnlError.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/PnlError.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/PnlError.lib"
 Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0061]
+[File 0060]
 File Type = "Include"
-Res Id = 61
+Res Id = 60
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "PnlError_Funcs.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/PnlError_Funcs.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/PnlError_Funcs.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0062]
+[File 0061]
 File Type = "CSource"
-Res Id = 62
+Res Id = 61
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "process.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/process.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/process.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0063]
+[File 0062]
 File Type = "Include"
-Res Id = 63
+Res Id = 62
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "process.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/process.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/process.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0064]
+[File 0063]
 File Type = "Library"
-Res Id = 64
+Res Id = 63
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "SelectorPanel.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/SelectorPanel.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SelectorPanel.lib"
 Exclude = False
 Project Flags = 0
 Folder = "Library Files"
+
+[File 0064]
+File Type = "Include"
+Res Id = 64
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "SelectorPanel_Funcs.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SelectorPanel_Funcs.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
 
 [File 0065]
 File Type = "Include"
 Res Id = 65
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "SelectorPanel_Funcs.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/SelectorPanel_Funcs.h"
+Path Rel Path = "SerialNumber.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SerialNumber.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
 [File 0066]
-File Type = "Include"
+File Type = "Library"
 Res Id = 66
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "SerialNumber.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/SerialNumber.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0067]
-File Type = "Library"
-Res Id = 67
-Path Is Rel = True
-Path Rel To = "Project"
 Path Rel Path = "SerialNumber.lib"
-Path = "/c/Projects/LinkUp/EOL/Software/current/SerialNumber.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SerialNumber.lib"
 Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0068]
+[File 0067]
 File Type = "Include"
-Res Id = 68
+Res Id = 67
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "status.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/status.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/status.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0069]
+[File 0068]
 File Type = "CSource"
-Res Id = 69
+Res Id = 68
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "strftime.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/strftime.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/strftime.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0070]
+[File 0069]
 File Type = "Include"
-Res Id = 70
+Res Id = 69
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "strftime.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/strftime.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/strftime.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0071]
+[File 0070]
 File Type = "CSource"
-Res Id = 71
+Res Id = 70
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "SvnIds.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/SvnIds.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SvnIds.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0072]
+[File 0071]
 File Type = "Include"
-Res Id = 72
+Res Id = 71
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "SvnIds.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/SvnIds.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/SvnIds.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0073]
+[File 0072]
 File Type = "CSource"
-Res Id = 73
+Res Id = 72
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "TM88.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/TM88.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/TM88.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0074]
+[File 0073]
 File Type = "Include"
-Res Id = 74
+Res Id = 73
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "TM88.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/TM88.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/TM88.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0075]
+[File 0074]
 File Type = "CSource"
-Res Id = 75
+Res Id = 74
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "UIMain.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/UIMain.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/UIMain.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0076]
+[File 0075]
 File Type = "Include"
-Res Id = 76
+Res Id = 75
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "UIMain.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/UIMain.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/UIMain.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0077]
+[File 0076]
 File Type = "CSource"
-Res Id = 77
+Res Id = 76
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Win32Prt.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/Win32Prt.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Win32Prt.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0078]
+[File 0077]
 File Type = "Include"
-Res Id = 78
+Res Id = 77
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Win32Prt.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/Win32Prt.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Win32Prt.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0079]
+[File 0078]
 File Type = "CSource"
-Res Id = 79
+Res Id = 78
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "zol.c"
-Path = "/c/Projects/LinkUp/EOL/Software/current/zol.c"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/zol.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0080]
+[File 0079]
 File Type = "Include"
-Res Id = 80
+Res Id = 79
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "zol.h"
-Path = "/c/Projects/LinkUp/EOL/Software/current/zol.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/zol.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -937,7 +926,7 @@ Include Path 1 = "/c/Program Files/Kvaser/CANLIB/INC"
 Include Path 2 Is Rel = True
 Include Path 2 Rel To = "Project"
 Include Path 2 Rel Path = "DDI/INC/USR"
-Include Path 2 = "/c/Projects/LinkUp/EOL/Software/current/DDI/INC/USR"
+Include Path 2 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/DDI/INC/USR"
 Include Path 3 Is Rel = False
 Include Path 3 = "/c/Program Files/IDS/uEye/Develop/include"
 
@@ -945,15 +934,15 @@ Include Path 3 = "/c/Program Files/IDS/uEye/Develop/include"
 Executable File_Debug Is Rel = True
 Executable File_Debug Rel To = "Project"
 Executable File_Debug Rel Path = "LinkUp_EOL.exe"
-Executable File_Debug = "/c/Projects/LinkUp/EOL/Software/current/LinkUp_EOL.exe"
+Executable File_Debug = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LinkUp_EOL.exe"
 Executable File_Release Is Rel = True
 Executable File_Release Rel To = "Project"
 Executable File_Release Rel Path = "LinkUp_EOL.exe"
-Executable File_Release = "/c/Projects/LinkUp/EOL/Software/current/LinkUp_EOL.exe"
+Executable File_Release = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LinkUp_EOL.exe"
 Icon File Is Rel = True
 Icon File Rel To = "Project"
 Icon File Rel Path = "veratron.ico"
-Icon File = "/c/Projects/LinkUp/EOL/Software/current/veratron.ico"
+Icon File = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/veratron.ico"
 Application Title = ""
 Numeric File Version = "1,0,0,0"
 Numeric Prod Version = "1,0,0,0"
@@ -1013,46 +1002,46 @@ kBytes Reserved on First Disk = 0
 Target Path Is Rel = True
 Target Path Rel To = "Project"
 Target Path Rel Path = "cvidistkit.AcquaLinkD110EOL"
-Target Path = "/c/Projects/LinkUp/EOL/Software/current/cvidistkit.AcquaLinkD110EOL"
+Target Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/cvidistkit.AcquaLinkD110EOL"
 Language = "German"
 Core Group Index = -1
 DLL Group Index = 2
 Project File 0001 Is Rel = True
 Project File 0001 Rel To = "Project"
 Project File 0001 Rel Path = "LinkUp_EOL.exe"
-Project File 0001 = "/c/Projects/LinkUp/EOL/Software/current/LinkUp_EOL.exe"
+Project File 0001 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LinkUp_EOL.exe"
 Project File 0002 Is Rel = True
 Project File 0002 Rel To = "Project"
 Project File 0002 Rel Path = "IBSETH.dll"
-Project File 0002 = "/c/Projects/LinkUp/EOL/Software/current/IBSETH.dll"
+Project File 0002 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/IBSETH.dll"
 Project File 0003 Is Rel = True
 Project File 0003 Rel To = "Project"
 Project File 0003 Rel Path = "LibNetworking.dll"
-Project File 0003 = "/c/Projects/LinkUp/EOL/Software/current/LibNetworking.dll"
+Project File 0003 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibNetworking.dll"
 Project File 0004 Is Rel = True
 Project File 0004 Rel To = "Project"
 Project File 0004 Rel Path = "LibTesterGui_0001.dll"
-Project File 0004 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0001.dll"
+Project File 0004 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0001.dll"
 Project File 0005 Is Rel = True
 Project File 0005 Rel To = "Project"
 Project File 0005 Rel Path = "LibTesterGui_0003.dll"
-Project File 0005 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0003.dll"
+Project File 0005 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0003.dll"
 Project File 0006 Is Rel = True
 Project File 0006 Rel To = "Project"
 Project File 0006 Rel Path = "LibTesterGui_0007.dll"
-Project File 0006 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0007.dll"
+Project File 0006 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0007.dll"
 Project File 0007 Is Rel = True
 Project File 0007 Rel To = "Project"
 Project File 0007 Rel Path = "LibTesterGui_0010.dll"
-Project File 0007 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0010.dll"
+Project File 0007 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0010.dll"
 Project File 0008 Is Rel = True
 Project File 0008 Rel To = "Project"
 Project File 0008 Rel Path = "LibTesterGui_Mgr.dll"
-Project File 0008 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_Mgr.dll"
+Project File 0008 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_Mgr.dll"
 Project File 0009 Is Rel = True
 Project File 0009 Rel To = "Project"
 Project File 0009 Rel Path = "NumPanel.dll"
-Project File 0009 = "/c/Projects/LinkUp/EOL/Software/current/NumPanel.dll"
+Project File 0009 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NumPanel.dll"
 Redistribute DataSocket = 1
 Redistribute NIReports = 0
 Redistribute DDC = 0
@@ -1075,7 +1064,7 @@ Register As ActiveX Servers = False
 File 0001 Is Rel = True
 File 0001 Rel To = "Project"
 File 0001 Rel Path = "IBSETH.dll"
-File 0001 = "/c/Projects/LinkUp/EOL/Software/current/IBSETH.dll"
+File 0001 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/IBSETH.dll"
 
 [Distribution Kit File Group 002]
 Group Name = "LinkUp_EOL"
@@ -1089,35 +1078,35 @@ Register As ActiveX Servers = False
 File 0001 Is Rel = True
 File 0001 Rel To = "Project"
 File 0001 Rel Path = "LinkUp_EOL.exe"
-File 0001 = "/c/Projects/LinkUp/EOL/Software/current/LinkUp_EOL.exe"
+File 0001 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LinkUp_EOL.exe"
 File 0002 Is Rel = True
 File 0002 Rel To = "Project"
 File 0002 Rel Path = "LibNetworking.dll"
-File 0002 = "/c/Projects/LinkUp/EOL/Software/current/LibNetworking.dll"
+File 0002 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibNetworking.dll"
 File 0003 Is Rel = True
 File 0003 Rel To = "Project"
 File 0003 Rel Path = "LibTesterGui_0001.dll"
-File 0003 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0001.dll"
+File 0003 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0001.dll"
 File 0004 Is Rel = True
 File 0004 Rel To = "Project"
 File 0004 Rel Path = "LibTesterGui_0003.dll"
-File 0004 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0003.dll"
+File 0004 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0003.dll"
 File 0005 Is Rel = True
 File 0005 Rel To = "Project"
 File 0005 Rel Path = "LibTesterGui_0007.dll"
-File 0005 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0007.dll"
+File 0005 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0007.dll"
 File 0006 Is Rel = True
 File 0006 Rel To = "Project"
 File 0006 Rel Path = "LibTesterGui_0010.dll"
-File 0006 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_0010.dll"
+File 0006 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0010.dll"
 File 0007 Is Rel = True
 File 0007 Rel To = "Project"
 File 0007 Rel Path = "LibTesterGui_Mgr.dll"
-File 0007 = "/c/Projects/LinkUp/EOL/Software/current/LibTesterGui_Mgr.dll"
+File 0007 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_Mgr.dll"
 File 0008 Is Rel = True
 File 0008 Rel To = "Project"
 File 0008 Rel Path = "NumPanel.dll"
-File 0008 = "/c/Projects/LinkUp/EOL/Software/current/NumPanel.dll"
+File 0008 = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/NumPanel.dll"
 
 [Distribution Kit Hardware Config]
 Include Hardware Config File = 0

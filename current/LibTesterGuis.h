@@ -4,8 +4,7 @@
   #include "LibTesterGui_Mgr_export.h"
 
   #include "LibTesterGui_0001_export.h"
-  #include "LibTesterGui_0003_export.h"
-  #include "LibTesterGui_0007_export.h"
+  #include "LibTesterGui_0004_export.h"
   //#include "LibTesterGui_0010_export.h"
 
 #endif // !LIBTESTERGUIS_H_INCLUDED

@@ -26,6 +26,8 @@
   #include "devicedat.h"
 
   #include "LibTesterGuis.h"
+  #include "LibTesterGui_0004_export.h"
+
 
 // ===============================
 // Konstanten für Bilddateien
@@ -67,6 +69,19 @@ typedef struct
 
 typedef struct
 {
+
+//@TESTER_GUI_GENERATED_STRUCT_VARS_START@
+//Generated: 15:48 @ 01.04.2020
+//Variables for Struct
+TagGuiTest0001 *ptagGuiWaitForLiquidLevelFull;
+TagGuiTest0004 *ptagGuiCheckLiquidLevelFull;
+TagGuiTest0001 *ptagGuiWaitForLiquidLevelHalf;
+TagGuiTest0004 *ptagGuiCheckLiquidLevelHalf;
+TagGuiTest0001 *ptagGuiWaitForLiquidLevelEmpty;
+TagGuiTest0004 *ptagGuiCheckLiquidLevelEmpty;
+//@TESTER_GUI_GENERATED_STRUCT_VARS_END@
+
+
   /**
    * Produkt-Daten
    */
@@ -110,17 +125,6 @@ typedef struct
     BOOL bHasError;
     BOOL bNetworkNeeded;
   } tagNetworkError;
-
-//@TESTER_GUI_GENERATED_STRUCT_VARS_START@
-//Generated: 15:48 @ 01.04.2020
-//Variables for Struct
-TagGuiTest0001 *ptagGuiWaitForLiquidLevelFull;
-TagGuiTest0004 *ptagGuiCheckLiquidLevelFull;
-TagGuiTest0001 *ptagGuiWaitForLiquidLevelHalf;
-TagGuiTest0004 *ptagGuiCheckLiquidLevelHalf;
-TagGuiTest0001 *ptagGuiWaitForLiquidLevelEmpty;
-TagGuiTest0004 *ptagGuiCheckLiquidLevelEmpty;
-//@TESTER_GUI_GENERATED_STRUCT_VARS_END@
 
 } tagUIElements;
 

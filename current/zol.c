@@ -24,11 +24,11 @@
 tagDigInp  eNotausOk            = {1, MODUL(0,0), &eInp00, "Notaus quittiert"};
 tagDigInp  eAlarmDut            = {1, MODUL(0,1), &eInp01, "Alarm DUT"};
 // E0.2 Reserve
-// E0.3 Reserve
-tagDigInp  eBCDBit0             = {1, MODUL(0,4), &eInp20, "BCDBit0"};
-tagDigInp  eBCDBit1             = {1, MODUL(0,5), &eInp21, "BCDBit1"};
-tagDigInp  eBCDBit2             = {1, MODUL(0,6), &eInp22, "BCDBit2"};
-tagDigInp  eBCDBit3             = {1, MODUL(0,7), &eInp23, "BCDBit3"};
+tagDigInp  eStart               = {1, MODUL(0,3), &eInp03, "eStart"};
+tagDigInp  eBCDBit0             = {1, MODUL(0,4), &eInp04, "BCDBit0"};
+tagDigInp  eBCDBit1             = {1, MODUL(0,5), &eInp05, "BCDBit1"};
+tagDigInp  eBCDBit2             = {1, MODUL(0,6), &eInp06, "BCDBit2"};
+tagDigInp  eBCDBit3             = {1, MODUL(0,7), &eInp07, "BCDBit3"};
 //==========================
 //tagDigInp  eVerriegelungRS      = {1, MODUL(1,0), &eInp10, "Verriegelung offen"};
 //tagDigInp  eVerriegelungAS      = {1, MODUL(1,1), &eInp11, "Verriegelung zu"};
@@ -62,14 +62,14 @@ tagDigInp  eBCDBit3             = {1, MODUL(0,7), &eInp23, "BCDBit3"};
 
 tagDigInp *apDigInpList_g[] =
 {
-  eNotausOk
-  eAlarmDut
-// E0.2 Reserve
+  &eNotausOk,
+  &eAlarmDut,
+  &eStart,
 // E0.3 Reserve
-  eBCDBit0
-  eBCDBit1
-  eBCDBit2
-  eBCDBit3
+  &eBCDBit0,
+  &eBCDBit1,
+  &eBCDBit2,
+  &eBCDBit3,
 //==========================
   //&eVerriegelungRS,
   //&eVerriegelungAS,
@@ -161,16 +161,16 @@ tagDigOut  aDUT_Pin12_high          = {1, MODUL(x,y), &aOut27, "-K104: Pin 12 hi
 
 tagDigOut *apDigOutList_g[] =
 {
-  &aUbattDutt
-  &aUmschalterVolt
+  &aUbattDutt,
+  &aUmschalterVolt,
 // A0.2 Reserve
 // A0.3 Reserve
 // A0.4 Reserve
-  &aVentilTankDruck
-  &aVentilWasserAblassen
-  &aVentilWasserhahn
+  &aVentilTankDruck,
+  &aVentilWasserAblassen,
+  &aVentilWasserhahn,
 //==========================
-  &aDUTSourceSink
+  &aDUTSourceSink,
   //&aVentilKontakt,
   //&aSignierung,
   //&aVentilFill,
@@ -210,15 +210,19 @@ tagDigOut *apDigOutList_g[] =
 //               |  |               |         +----------- .IBS_Node (Eingangsvariable)
 //               |  |               |         |      +----------- .pcTxt (Beschreibung)
 //               |  |               |         |      |
-tagAInp eADC1 = {1, PNL_DIAGIO_AI1, 0,        &eAI1, "Ivcc [mA]"};   // 30000 entspr. 1A (10V)
-//tagAInp eADC2 = {1, PNL_DIAGIO_AI2, 0.333333, &eAI2, "U-CAN [mV]"};   // 3000 entspr. 1000mV (1V)
-//tagAInp eADC3 = {2, PNL_DIAGIO_AI3, 0.065769, &eAI3, "Druck [mB]"};   // 3429 entspr. 227.8mb
+tagAInp eADC1 = {1, PNL_DIAGIO_AI1, 0,        &eAI1, "Ivcc [mA]"};
+tagAInp eADC2 = {1, PNL_DIAGIO_AI2, 0,        &eAI2, "U-CAN [mV]"};
+tagAInp eADC3 = {2, PNL_DIAGIO_AI3, 0,        &eAI3, "Druck [mB]"};
+tagAInp eADC5 = {2, PNL_DIAGIO_AI5, 0,        &eAI5, "Referenzgeber Low"};
+tagAInp eADC6 = {2, PNL_DIAGIO_AI6, 0,        &eAI6, "Referenzgeber High"};
 
 tagAInp *apAInpList_g[] =
 {
   &eADC1,
-  //&eADC2,
-  //&eADC3,
+  &eADC2,
+  &eADC3,
+  &eADC5,
+  &eADC6,
   NULL
 };
 

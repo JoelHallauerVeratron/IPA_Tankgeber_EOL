@@ -41,14 +41,6 @@
 #include "devicedat.h"
 #include "KWP2000Diag_Funcs.h"
 #include "SerialNumber.h"
-#ifdef USE_NFC
-#include "LibNfc.h"
-#endif // USE_NFC
-
-#ifdef USE_LABEL_PRINTER
-  #include "LibIntermecPrinter.h"
-#endif // USE_LABEL_PRINTER
-
 
 int iPanelMain_m=INVALID_PANEL_HANDLE;
 
@@ -115,57 +107,39 @@ BOOL bProgInit_m(void)
   }
   //vAppConfig_Dump_g();
 
-  sprintf(caVersion,"%d.%03d",PROGRAM_VERSION_MAJOR,PROGRAM_VERSION_MINOR);
-  if(!bNetworking_ConnectWait(tagAppConfig_g.tagNetwork.caUser,
-                              tagAppConfig_g.tagNetwork.caPwd,
-                              tagAppConfig_g.tagNetwork.caMapDrive,
-                              tagAppConfig_g.tagNetwork.caShareName,
-                              tagAppConfig_g.pcCompanyName,
-                              tagAppConfig_g.pcProjectName,
-                              tagAppConfig_g.pcApplicationName,
-                              caVersion))
-  {
-    printf("bNetworking_ConnectWait(\"%s\",\n"
-           "                        \"%s\",\n"
-           "                        \"%s\",\n"
-           "                        \"%s\",\n"
-           "                        \"%s\",\n"
-           "                        \"%s\",\n"
-           "                        \"%s\"\n) failed\n",
-           tagAppConfig_g.tagNetwork.caUser,
-           "*****",
-           tagAppConfig_g.tagNetwork.caMapDrive,
-           tagAppConfig_g.tagNetwork.caShareName,
-           tagAppConfig_g.pcProjectName,
-           tagAppConfig_g.pcApplicationName,
-           caVersion);
-    MessageBox(NULL,pcNetworking_GetLastErrorString(),"Fehler",MB_OK|MB_ICONWARNING);
-    return(FALSE);
-  }
-
-  if(iSNr_Init_g(tagAppConfig_g.caPathSerialNumbers,eMonthly)!=SNR_ERROR_NO_ERROR)
-  {
-    printf("iSNr_Init_g(): failed %s\n",tagAppConfig_g.caPathSerialNumbers);
-    return(FALSE);
-  }
-
-#ifdef USE_LABEL_PRINTER
-  if(!bIntermecPrinter_Connect_g(tagAppConfig_g.tagLabelPrinter.caIpAddress))
-  {
-    printf("Fehler beim initialisieren des Etiketten-Druckers\n");
-    return(FALSE);
-  }
-#endif // USE_LABEL_PRINTER
-
-#ifdef USE_NFC
-  if(!bNFC_Init_g(tagAppConfig_g.tagNfcReader.uiComPort,
-                  tagAppConfig_g.tagNfcReader.uiBaudrate))
-  {
-    printf("Fehler beim initialisieren des NFC-Readers\n"
-           "Fehler: \"%s\"",pcNFC_GetErrorMessage_g());
-    return(FALSE);
-  }
-#endif // USE_NFC
+//sprintf(caVersion,"%d.%03d",PROGRAM_VERSION_MAJOR,PROGRAM_VERSION_MINOR);
+//if(!bNetworking_ConnectWait(tagAppConfig_g.tagNetwork.caUser,
+//                            tagAppConfig_g.tagNetwork.caPwd,
+//                            tagAppConfig_g.tagNetwork.caMapDrive,
+//                            tagAppConfig_g.tagNetwork.caShareName,
+//                            tagAppConfig_g.pcCompanyName,
+//                            tagAppConfig_g.pcProjectName,
+//                            tagAppConfig_g.pcApplicationName,
+//                            caVersion))
+//{
+//  printf("bNetworking_ConnectWait(\"%s\",\n"
+//         "                        \"%s\",\n"
+//         "                        \"%s\",\n"
+//         "                        \"%s\",\n"
+//         "                        \"%s\",\n"
+//         "                        \"%s\",\n"
+//         "                        \"%s\"\n) failed\n",
+//         tagAppConfig_g.tagNetwork.caUser,
+//         "*****",
+//         tagAppConfig_g.tagNetwork.caMapDrive,
+//         tagAppConfig_g.tagNetwork.caShareName,
+//         tagAppConfig_g.pcProjectName,
+//         tagAppConfig_g.pcApplicationName,
+//         caVersion);
+//  MessageBox(NULL,pcNetworking_GetLastErrorString(),"Fehler",MB_OK|MB_ICONWARNING);
+//  return(FALSE);
+//}
+//
+//if(iSNr_Init_g(tagAppConfig_g.caPathSerialNumbers,eMonthly)!=SNR_ERROR_NO_ERROR)
+//{
+//  printf("iSNr_Init_g(): failed %s\n",tagAppConfig_g.caPathSerialNumbers);
+//  return(FALSE);
+//}
 
   bIniFileDevice_SetFile_g(tagAppConfig_g.caDutDatIniFileName);
 
@@ -208,10 +182,6 @@ void vProgEnd_m(int iRc)
     printf("bNetworkDisconnect_g() failed\n");
   }
 
-#ifdef USE_NFC
-  bNFC_Close_g();
-#endif // USE_NFC
-
   vUIDiscard_g();
 
   HidePanel(iPanelMain_m);
@@ -242,7 +212,7 @@ int main(int argc, char *argv[])
     exit(-3);
 
   tagAppConfig_g.pcCompanyName="veratron AG";
-  tagAppConfig_g.pcProjectName="LinkUp";
+  tagAppConfig_g.pcProjectName="Kapazitiver Tankgeber";
   tagAppConfig_g.pcApplicationName="EOL";
   if(!bProgInit_m())
   {
@@ -290,11 +260,6 @@ int main(int argc, char *argv[])
 void vQuitProgram_g(void)
 {
   vResAllOutputs_g();
-  vSetDO_g(&aSteuerungBereit,FALSE);
-
-#ifdef USE_LABEL_PRINTER
-  vIntermecPrinter_Disconnect_g();
-#endif // USE_LABEL_PRINTER
 
   bProgramExit_m=TRUE;
   // QuitUserInterface() wird verzögert vom Scheduler aufgerufen, dass zum

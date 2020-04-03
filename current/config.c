@@ -72,20 +72,6 @@
 #define REG_KEY_CONFIG_PATH_DUT_CONFIG_FILE       "DeviceData"
 #define DEFAULT_CONFIG_PATH_DUT_CONFIG_FILE       "DeviceDat.ini"
 
-/**
- * Section printer
- */
-#define REG_SECTION_CONFIG_LABEL_PRINTER          "LabelPrinter"
-#define REG_KEY_CONFIG_LABEL_PRINTER_IP_ADDRESS   "IpAddress"
-#define DEFAULT_CONFIG_LABEL_PRINTER_IP_ADDRESS   "192.168.1.3"
-
-/**
- * Section Nfc Reader
- */
-#define REG_SECTION_CONFIG_NFC_READER              "NfcReader"
-#define REG_KEY_CONFIG_NFC_READER_COMPORT          "ComPort"
-#define REG_KEY_CONFIG_NFC_READER_BAUDRATE         "Baudrate"
-
 
 char* pcRot13_m(char *s);
 
@@ -313,32 +299,6 @@ BOOL bAppConfig_Read_g(char *pcConfigFileName)
   }
   strcpy(tagAppConfig_g.caDutDatIniFileName,pcCorrectPath(tagAppConfig_g.tagNetwork.caMapDrive,tagAppConfig_g.caDutDatIniFileName));
 
-
-  //[LabelPrinter]
-  pcSection=REG_SECTION_CONFIG_LABEL_PRINTER;
-
-  //IpAddress="192.168.20.205"
-  pcItem=REG_KEY_CONFIG_LABEL_PRINTER_IP_ADDRESS;
-  if(Ini_GetStringIntoBuffer(iniHandle_m,pcSection,pcItem,tagAppConfig_g.tagLabelPrinter.caIpAddress,MAX_IP_ADDRESS_LEN+1)<1)
-  {
-    pcDefault=DEFAULT_CONFIG_LABEL_PRINTER_IP_ADDRESS;
-#ifdef WARN_MISSING_CONFIG_ITEMS
-    printf("Item \"%s/%s\" not found!"
-           "   using default  \"%s\" instead\n",pcSection,pcItem,pcDefault);
-#endif // WARN_MISSING_CONFIG_ITEMS
-    strcpy(tagAppConfig_g.tagLabelPrinter.caIpAddress,pcDefault);
-  }
-
-
-  //[NfcReader]
-  pcSection=REG_SECTION_CONFIG_NFC_READER;
-  //ComPort=15
-  pcItem=REG_KEY_CONFIG_NFC_READER_COMPORT;
-  if(Ini_GetUInt(iniHandle_m,pcSection,pcItem,&(tagAppConfig_g.tagNfcReader.uiComPort))<1)
-  {
-    printf("Item \"%s/%s\" not found!",pcSection,pcItem);
-    bFaultsFound=TRUE;
-  }
 
   //Baudrate=19200
   pcItem=REG_KEY_CONFIG_NFC_READER_BAUDRATE;

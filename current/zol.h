@@ -52,29 +52,29 @@ typedef struct
 }tagAOut;
 
 
-extern tagDigInp  eNotausOk;
-extern tagDigInp  eTasteStart;
-extern tagDigInp  eTasteQuittierung;
-extern tagDigInp  eNotausEntriegelt;
-// E0.4 Reserve
-// E0.5 Reserve
-extern tagDigInp  eTeilEingelegt;
-// E0.7 Reserve
+extern tagDigInp eNotausOk;
+extern tagDigInp eAlarmDut;
+// E0.2 Reserve
+extern tagDigInp eStart;
+extern tagDigInp eBCDBit0;
+extern tagDigInp eBCDBit1;
+extern tagDigInp eBCDBit2;
+extern tagDigInp eBCDBit3;
 //==========================
 //extern tagDigInp  eVerriegelungRS;
 //extern tagDigInp  eVerriegelungAS;
 //extern tagDigInp  eKontaktAS;
 //extern tagDigInp  eKontaktRS;
-extern tagDigInp  eHaubeInAS;
+//extern tagDigInp  eHaubeInAS;
 // E1.5 Reserve
 // E1.6 Reserve
 // E1.7 Reserve
 //==========================
-extern tagDigInp  eTasteIo;
-extern tagDigInp  eTasteNio;
-extern tagDigInp  eTasteEnter;
-extern tagDigInp  eTastePrev;
-extern tagDigInp  eTasteNext;
+//extern tagDigInp  eTasteIo;
+//extern tagDigInp  eTasteNio;
+//extern tagDigInp  eTasteEnter;
+//extern tagDigInp  eTastePrev;
+//extern tagDigInp  eTasteNext;
 // E2.5 Reserve
 // E2.6 Reserve
 //extern tagDigInp  eTTOilPress;
@@ -92,27 +92,26 @@ extern tagDigInp  eTasteNext;
 
 
 //-----------------------------------------
-extern tagDigOut  aLampeStart;
-extern tagDigOut  aLampeStart;
-extern tagDigOut  aLampeFehler;
-extern tagDigOut  aLampePass;
-extern tagDigOut  aLampeFail;
-extern tagDigOut  aSteuerungBereit;
-// A0.5 Reserve
-// A0.6 Reserve
-// A0.7 Reserve
+extern tagDigOut aUbattDutt;
+extern tagDigOut aUmschalterVolt;
+// A0.2 Reserve
+// A0.3 Reserve
+// A0.4 Reserve
+extern tagDigOut aVentilTankDruck;
+extern tagDigOut aVentilWasserAblassen;
+extern tagDigOut aVentilWasserhahn;
 //==========================
-//extern tagDigOut  aVentilVerrieglungZu;
+extern tagDigOut aDUTSourceSink;
 //extern tagDigOut  aVentilKontakt;
 //extern tagDigOut  aSignierung;
 //extern tagDigOut  aVentilFill;
 //extern tagDigOut  aVentilDichten;
-extern tagDigOut  aK506Reserve;
-extern tagDigOut  aK507Reserve;
+//extern tagDigOut  aK506Reserve;
+//extern tagDigOut  aK507Reserve;
 // A1.7 Reserve
 //==========================
 //extern tagDigOut  aUmschVGND;
-extern tagDigOut  aDutVccBatt;
+//extern tagDigOut  aDutVccBatt;
 //extern tagDigOut  aDutIgnition;
 //extern tagDigOut  aDutFuel;
 //extern tagDigOut  aDUT_Pin4_high;
@@ -124,10 +123,10 @@ extern tagDigOut  aDutVccBatt;
 //extern tagDigOut  aDUT_Pin8_high;
 //extern tagDigOut  aSwitchToJ1850;
 //extern tagDigOut  aTripSwToGnd;
-extern tagDigOut  aK502DutR500;
-extern tagDigOut  aK503Reserve;
-extern tagDigOut  aK504Reserve;
-extern tagDigOut  aK505Reserve;
+//extern tagDigOut  aK502DutR500;
+//extern tagDigOut  aK503Reserve;
+//extern tagDigOut  aK504Reserve;
+//extern tagDigOut  aK505Reserve;
 //==========================
 
 
@@ -135,6 +134,8 @@ extern tagDigOut  aK505Reserve;
 extern  tagAInp eADC1;
 extern  tagAInp eADC2;
 extern  tagAInp eADC3;
+extern  tagAInp eADC5;
+extern  tagAInp eADC6;
 
 
 //extern  tagAOut aDAC1;

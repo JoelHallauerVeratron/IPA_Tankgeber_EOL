@@ -402,38 +402,6 @@ int CVICALLBACK BoxCB(int panel, int control, int event,
 } // BoxCB()
 
 
-int CVICALLBACK SwitchCB(int panel,int control,int event,
-                         void *callbackData,int eventData1,int eventData2)
-{
-  switch(event)
-  {
-    case EVENT_COMMIT:
-      switch(control)
-      {
-        case PNL_TESTS_SW_TEST_SW_VERSION:
-          GetCtrlVal(panel,control,(int*)&tagAppStatus_g.tagTest.bSwVersion);
-          break;
-        case PNL_TESTS_SW_TEST_AI:
-          GetCtrlVal(panel,control,(int*)&tagAppStatus_g.tagTest.bAnInputs);
-          break;
-        case PNL_TESTS_SW_TEST_NFC:
-          GetCtrlVal(panel,control,(int*)&tagAppStatus_g.tagTest.bNfc);
-          break;
-        case PNL_TESTS_SW_TEST_LED:
-          GetCtrlVal(panel,control,(int*)&tagAppStatus_g.tagTest.bLed);
-          break;
-        case PNL_TESTS_BTN_OK:
-          vLibTesterGui_Init_g();
-          DiscardPanel(panel);
-          iPanelTests_m=-1;
-          break;
-      }
-      break;
-  }
-  return(0);
-} // SwitchCB()
-
-
 int CVICALLBACK TouchMainMenuCB(int panel, int control, int event,
                                 void *callbackData, int eventData1, int eventData2)
 {
@@ -482,10 +450,6 @@ void vInitPanelTests_m(void)
   SetPanelAttribute(iPanelTests_m,ATTR_TITLEBAR_VISIBLE,0);
   SetPanelPos(iPanelTests_m,30,40);
 
-  SetCtrlVal(iPanelTests_m,PNL_TESTS_SW_TEST_SW_VERSION,(int)tagAppStatus_g.tagTest.bSwVersion);
-  SetCtrlVal(iPanelTests_m,PNL_TESTS_SW_TEST_AI,(int)tagAppStatus_g.tagTest.bAnInputs);
-  SetCtrlVal(iPanelTests_m,PNL_TESTS_SW_TEST_NFC,(int)tagAppStatus_g.tagTest.bNfc);
-  SetCtrlVal(iPanelTests_m,PNL_TESTS_SW_TEST_LED,(int)tagAppStatus_g.tagTest.bLed);
 } // vInitPanelTests_m()
 
 
@@ -514,12 +478,6 @@ int CVICALLBACK TouchMenuCB(int panel, int control, int event,
       break;
     case PNL_MENU_BTN_DIAG_IO:
       vInitDiagnosePanel_g(TRUE);  // TRUE => für Touch-Display
-      break;
-
-    case PNL_MENU_BTN_DIAG_PRT9:
-#ifdef USE_LABEL_PRINTER
-      vLabelPrintPanel09_Open_g(0);
-#endif // USE_LABEL_PRINTER
       break;
 
     case PNL_MENU_BTN_ABOUT:

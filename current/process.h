@@ -88,13 +88,6 @@ typedef enum
 
   req_prod_data_init                   =  240,
 
-  req_snr                              =  245,
-  req_snr_read                         =  246,
-
-  req_sw_version                       =  250,
-  req_sw_version_read                  =  251,
-
-
   test_start                           =  290,
 
   /**
@@ -118,51 +111,46 @@ typedef enum
    * Prüfen des Wasserstandes an den Tankgebern
    */
   CheckLiquidLevelFull_start         = 3000,
-  CheckLiquidLevelFull_WaitForDut    = CheckLiquidLevelFull_start+10
-  CheckLiquidLevelFull_check         = CheckLiquidLevelFull_start+20
-  CheckLiquidLevelFull_end           = CheckLiquidLevelFull_start+99
+  CheckLiquidLevelFull_WaitForDut    = CheckLiquidLevelFull_start+10,
+  CheckLiquidLevelFull_check         = CheckLiquidLevelFull_start+20,
+  CheckLiquidLevelFull_end           = CheckLiquidLevelFull_start+99,
 
   /**
    * Wasserstand auf 50%
    */
   LiquidLevelToHalf_start             = 4000,
   LiquidLevelToHalf_fill              = LiquidLevelToHalf_start+10,
-  LiquidLevelToHalf_wait              = LiquidLevelToHalf_start+20
-  LiquidLevelToHalf_end               = LiquidLevelToHalf_start+99
+  LiquidLevelToHalf_wait              = LiquidLevelToHalf_start+20,
+  LiquidLevelToHalf_end               = LiquidLevelToHalf_start+99,
 
   /**
   * Prüfen des Wasserstandes an den Tankgebern
    */
   CheckLiquidLevelHalf_start          = 5000,
-  CheckLiquidLevelHalf_WaitForDut     = CheckLiquidLevelHalf_start+10
-  CheckLiquidLevelHalf_check          = CheckLiquidLevelHalf_start+20
-  CheckLiquidLevelHalf_end            = CheckLiquidLevelHalf_start+99
+  CheckLiquidLevelHalf_WaitForDut     = CheckLiquidLevelHalf_start+10,
+  CheckLiquidLevelHalf_check          = CheckLiquidLevelHalf_start+20,
+  CheckLiquidLevelHalf_end            = CheckLiquidLevelHalf_start+99,
 
   /**
    * Wasserstand auf 0%
    */
   LiquidLevelToEmpty_start             = 6000,
   LiquidLevelToEmpty_fill              = LiquidLevelToEmpty_start+10,
-  LiquidLevelToEmpty_wait              = LiquidLevelToEmpty_start+20
-  LiquidLevelToEmpty_end               = LiquidLevelToEmpty_start+99
+  LiquidLevelToEmpty_wait              = LiquidLevelToEmpty_start+20,
+  LiquidLevelToEmpty_end               = LiquidLevelToEmpty_start+99,
 
   /**
   * Prüfen des Wasserstandes an den Tankgebern
    */
   CheckLiquidLevelEmpty_start          = 7000,
-  CheckLiquidLevelEmpty_WaitForDut     = CheckLiquidLevelEmpty_start+10
-  CheckLiquidLevelEmpty_check          = CheckLiquidLevelEmpty_start+20
-  CheckLiquidLevelEmpty_end            = CheckLiquidLevelEmpty_start+99
+  CheckLiquidLevelEmpty_WaitForDut     = CheckLiquidLevelEmpty_start+10,
+  CheckLiquidLevelEmpty_check          = CheckLiquidLevelEmpty_start+20,
+  CheckLiquidLevelEmpty_end            = CheckLiquidLevelEmpty_start+99,
 
 
   /* Bearbeitung abgeschlossen */
   process_end                          = 8000,
 
-
-  prod_data_start                      = 8100,
-  prod_data_write                      = 8110,
-  prod_data_write_wait                 = 8111,
-  prod_data_write_next                 = 8112,
 
   ignition_reset                       = 8240,
   ignition_reset2                      = 8241,
@@ -189,15 +177,15 @@ typedef enum
   /**
    * Sub-State-Machine
    */
-  device_restart       = 5000,
-  device_reset         = 5001,
-  device_start_wait    = 5002,
+  device_restart       = 9500,
+  device_reset         = 9501,
+  device_start_wait    = 9502,
 
-  login_diag_mode      = 5020,
-  login_diag_mode_wait = 5021,
+  login_diag_mode      = 9520,
+  login_diag_mode_wait = 9521,
 
-  login_security       = 5030,
-  login_security_wait  = 5031,
+  login_security       = 9530,
+  login_security_wait  = 9531,
 
 } EProcessState;
 

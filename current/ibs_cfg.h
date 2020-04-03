@@ -31,6 +31,8 @@
 extern T_IBS_WORD          eAI1;
 extern T_IBS_WORD          eAI2;
 extern T_IBS_WORD          eAI3;
+extern T_IBS_WORD          eAI5;
+extern T_IBS_WORD          eAI6;
 extern T_IBS_WORD          eAO1AW;
 extern T_IBS_WORD          eAO2AW;
 extern T_IBS_WORD          aAO1;

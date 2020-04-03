@@ -114,20 +114,19 @@ typedef enum
   eProdNrCustomer    = 2,
   eProdNrPcb         = 3,
   eProgDatePcb       = 4,
-  eVersionHardware   = 5,
-  eVersionSoftware   = 6,
+  eHardwareVersion   = 5,
+  eSoftwareVersion   = 6,
   eDigInputConfig    = 7,
   eFreqOutputConfig  = 8,
   eCheckSumBm        = 9,   // CRC Boot-Manager
   eCheckSumFl        = 10,  // CRC Flash-Loader
   eCheckSumSw        = 11,  // CRC Software
   eCheckSumBhmi      = 12,  // CRC BHMI
-  eVersionBluetooth  = 13,
+  eBluetoothVersion  = 13,
   eDialScaleX        = 14,
   eDialScaleY        = 15,
   eGaugeType         = 16,
   eProductCode       = 17,
-  eVersionBootloader = 18
 
 }EDataType;
 

@@ -224,6 +224,8 @@ T_IBS_BOOL          aOut97;
 T_IBS_WORD          eAI1;
 T_IBS_WORD          eAI2;
 T_IBS_WORD          eAI3;
+T_IBS_WORD          eAI5;
+T_IBS_WORD          eAI6;
 T_IBS_WORD          eAO1AW;
 T_IBS_WORD          eAO2AW;
 T_IBS_WORD          aAO1;
@@ -624,6 +626,8 @@ void vUpdateReceiveData_m(void)
   eAI1 = (USHORT)IB_PD_GetDataN(usReadData,2);
   eAI2 = (USHORT)IB_PD_GetDataN(usReadData,3);
   eAI3 = (USHORT)IB_PD_GetDataN(usReadData,4);
+  eAI5 = (USHORT)IB_PD_GetDataN(usReadData,6);
+  eAI6 = (USHORT)IB_PD_GetDataN(usReadData,7);
 
 } // vUpdateReceiveData_m()
 

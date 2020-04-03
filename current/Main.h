@@ -56,15 +56,6 @@
 #define  PNL_MENU_TEXTMSG                7
 
 #define  PNL_TESTS                       3
-#define  PNL_TESTS_SW_TEST_LED           2       /* callback function: SwitchCB */
-#define  PNL_TESTS_SW_TEST_NFC           3       /* callback function: SwitchCB */
-#define  PNL_TESTS_SW_TEST_AI            4       /* callback function: SwitchCB */
-#define  PNL_TESTS_SW_TEST_SW_VERSION    5       /* callback function: SwitchCB */
-#define  PNL_TESTS_BTN_OK                6       /* callback function: SwitchCB */
-#define  PNL_TESTS_TEXTMSG_4             7
-#define  PNL_TESTS_DECORATION_4          8
-#define  PNL_TESTS_DECORATION_2          9
-#define  PNL_TESTS_TEXTMSG_2             10
 
 
      /* Menu Bars, Menus, and Menu Items: */
@@ -78,7 +69,6 @@ int  CVICALLBACK BoxCB(int panel, int control, int event, void *callbackData, in
 int  CVICALLBACK MainPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SchedulerCB(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SelectDeviceCB(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-int  CVICALLBACK SwitchCB(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK TouchMainMenuCB(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK TouchMenuCB(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 

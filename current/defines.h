@@ -26,7 +26,7 @@
   #define PROGRAM_VERSION_MAJOR  0
   #define PROGRAM_VERSION_MINOR  801
 
-//#define TEST_OFFLINE  // Software ohne Vorichtung testen
+#define TEST_OFFLINE  // Software ohne Vorichtung testen
 
 //**
 // LibTester Gui Defines
