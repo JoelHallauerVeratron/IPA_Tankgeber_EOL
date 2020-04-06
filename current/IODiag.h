@@ -99,25 +99,26 @@
 #define  PNL_DIAGIO_DECORATION_5         83
 #define  PNL_DIAGIO_TEXTMSG_3            84
 #define  PNL_DIAGIO_DECORATION_6         85
-#define  PNL_DIAGIO_AI5                  86
-#define  PNL_DIAGIO_AI6                  87
-#define  PNL_DIAGIO_AI2                  88
-#define  PNL_DIAGIO_DECORATION_8         89
-#define  PNL_DIAGIO_DAC1_IST             90
-#define  PNL_DIAGIO_DAC1_SOLL            91      /* callback function: SwitchOutputCB */
-#define  PNL_DIAGIO_DAC2_IST             92
-#define  PNL_DIAGIO_DAC2_SOLL            93      /* callback function: SwitchOutputCB */
-#define  PNL_DIAGIO_DECORATION_7         94
-#define  PNL_DIAGIO_AI3                  95
-#define  PNL_DIAGIO_AI1                  96
-#define  PNL_DIAGIO_TEXTMSG_2            97
-#define  PNL_DIAGIO_BTN_OUT_UP           98      /* callback function: OutputPageFlipCB */
-#define  PNL_DIAGIO_BTN_INP_UP           99      /* callback function: InputPageFlipCB */
-#define  PNL_DIAGIO_BTN_INP_DOWN         100     /* callback function: InputPageFlipCB */
-#define  PNL_DIAGIO_BTN_OUT_DOWN         101     /* callback function: OutputPageFlipCB */
-#define  PNL_DIAGIO_CHK_AUTO_ENABLE      102     /* callback function: AutoEnableCB */
-#define  PNL_DIAGIO_TEXTMSG              103
-#define  PNL_DIAGIO_TEXTMSG_4            104
+#define  PNL_DIAGIO_AI4                  86
+#define  PNL_DIAGIO_AI5                  87
+#define  PNL_DIAGIO_AI6                  88
+#define  PNL_DIAGIO_AI2                  89
+#define  PNL_DIAGIO_DECORATION_8         90
+#define  PNL_DIAGIO_DAC1_IST             91
+#define  PNL_DIAGIO_DAC1_SOLL            92      /* callback function: SwitchOutputCB */
+#define  PNL_DIAGIO_DAC2_IST             93
+#define  PNL_DIAGIO_DAC2_SOLL            94      /* callback function: SwitchOutputCB */
+#define  PNL_DIAGIO_DECORATION_7         95
+#define  PNL_DIAGIO_AI3                  96
+#define  PNL_DIAGIO_AI1                  97
+#define  PNL_DIAGIO_TEXTMSG_2            98
+#define  PNL_DIAGIO_BTN_OUT_UP           99      /* callback function: OutputPageFlipCB */
+#define  PNL_DIAGIO_BTN_INP_UP           100     /* callback function: InputPageFlipCB */
+#define  PNL_DIAGIO_BTN_INP_DOWN         101     /* callback function: InputPageFlipCB */
+#define  PNL_DIAGIO_BTN_OUT_DOWN         102     /* callback function: OutputPageFlipCB */
+#define  PNL_DIAGIO_CHK_AUTO_ENABLE      103     /* callback function: AutoEnableCB */
+#define  PNL_DIAGIO_TEXTMSG              104
+#define  PNL_DIAGIO_TEXTMSG_4            105
 
 
      /* Menu Bars, Menus, and Menu Items: */

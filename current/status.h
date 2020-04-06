@@ -43,8 +43,6 @@ typedef struct
   struct
   {
     BOOL   bSwVersion;
-    BOOL   bNfc;
-    BOOL   bLed;
     BOOL   bAnInputs;
   } tagTest;
 } TagAppStatus;

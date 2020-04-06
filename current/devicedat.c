@@ -54,6 +54,10 @@
 #define REG_KEY_DEVICE_LABEL_DATE_FORMAT   "LabelDateFormat"      // LabelDateFormat="KW%V/%y"
 #define REG_KEY_DEVICE_LABEL_SAMPLE_TEXT   "SampleText"           // SampleText="C1 sample"
 
+#define REG_KEY_DEVICE_SOURCEMODE   "SourceMode"           // SampleText="C1 sample"
+#define REG_KEY_DEVICE_SINKMODE   "SinkMode"           // SampleText="C1 sample"
+#define REG_KEY_DEVICE_WATERTYPE   "WaterType"           // SampleText="C1 sample"
+
 
 #define DEFAULT_BOOT_TIME                  1.0f                   // default für BootTime=2.0
 #define DEFAULT_VOLTAGE                   14.0f                   // default für Voltage=14.0
@@ -555,7 +559,7 @@ BOOL bIniFileDevice_ReadData_g(char *pcDeviceNr)
     tagCurrentDeviceTyp_g.caDescription[0]=0;
   }
 
-  // LibDutComNr=44
+  // LibDutComNr=55
   iIni2_GetInt_m(iniHandle,pcSection,REG_KEY_DEVICE_LIB_DUT_COM_NR,-1,&(tagCurrentDeviceTyp_g.uiLibDutComNr),TRUE,DEFAULT_LIB_DUT_COM_NR,&iErrorFound);
 
   //  SwVersion="2.0"
@@ -615,8 +619,8 @@ BOOL bIniFileDevice_ReadData_g(char *pcDeviceNr)
 
 
 
-  // SignalType="R"
-  pcItem=REG_KEY_SIGNAL_TYPE;
+  // WaterType="F"
+  pcItem=REG_KEY_DEVICE_WATERTYPE;
   if(Ini_GetStringIntoBuffer(iniHandle,pcSection,pcItem,caString,DEVICE_LABEL_TEXT_LEN+1)<1)
   {
     // keine Angabe gefunden
@@ -626,72 +630,51 @@ BOOL bIniFileDevice_ReadData_g(char *pcDeviceNr)
   }
   else
   {
-    if(strnicmp(caString,"U",1)==0)
-      tagCurrentDeviceTyp_g.tagSignalData.eType=eSignalType_U;
-    if(strnicmp(caString,"R",1)==0)
-      tagCurrentDeviceTyp_g.tagSignalData.eType=eSignalType_R;
-    if(strnicmp(caString,"I",1)==0)
-      tagCurrentDeviceTyp_g.tagSignalData.eType=eSignalType_I;
+    if(strnicmp(caString,"F",1)==0)
+      tagCurrentDeviceTyp_g.eWaterType =eWaterType_Fresh;
+    if(strnicmp(caString,"W",1)==0)
+      tagCurrentDeviceTyp_g.eWaterType =eWaterType_Wasted;
     //if(strnicmp(caString,"LinBus",6)==0)
     //  tagCurrentDeviceTyp_g.tagSignalData.eType=eSignalType_LinBus;
   }
 
-  // SignalValue=511
-  pcItem=REG_KEY_SIGNAL_VALUE;
-  if(  (tagCurrentDeviceTyp_g.tagSignalData.eType==eSignalType_U)
-     ||(tagCurrentDeviceTyp_g.tagSignalData.eType==eSignalType_R)
-     ||(tagCurrentDeviceTyp_g.tagSignalData.eType==eSignalType_I)
-    )
-  {
-    iIni2_GetInt_m(iniHandle,pcSection,pcItem,-1,&(tagCurrentDeviceTyp_g.tagSignalData.iValue),FALSE,0,&iErrorFound);
-  }
 
-  // SignalADC=480
-  pcItem=REG_KEY_SIGNAL_ADC;
-  iIni2_GetInt_m(iniHandle,pcSection,pcItem,-1,&(tagCurrentDeviceTyp_g.tagSignalData.uiAdc),FALSE,0,&iErrorFound);
-
-  // SignalTol=30
-  pcItem=REG_KEY_SIGNAL_TOL;
-  iIni2_GetInt_m(iniHandle,pcSection,pcItem,-1,&(tagCurrentDeviceTyp_g.tagSignalData.iTol),FALSE,0,&iErrorFound);
-
-
-
-  // LabelType=9
-  pcItem=REG_KEY_DEVICE_LABEL_TYPE;
-  iIni2_GetInt_m(iniHandle,pcSection,pcItem,-1,&iValue,FALSE,0,&iErrorFound);
-  switch(iValue)
-  {
-    case eLabelType_LinkUp:
-      tagCurrentDeviceTyp_g.tagProdData.eLabelType=(ELabelType)iValue;
-      break;
-    default:
-      printf("Device %s: Item \"%s\" hat ungültigen Wert %d\n",
-             pcSection,pcItem,iValue);
-      iErrorFound++;
-  }
-
-  // LabelText="LinkUp"
-  pcItem=REG_KEY_DEVICE_LABEL_TEXT;
-  if(Ini_GetStringIntoBuffer(iniHandle,pcSection,pcItem,tagCurrentDeviceTyp_g.tagProdData.caLabelText,DEVICE_LABEL_TEXT_LEN+1)<1)
-  {
-    // keine Angabe gefunden
-    printf("Device %s: Item \"%s\" nicht gefunden\n",
-           pcSection,pcItem);
-    iErrorFound++;
-  }
-
-  // LabelDateFormat="KW%V/%y"
-  iIni2_GetStringIntoBuffer_m(iniHandle,pcSection,REG_KEY_DEVICE_LABEL_DATE_FORMAT,-1,tagCurrentDeviceTyp_g.tagProdData.caLabelDateFormat,DEVICE_LABEL_DATE_FORMAT_LEN+1,TRUE,DEFAULT_LABEL_DATE_FORMAT,NULL);
-
-  // SampleText="C1 sample"
-  pcItem=REG_KEY_DEVICE_LABEL_SAMPLE_TEXT;
-  if(Ini_GetStringIntoBuffer(iniHandle,pcSection,pcItem,tagCurrentDeviceTyp_g.tagProdData.caSampleText,DEVICE_LABEL_TEXT_LEN+1)<1)
-  {
-    // keine Angabe gefunden
-    tagCurrentDeviceTyp_g.tagProdData.caSampleText[0]=0;
-  }
-
-
+//// LabelType=9
+//pcItem=REG_KEY_DEVICE_LABEL_TYPE;
+//iIni2_GetInt_m(iniHandle,pcSection,pcItem,-1,&iValue,FALSE,0,&iErrorFound);
+//switch(iValue)
+//{
+//  case eLabelType_LinkUp:
+//    tagCurrentDeviceTyp_g.tagProdData.eLabelType=(ELabelType)iValue;
+//    break;
+//  default:
+//    printf("Device %s: Item \"%s\" hat ungültigen Wert %d\n",
+//           pcSection,pcItem,iValue);
+//    iErrorFound++;
+//}
+//
+//// LabelText="LinkUp"
+//pcItem=REG_KEY_DEVICE_LABEL_TEXT;
+//if(Ini_GetStringIntoBuffer(iniHandle,pcSection,pcItem,tagCurrentDeviceTyp_g.tagProdData.caLabelText,DEVICE_LABEL_TEXT_LEN+1)<1)
+//{
+//  // keine Angabe gefunden
+//  printf("Device %s: Item \"%s\" nicht gefunden\n",
+//         pcSection,pcItem);
+//  iErrorFound++;
+//}
+//
+//// LabelDateFormat="KW%V/%y"
+//iIni2_GetStringIntoBuffer_m(iniHandle,pcSection,REG_KEY_DEVICE_LABEL_DATE_FORMAT,-1,tagCurrentDeviceTyp_g.tagProdData.caLabelDateFormat,DEVICE_LABEL_DATE_FORMAT_LEN+1,TRUE,DEFAULT_LABEL_DATE_FORMAT,NULL);
+//
+//// SampleText="C1 sample"
+//pcItem=REG_KEY_DEVICE_LABEL_SAMPLE_TEXT;
+//if(Ini_GetStringIntoBuffer(iniHandle,pcSection,pcItem,tagCurrentDeviceTyp_g.tagProdData.caSampleText,DEVICE_LABEL_TEXT_LEN+1)<1)
+//{
+//  // keine Angabe gefunden
+//  tagCurrentDeviceTyp_g.tagProdData.caSampleText[0]=0;
+//}
+//
+//
 
 
 

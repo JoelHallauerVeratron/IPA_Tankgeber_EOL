@@ -53,7 +53,7 @@ typedef struct
 
 
 extern tagDigInp eNotausOk;
-extern tagDigInp eAlarmDut;
+//extern tagDigInp eAlarmDut;
 // E0.2 Reserve
 extern tagDigInp eStart;
 extern tagDigInp eBCDBit0;
@@ -61,7 +61,7 @@ extern tagDigInp eBCDBit1;
 extern tagDigInp eBCDBit2;
 extern tagDigInp eBCDBit3;
 //==========================
-//extern tagDigInp  eVerriegelungRS;
+extern tagDigInp eAlarmDut;
 //extern tagDigInp  eVerriegelungAS;
 //extern tagDigInp  eKontaktAS;
 //extern tagDigInp  eKontaktRS;
@@ -134,6 +134,7 @@ extern tagDigOut aDUTSourceSink;
 extern  tagAInp eADC1;
 extern  tagAInp eADC2;
 extern  tagAInp eADC3;
+extern  tagAInp eADC4;
 extern  tagAInp eADC5;
 extern  tagAInp eADC6;
 

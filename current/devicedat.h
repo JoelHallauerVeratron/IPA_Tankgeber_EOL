@@ -89,20 +89,10 @@ typedef struct
 
 typedef enum
 {
-  eSignalType_R,
-  eSignalType_U,
-  eSignalType_I,
+  eWaterType_Fresh,
+  eWaterType_Wasted,
   //eSignalType_Kline,
-}ESignalType;
-
-typedef struct
-{
-  ESignalType eType;
-  int iValue;
-  UINT uiAdc;
-  int iTol;
-} TagSignalData;
-
+}EWaterType;
 
 typedef struct
 {
@@ -112,13 +102,14 @@ typedef struct
   char           caSwVersion[DEVICE_SW_VERSION_LEN+1];
   BOOL           bCheckSwVersion;
 
-  float          fBoottime;
+//  float          fBoottime;
   float          fUbatt;   // [V]
   int            iIvccIdleMin;   // [mA]
   int            iIvccIdleMax;   // [mA]
 
-  TagProdData    tagProdData;
-  TagSignalData  tagSignalData;
+  BOOL           bSinkMode;
+  BOOL           bSourceMode;
+  EWaterType     eWaterType;
 } TagDevice;
 
 

@@ -36,6 +36,7 @@
 #define ERR_FREQ_OUTPUTS      23   // Fehler bei Frequenz Output
 #define ERR_NFC               24   // Fehler bei GPS
 #define ERR_EASYLINK          25
+#define ERR_ALARM_DUT         30
 
 #define ERR_SNR               35   // keine Snr vorhanden
 

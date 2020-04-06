@@ -223,8 +223,6 @@ int main(int argc, char *argv[])
   /* Initialwerte für auszuführende Operationen setzen */
   tagAppStatus_g.tagTest.bSwVersion  =TRUE;
   tagAppStatus_g.tagTest.bAnInputs   =TRUE;
-  tagAppStatus_g.tagTest.bNfc        =TRUE;
-  tagAppStatus_g.tagTest.bLed        =TRUE;
 
 #if 0
   // Zum Testen andere Schalterstellungen setzen
@@ -233,10 +231,6 @@ int main(int argc, char *argv[])
   tagAppStatus_g.tagTest.bNfc        =FALSE;
   tagAppStatus_g.tagTest.bLed        =TRUE;
 #endif
-
-  #ifndef USE_NFC
-  tagAppStatus_g.tagTest.bNfc        =FALSE;
-  #endif // !USE_NFC
 
 #ifndef IGNORE_FLIL
   iIBS_HLI_Init_g();

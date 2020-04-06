@@ -123,4 +123,9 @@ float fGetPLuft_g(void)
   return(*apAInpList_g[2]->IBS_Node * apAInpList_g[2]->fConv);
 } // fGetPLuft_g()
 
+float fGetLiquidLevelReferenz(void)
+{
+
+  return(((*apAInpList_g[5]->IBS_Node << 8) | *apAInpList_g[4]->IBS_Node) * apAInpList_g[4]->fConv);
+} // fGetPLuft_g()
 

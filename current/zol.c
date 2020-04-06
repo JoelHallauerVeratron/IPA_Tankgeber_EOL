@@ -22,7 +22,7 @@
 //                                 |  |           |        +----------- .pcTxt (Beschreibung)
 //                                 |  |           |        |
 tagDigInp  eNotausOk            = {1, MODUL(0,0), &eInp00, "Notaus quittiert"};
-tagDigInp  eAlarmDut            = {1, MODUL(0,1), &eInp01, "Alarm DUT"};
+//tagDigInp  eAlarmDut            = {1, MODUL(0,1), &eInp01, "Alarm DUT"};
 // E0.2 Reserve
 tagDigInp  eStart               = {1, MODUL(0,3), &eInp03, "eStart"};
 tagDigInp  eBCDBit0             = {1, MODUL(0,4), &eInp04, "BCDBit0"};
@@ -30,7 +30,7 @@ tagDigInp  eBCDBit1             = {1, MODUL(0,5), &eInp05, "BCDBit1"};
 tagDigInp  eBCDBit2             = {1, MODUL(0,6), &eInp06, "BCDBit2"};
 tagDigInp  eBCDBit3             = {1, MODUL(0,7), &eInp07, "BCDBit3"};
 //==========================
-//tagDigInp  eVerriegelungRS      = {1, MODUL(1,0), &eInp10, "Verriegelung offen"};
+tagDigInp  eAlarmDut            = {1, MODUL(1,0), &eInp10, "Alarm DUT"};
 //tagDigInp  eVerriegelungAS      = {1, MODUL(1,1), &eInp11, "Verriegelung zu"};
 //tagDigInp  eKontaktAS           = {1, MODUL(1,2), &eInp12, "Kontakt. Arbeitspos."};
 //tagDigInp  eKontaktRS           = {1, MODUL(1,3), &eInp13, "Kontakt. Ruhepos."};
@@ -63,15 +63,15 @@ tagDigInp  eBCDBit3             = {1, MODUL(0,7), &eInp07, "BCDBit3"};
 tagDigInp *apDigInpList_g[] =
 {
   &eNotausOk,
-  &eAlarmDut,
+//  &eAlarmDut,
+//  &eStart,
   &eStart,
-// E0.3 Reserve
   &eBCDBit0,
   &eBCDBit1,
   &eBCDBit2,
   &eBCDBit3,
 //==========================
-  //&eVerriegelungRS,
+  &eAlarmDut,
   //&eVerriegelungAS,
   //&eKontaktAS,
   //&eKontaktRS,
@@ -213,10 +213,11 @@ tagDigOut *apDigOutList_g[] =
 tagAInp eADC1 = {1, PNL_DIAGIO_AI1, 0,        &eAI1, "Ivcc [mA]"};
 tagAInp eADC2 = {1, PNL_DIAGIO_AI2, 0,        &eAI2, "U-CAN [mV]"};
 tagAInp eADC3 = {2, PNL_DIAGIO_AI3, 0,        &eAI3, "Druck [mB]"};
+tagAInp eADC4 = {2, PNL_DIAGIO_AI4, 0,        &eAI4, "Druck [mB]"};
 tagAInp eADC5 = {2, PNL_DIAGIO_AI5, 0,        &eAI5, "Referenzgeber Low"};
 tagAInp eADC6 = {2, PNL_DIAGIO_AI6, 0,        &eAI6, "Referenzgeber High"};
 
-tagAInp *apAInpList_g[] =
+tagAInp *apAInpList_g[] =+
 {
   &eADC1,
   &eADC2,
