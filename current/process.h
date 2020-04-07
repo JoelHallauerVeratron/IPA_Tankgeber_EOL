@@ -112,8 +112,11 @@ typedef enum
    * Prüfen des Wasserstandes an den Tankgebern
    */
   CheckLiquidLevelFull_start         = 3000,
+  CheckLiquidLevelFull_start_wait    = CheckLiquidLevelFull_start+5
   CheckLiquidLevelFull_WaitForDut    = CheckLiquidLevelFull_start+10,
+  CheckLiquidLevelFull_check_req     = CheckLiquidLevelFull_start+15
   CheckLiquidLevelFull_check         = CheckLiquidLevelFull_start+20,
+  CheckLiquidLevelFull_Check_Alarm   = CheckLiquidLevelFull_start+30,
   CheckLiquidLevelFull_end           = CheckLiquidLevelFull_start+99,
 
   /**
@@ -128,7 +131,9 @@ typedef enum
   * Prüfen des Wasserstandes an den Tankgebern
    */
   CheckLiquidLevelHalf_start          = 5000,
+  CheckLiquidLevelHalf_start_wait     = CheckLiquidLevelHalf_start+5,
   CheckLiquidLevelHalf_WaitForDut     = CheckLiquidLevelHalf_start+10,
+  CheckLiquidLevelHalf_check_req      = CheckLiquidLevelHalf_start+15,
   CheckLiquidLevelHalf_check          = CheckLiquidLevelHalf_start+20,
   CheckLiquidLevelHalf_end            = CheckLiquidLevelHalf_start+99,
 
@@ -144,8 +149,11 @@ typedef enum
   * Prüfen des Wasserstandes an den Tankgebern
    */
   CheckLiquidLevelEmpty_start          = 7000,
+  CheckLiquidLevelEmpty_start_wait     = CheckLiquidLevelEmpty_start+5,
   CheckLiquidLevelEmpty_WaitForDut     = CheckLiquidLevelEmpty_start+10,
+  CheckLiquidLevelEmpty_check_req      = CheckLiquidLevelEmpty_start+15,
   CheckLiquidLevelEmpty_check          = CheckLiquidLevelEmpty_start+20,
+  CheckLiquidLevelEmpty_Check_Alarm    = CheckLiquidLevelEmpty_start+25,
   CheckLiquidLevelEmpty_end            = CheckLiquidLevelEmpty_start+99,
 
 
