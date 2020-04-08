@@ -1,6 +1,6 @@
 /*******************************************************************
  *
- *    PROJECT:     LinkUp EOL
+ *    PROJECT:     Tankfüllstandsgeber EOL
  *
  *    EQUIPMENT:   EOL
  *
@@ -8,7 +8,7 @@
  *
  *    DESCRIPTION:
  *
- *    AUTHOR:      $Author$
+ *    AUTHOR:      HaJ
  *
  *    ENVIRONMENT: CVI 7.1
  *
@@ -102,14 +102,17 @@ typedef struct
   char           caSwVersion[DEVICE_SW_VERSION_LEN+1];
   BOOL           bCheckSwVersion;
 
-//  float          fBoottime;
+  float          fBoottime;
   float          fUbatt;   // [V]
   int            iIvccIdleMin;   // [mA]
   int            iIvccIdleMax;   // [mA]
 
   BOOL           bSinkMode;
   BOOL           bSourceMode;
+  BOOL           bAnalogSignal;
+  int            iStecker;
   EWaterType     eWaterType;
+  TagProdData    tagProdData;
 } TagDevice;
 
 

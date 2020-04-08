@@ -1,6 +1,6 @@
 /*******************************************************************
  *
- *    PROJECT:     LinkUp EOL
+ *    PROJECT:     Tankfüllstandsgeber EOL
  *
  *    EQUIPMENT:   Funktionskontrolle
  *
@@ -8,7 +8,7 @@
  *
  *    DESCRIPTION:
  *
- *    AUTHOR:      $Author
+ *    AUTHOR:      HaJ
  *
  *    ENVIRONMENT: CVI 7.1
  *

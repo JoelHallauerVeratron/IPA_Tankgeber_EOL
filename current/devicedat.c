@@ -1,6 +1,6 @@
 /*******************************************************************
  *
- *    PROJECT:     LinkUp EOL
+ *    PROJECT:     Tankfüllstandsgeber EOL
  *
  *    EQUIPMENT:   EOL
  *
@@ -8,7 +8,7 @@
  *
  *    DESCRIPTION:
  *
- *    AUTHOR:      $Author$
+ *    AUTHOR:      HaJ
  *
  *    ENVIRONMENT: CVI 7.1
  *
@@ -54,9 +54,10 @@
 #define REG_KEY_DEVICE_LABEL_DATE_FORMAT   "LabelDateFormat"      // LabelDateFormat="KW%V/%y"
 #define REG_KEY_DEVICE_LABEL_SAMPLE_TEXT   "SampleText"           // SampleText="C1 sample"
 
-#define REG_KEY_DEVICE_SOURCEMODE   "SourceMode"           // SampleText="C1 sample"
-#define REG_KEY_DEVICE_SINKMODE   "SinkMode"           // SampleText="C1 sample"
-#define REG_KEY_DEVICE_WATERTYPE   "WaterType"           // SampleText="C1 sample"
+#define REG_KEY_DEVICE_SOURCEMODE          "SourceMode"           // SampleText="C1 sample"
+#define REG_KEY_DEVICE_SINKMODE            "Stecker"           // SampleText="C1 sample"
+#define REG_KEY_DEVICE_STECKER             "IvccIdleMin"          // IvccIdleMin=100.0
+#define REG_KEY_DEVICE_WATERTYPE           "WaterType"           // SampleText="C1 sample"
 
 
 #define DEFAULT_BOOT_TIME                  1.0f                   // default für BootTime=2.0
@@ -638,6 +639,34 @@ BOOL bIniFileDevice_ReadData_g(char *pcDeviceNr)
     //  tagCurrentDeviceTyp_g.tagSignalData.eType=eSignalType_LinBus;
   }
 
+    // SignalType="A"
+  pcItem=REG_KEY_SIGNAL_TYPE;
+  if(Ini_GetStringIntoBuffer(iniHandle,pcSection,pcItem,caString,DEVICE_LABEL_TEXT_LEN+1)<1)
+  {
+    // keine Angabe gefunden
+    printf("Device %s: Item \"%s\" nicht gefunden\n",
+           pcSection,pcItem);
+    iErrorFound++;
+  }
+  else
+  {
+    if(strnicmp(caString,"A",1)==0)
+      tagCurrentDeviceTyp_g.bAnalogSignal = TRUE;
+    if(strnicmp(caString,"D",1)==0)
+      tagCurrentDeviceTyp_g.bAnalogSignal = FALSE;
+  }
+
+  // Stecker=2
+  pcItem=REG_KEY_DEVICE_SINKMODE;
+  if(Ini_GetInt(iniHandle,pcSection,pcItem,&iValue)<1)
+  {
+    printf("Device %s: Item \"%s\" nicht gefunden\n",
+           pcSection,pcItem);
+    iErrorFound++;
+  }
+  else
+    tagCurrentDeviceTyp_g.iStecker=iValue;
+
 
 //// LabelType=9
 //pcItem=REG_KEY_DEVICE_LABEL_TYPE;
@@ -718,15 +747,4 @@ void vIniFileDevices_Dump_g(TagDevice *ptagDeviceTyp)
   //TagSignalData  tagSignalData;
   printf("Signal data:");
   printf("  type = ");
-  switch(ptagDeviceTyp->tagSignalData.eType)
-  {
-    case eSignalType_U: printf("U value=%.1fV",ptagDeviceTyp->tagSignalData.iValue); break;
-    case eSignalType_R: printf("R value=%.1dohm",ptagDeviceTyp->tagSignalData.iValue); break;
-    case eSignalType_I: printf("I value=%.1mA",ptagDeviceTyp->tagSignalData.iValue); break;
-    //case eSignalType_LinBus: printf("LinBus"); break;
-  }
-  putchar('\n');
-  printf("  ADC value = %d\n",ptagDeviceTyp->tagSignalData.uiAdc);
-  printf("  ADC value range = %d...%d\n",ptagDeviceTyp->tagSignalData.uiAdc-ptagDeviceTyp->tagSignalData.iTol,
-                                         ptagDeviceTyp->tagSignalData.uiAdc+ptagDeviceTyp->tagSignalData.iTol);
 } // vIniFileDevices_Dump_g()

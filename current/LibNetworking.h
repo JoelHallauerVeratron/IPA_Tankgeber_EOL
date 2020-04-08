@@ -6,7 +6,7 @@
  *
  *    DESCRIPTION: Library for connecting and disconnecting Network drives
  *
- *    AUTHOR:      $Author$
+ *    AUTHOR:      HaJ
  *
  *    ENVIRONMENT: CVI 7.1
  *

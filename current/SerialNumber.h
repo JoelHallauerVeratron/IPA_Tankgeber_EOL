@@ -8,7 +8,7 @@
  *
  *    DESCRIPTION: Interface zu SerialNumber
  *
- *    AUTHOR:      $Author$
+ *    AUTHOR:      HaJ
  *
  *    ENVIRONMENT: CVI 7.1
  *

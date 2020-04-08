@@ -1,6 +1,6 @@
 /*******************************************************************
  *
- *    PROJECT:     LinkUp EOL
+ *    PROJECT:     Tankfüllstandsgeber EOL
  *
  *    EQUIPMENT:   EOL
  *
@@ -8,7 +8,7 @@
  *
  *    DESCRIPTION:
  *
- *    AUTHOR:      $Author
+ *    AUTHOR:      HaJ
  *
  *    ENVIRONMENT: CVI 7.1
  *
@@ -90,6 +90,7 @@ typedef enum
   req_prod_data_init                   =  240,
 
   test_start                           =  290,
+  test_init                            =  300,
 
   /**
    * Stromaufnahme messen
@@ -112,9 +113,9 @@ typedef enum
    * Prüfen des Wasserstandes an den Tankgebern
    */
   CheckLiquidLevelFull_start         = 3000,
-  CheckLiquidLevelFull_start_wait    = CheckLiquidLevelFull_start+5
+  CheckLiquidLevelFull_start_wait    = CheckLiquidLevelFull_start+5,
   CheckLiquidLevelFull_WaitForDut    = CheckLiquidLevelFull_start+10,
-  CheckLiquidLevelFull_check_req     = CheckLiquidLevelFull_start+15
+  CheckLiquidLevelFull_check_req     = CheckLiquidLevelFull_start+15,
   CheckLiquidLevelFull_check         = CheckLiquidLevelFull_start+20,
   CheckLiquidLevelFull_Check_Alarm   = CheckLiquidLevelFull_start+30,
   CheckLiquidLevelFull_end           = CheckLiquidLevelFull_start+99,

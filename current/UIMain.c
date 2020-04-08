@@ -1,6 +1,6 @@
 /*******************************************************************
  *
- *    PROJECT:     LinkUp EOL
+ *    PROJECT:     Tankfüllstandsgeber EOL
  *
  *    EQUIPMENT:   EOL
  *
@@ -36,12 +36,8 @@
 #include "zol.h"
 #include "devicedat.h"
 #include "toolbox.h"
-#include "KWP2000Diag_Funcs.h"
 #include "NetworkState_Funcs.h"
 #include "SelectorPanel_Funcs.h"
-#ifdef USE_LABEL_PRINTER
-  #include "LabelPrt09_Funcs.h"
-#endif // USE_LABEL_PRINTER
 
 #include "SvnIds.h"
 
@@ -428,9 +424,6 @@ int CVICALLBACK TouchMainMenuCB(int panel, int control, int event,
 #ifdef IGNORE_FLIL
         SetCtrlAttribute(iPanelMenuMain_m,PNL_MENU_BTN_DIAG_IO,ATTR_DIMMED,1);
 #endif // IGNORE_FLIL
-#ifndef USE_LABEL_PRINTER
-        SetCtrlAttribute(iPanelMenuMain_m,PNL_MENU_BTN_DIAG_PRT9,ATTR_DIMMED,1);
-#endif // !USE_LABEL_PRINTER
         DisplayPanel(iPanelMenuMain_m);
         return(1);   // event "schlucken"
       }
@@ -473,9 +466,6 @@ int CVICALLBACK TouchMenuCB(int panel, int control, int event,
       DisplayPanel(iPanelTests_m);
       break;
 
-    case PNL_MENU_BTN_DIAG_CAN:
-      vInitKWP2000Panel_g(panel);
-      break;
     case PNL_MENU_BTN_DIAG_IO:
       vInitDiagnosePanel_g(TRUE);  // TRUE => für Touch-Display
       break;

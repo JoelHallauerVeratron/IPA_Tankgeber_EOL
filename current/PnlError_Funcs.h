@@ -8,7 +8,7 @@
  *
  *    DESCRIPTION: Displays an error message
  *
- *    AUTHOR:      $Author$
+ *    AUTHOR:      HaJ
  *
  *    ENVIRONMENT: CVI 7.1
  *

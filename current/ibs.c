@@ -83,49 +83,33 @@ int iGetIvcc_g(void)
 } // iGetIvcc_g()
 
 
-/**
- * Gibt die Spannung vom zugeschalteten CAN-Pegel in mV zurück
- *
- * @author uidc9013 (03.09.2010)
- *
- * @return float
- */
-float fGetVoltageCanLowToGnd_g(void)
-{
-  return(apAInpList_g[1]->fConv * *apAInpList_g[1]->IBS_Node);
-} // fGetVoltageCanLowToGnd_g()
-
-
-/**
- * Gibt die Spannung vom zugeschalteten CAN-Pegel in mV zurück
- *
- * @author uidc9013 (03.09.2010)
- *
- * @return int
- */
-int iGetVoltageCanLowToGnd_g(void)
-{
-  return((int)(fGetVoltageCanLowToGnd_g()));
-} // iGetVoltageCanLowToGnd_g()
-
-/**
- * Gibt den gemessenen Luftdruck in Bar zurück
- *
- * @return gemessener Luftdruck
- */
-float fGetPLuft_g(void)
-{
-  //
-  //      2 * U
-  // P = ------- = U * 0.2
-  //       10
-  //
-  return(*apAInpList_g[2]->IBS_Node * apAInpList_g[2]->fConv);
-} // fGetPLuft_g()
-
 float fGetLiquidLevelReferenz(void)
 {
-
   return(((*apAInpList_g[5]->IBS_Node << 8) | *apAInpList_g[4]->IBS_Node) * apAInpList_g[4]->fConv);
 } // fGetPLuft_g()
+
+float fGetCH2(void)
+{
+  return(apAInpList_g[1]->fConv * *apAInpList_g[1]->IBS_Node);
+}
+
+float fGetCH3(void)
+{
+  return(apAInpList_g[2]->fConv * *apAInpList_g[2]->IBS_Node);
+}
+
+float fGetCH4(void)
+{
+  return(apAInpList_g[3]->fConv * *apAInpList_g[3]->IBS_Node);
+}
+
+float fGetCH5(void)
+{
+  return(apAInpList_g[4]->fConv * *apAInpList_g[4]->IBS_Node);
+}
+
+float fGetCH6(void)
+{
+  return(apAInpList_g[5]->fConv * *apAInpList_g[5]->IBS_Node);
+}
 

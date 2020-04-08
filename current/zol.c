@@ -211,17 +211,18 @@ tagDigOut *apDigOutList_g[] =
 //               |  |               |         |      +----------- .pcTxt (Beschreibung)
 //               |  |               |         |      |
 tagAInp eADC1 = {1, PNL_DIAGIO_AI1, 0,        &eAI1, "Ivcc [mA]"};
-tagAInp eADC2 = {1, PNL_DIAGIO_AI2, 0,        &eAI2, "U-CAN [mV]"};
-tagAInp eADC3 = {2, PNL_DIAGIO_AI3, 0,        &eAI3, "Druck [mB]"};
-tagAInp eADC4 = {2, PNL_DIAGIO_AI4, 0,        &eAI4, "Druck [mB]"};
-tagAInp eADC5 = {2, PNL_DIAGIO_AI5, 0,        &eAI5, "Referenzgeber Low"};
-tagAInp eADC6 = {2, PNL_DIAGIO_AI6, 0,        &eAI6, "Referenzgeber High"};
+tagAInp eADC2 = {1, PNL_DIAGIO_AI2, 0,        &eAI2, "AD CH2"};
+tagAInp eADC3 = {1, PNL_DIAGIO_AI3, 0,        &eAI3, "AD CH3"};
+tagAInp eADC4 = {1, PNL_DIAGIO_AI4, 0,        &eAI4, "AD CH4"};
+tagAInp eADC5 = {1, PNL_DIAGIO_AI5, 0,        &eAI5, "AD CH5"};
+tagAInp eADC6 = {1, PNL_DIAGIO_AI6, 0,        &eAI6, "AD CH6"};
 
-tagAInp *apAInpList_g[] =+
+tagAInp *apAInpList_g[] =
 {
   &eADC1,
   &eADC2,
   &eADC3,
+  &eADC4,
   &eADC5,
   &eADC6,
   NULL

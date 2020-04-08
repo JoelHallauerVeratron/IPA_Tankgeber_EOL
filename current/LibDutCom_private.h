@@ -8,7 +8,7 @@
  *
  *    DESCRIPTION: Header file for private, non-public functions
  *
- *    AUTHOR:      $Author$
+ *    AUTHOR:      HaJ
  *
  *    ENVIRONMENT: CVI 7.1
  *

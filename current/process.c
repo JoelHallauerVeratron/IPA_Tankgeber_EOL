@@ -1,6 +1,6 @@
 /*******************************************************************
  *
- *    PROJECT:     LinkUp EOL
+ *    PROJECT:     Tankfüllstandsgeber EOL
  *
  *    EQUIPMENT:   EOL
  *
@@ -8,7 +8,7 @@
  *
  *    DESCRIPTION:
  *
- *    AUTHOR:      $Author
+ *    AUTHOR:      HaJ
  *
  *    ENVIRONMENT: CVI 7.1
  *
@@ -84,15 +84,15 @@ BOOL bBtnNio;     // TRUE = Taste "NIO" gedrückt
 
 #define TEXT_DUT                 "Prüfling"
 
-#define REFERENCE_LIQUID_LVL_FULL
-#define REFERENCE_LIQUID_LVL_FULL_TOL
-#define REFERENCE_LIQUID_LVL_FULL_MINMAX
-#define REFERENCE_LIQUID_LVL_HALF
-#define REFERENCE_LIQUID_LVL_HALF_TOL
-#define REFERENCE_LIQUID_LVL_HALF_MINMAX
-#define REFERENCE_LIQUID_LVL_EMPTY
-#define REFERENCE_LIQUID_LVL_EMPTY_TOL
-#define REFERENCE_LIQUID_LVL_EMPTY_MINMAX
+#define REFERENCE_LIQUID_LVL_FULL          75
+#define REFERENCE_LIQUID_LVL_FULL_TOL      2
+#define REFERENCE_LIQUID_LVL_FULL_MINMAX   10
+#define REFERENCE_LIQUID_LVL_HALF          50
+#define REFERENCE_LIQUID_LVL_HALF_TOL      2
+#define REFERENCE_LIQUID_LVL_HALF_MINMAX   10
+#define REFERENCE_LIQUID_LVL_EMPTY         25
+#define REFERENCE_LIQUID_LVL_EMPTY_TOL     2
+#define REFERENCE_LIQUID_LVL_EMPTY_MINMAX  10
 
 
 //  ------------------------------------------------------------------------------------------------
@@ -118,9 +118,11 @@ BOOL bInGrundstellung_m(void);
 
 void vWriteResultsToDisk_m(void);
 
-void vLiquidLevelFill(void);
-void vLiquidLevelEmpty(void);
-void vLiquidLevelStop(void);
+void vLiquidLevelFill_m(void);
+void vLiquidLevelEmpty_m(void);
+void vLiquidLevelStop_m(void);
+
+float fGetLiquidLevelDUT_m(void);
 
 
 //  ------------------------------------------------------------------------------------------------
@@ -152,6 +154,8 @@ int iProcess_g(void)
   UINT uiAnalogInputValue;
   int  iSoll=0;
   char *pcUnit=NULL;
+
+  float fAnalogInputValue;
 
   UCHAR ucaNmeaCode[2+1];
 
@@ -391,14 +395,12 @@ int iProcess_g(void)
 
     case test_start:
       vUiSetDeviceSerialNr_g(uiDevSNr_m);
-      eState=mess_current_idle_init;
+      eState=test_init;
       break;
 
     case test_init:
-      eState = mess_current_idle_init,
-
+      eState = mess_current_idle;
       break;
-
 
    /**
    * Stromaufnahme messen
@@ -408,7 +410,7 @@ int iProcess_g(void)
       break;
     case mess_current_idle_init:
       vSetDO_g(&aUbattDutt,TRUE);
-      eSate = mess_current_idle_wait;
+      eState = mess_current_idle_wait;
       break;
     case mess_current_idle_wait:
 
@@ -421,27 +423,27 @@ int iProcess_g(void)
    * Wasserstand auf 100%
    */
     case LiquidLevelToFull_start:
-      iUiWaitForLiquidLevelFull_SetState_g(eRunning)
+      iUiWaitForLiquidLevelFull_SetState_g(eRunning);
       eState = LiquidLevelToFull_fill;
       break;
 
     case LiquidLevelToFull_fill:
       fReferenzgeber =  fGetLiquidLevelReferenz();
 
-      if(fReferenzgeber > REFERENCE_LIQUID_LVL_FULL - REFERENCE_LIQUID_LVL_FULL_TOL
-         && fReferenzgeber < REFERENCE_LIQUID_LVL_FULL + REFERENCE_LIQUID_LVL_FULL_TOL)
+      if((fReferenzgeber > (REFERENCE_LIQUID_LVL_FULL - REFERENCE_LIQUID_LVL_FULL_TOL))
+        && (fReferenzgeber < (REFERENCE_LIQUID_LVL_FULL + REFERENCE_LIQUID_LVL_FULL_TOL)))
       {
         // Wasser bereits auf 100 %
         eState = LiquidLevelToFull_wait;
-        vLiquidLevelStop();
+        vLiquidLevelStop_m();
         break;
       }
 
-      if(fReferenzgeber < REFERENCE_LIQUID_LVL_FULL + REFERENCE_LIQUID_LVL_FULL_TOL)
+      if(fReferenzgeber < (REFERENCE_LIQUID_LVL_FULL + REFERENCE_LIQUID_LVL_FULL_TOL))
       {
         // Wasserstand zu Tief
         eState = LiquidLevelToFull_wait;
-        vLiquidLevelFill();
+        vLiquidLevelFill_m();
         break;
       }
 
@@ -451,34 +453,34 @@ int iProcess_g(void)
 
       fReferenzgeber =  fGetLiquidLevelReferenz();
 
-      if(fReferenzgeber > REFERENCE_LIQUID_LVL_FULL - REFERENCE_LIQUID_LVL_FULL_TOL
-         && fReferenzgeber < REFERENCE_LIQUID_LVL_FULL + REFERENCE_LIQUID_LVL_FULL_TOL)
+      if((fReferenzgeber > (REFERENCE_LIQUID_LVL_FULL - REFERENCE_LIQUID_LVL_FULL_TOL))
+        && (fReferenzgeber < (REFERENCE_LIQUID_LVL_FULL + REFERENCE_LIQUID_LVL_FULL_TOL)))
       {
         // Wasser bereits auf 100 %
         eState = LiquidLevelToFull_end;
-        vLiquidLevelStop();
+        vLiquidLevelStop_m();
         break;
       }
 
       if(fReferenzgeber > REFERENCE_LIQUID_LVL_FULL - REFERENCE_LIQUID_LVL_FULL_TOL)
       {
         // Wasserstand zu Hoch
-        vLiquidLevelEmpty();
+        vLiquidLevelEmpty_m();
         break;
       }
 
       if(fReferenzgeber < REFERENCE_LIQUID_LVL_FULL + REFERENCE_LIQUID_LVL_FULL_TOL)
       {
         // Wasserstand zu Tief
-        vLiquidLevelFill();
+        vLiquidLevelFill_m();
         break;
       }
 
       break;
 
     case LiquidLevelToFull_end:
-      iUiCheckAnalogInputs_SetState_g(ePass);
-      estate = CheckLiquidLevelFull_start;
+      iUiWaitForLiquidLevelFull_SetState_g(ePass);
+      eState = CheckLiquidLevelFull_start;
       break;
 
 
@@ -508,7 +510,7 @@ int iProcess_g(void)
       break;
 
     case CheckLiquidLevelFull_WaitForDut:
-      if(iGetIvcc_g > 45)
+      if(iGetIvcc_g() > 45)
         eState = CheckLiquidLevelFull_check;
       break;
 
@@ -518,13 +520,23 @@ int iProcess_g(void)
       break;
 
     case CheckLiquidLevelFull_check:
-      bDutCom_AnalogInputsReadSingle(&uiAnalogInputValue)
-      vUiCheckLiquidLevelFull_SetValue_g(uiAnalogInputValue);
 
+      if(tagCurrentDeviceTyp_g.bAnalogSignal)
+      {
+        // Analoger Tankfüllstandsgeber
+        fAnalogInputValue = fGetLiquidLevelDUT_m()
+        vUiCheckLiquidLevelFull_SetValue_g(fAnalogInputValue);
+      }
+      else
+      {
+        // Digitaler Tankfüllstandsgeber
+        bDutCom_AnalogInputsReadSingle(&uiAnalogInputValue);
+        vUiCheckLiquidLevelFull_SetValue_g(uiAnalogInputValue);
+      }
 
       if(iReadDI_g(&eStart))
       {
-        if(tagCurrentDeviceTyp_g.eWaterType == eWaterType_Wasted))
+        if(tagCurrentDeviceTyp_g.eWaterType == eWaterType_Wasted)
         {
           eState = CheckLiquidLevelFull_Check_Alarm;
         }
@@ -561,7 +573,7 @@ int iProcess_g(void)
    * Wasserstand auf 50%
    */
     case LiquidLevelToHalf_start:
-      iUiWaitForLiquidLevelHalf_SetState_g(eRunning)
+      iUiWaitForLiquidLevelHalf_SetState_g(eRunning);
       eState = LiquidLevelToHalf_fill;
 
       break;
@@ -573,7 +585,7 @@ int iProcess_g(void)
       {
         // Wasser bereits auf 50 %
         eState = LiquidLevelToHalf_wait;
-        vLiquidLevelStop();
+        vLiquidLevelStop_m();
         break;
       }
 
@@ -581,7 +593,7 @@ int iProcess_g(void)
       {
         // Wasserstand zu Tief
         eState = LiquidLevelToHalf_wait;
-        vLiquidLevelEmpty();
+        vLiquidLevelEmpty_m();
         break;
       }
       break;
@@ -595,28 +607,28 @@ int iProcess_g(void)
       {
         // Wasser auf 50 %
         eState = LiquidLevelToHalf_end;
-        vLiquidLevelStop();
+        vLiquidLevelStop_m();
         break;
       }
 
       if(fReferenzgeber > REFERENCE_LIQUID_LVL_HALF - REFERENCE_LIQUID_LVL_HALF_TOL)
       {
         // Wasserstand zu Hoch
-        vLiquidLevelEmpty();
+        vLiquidLevelEmpty_m();
         break;
       }
 
       if(fReferenzgeber < REFERENCE_LIQUID_LVL_HALF + REFERENCE_LIQUID_LVL_HALF_TOL)
       {
         // Wasserstand zu Tief
-        vLiquidLevelFill();
+        vLiquidLevelFill_m();
         break;
       }
       break;
 
     case LiquidLevelToHalf_end:
       iUiWaitForLiquidLevelHalf_SetState_g(ePass);
-      estate = CheckLiquidLevelFull_start;
+      eState = CheckLiquidLevelFull_start;
       break;
 
   /**
@@ -647,7 +659,7 @@ int iProcess_g(void)
 
 
     case CheckLiquidLevelHalf_WaitForDut:
-      if(iGetIvcc_g > 45)
+      if(iGetIvcc_g() > 45)
       eState = CheckLiquidLevelHalf_check_req;
       break;
 
@@ -657,8 +669,18 @@ int iProcess_g(void)
       break;
 
     case CheckLiquidLevelHalf_check:
-      bDutCom_AnalogInputsReadSingle(&uiAnalogInputValue)
-      vUiCheckLiquidLevelHalf_SetValue_g(uiAnalogInputValue);
+      if(tagCurrentDeviceTyp_g.bAnalogSignal)
+      {
+        // Analoger Tankfüllstandsgeber
+        fAnalogInputValue = fGetLiquidLevelDUT_m()
+        vUiCheckLiquidLevelHalf_SetValue_g(fAnalogInputValue);
+      }
+      else
+      {
+        // Digitaler Tankfüllstandsgeber
+        bDutCom_AnalogInputsReadSingle(&uiAnalogInputValue);
+        vUiCheckLiquidLevelHalf_SetValue_g(uiAnalogInputValue);
+      }
 
       if(iReadDI_g(&eStart))
       {
@@ -675,7 +697,7 @@ int iProcess_g(void)
    * Wasserstand auf 0%
    */
     case LiquidLevelToEmpty_start:
-      iUiWaitForLiquidLevelEmpty_SetState_g(eRunning)
+      iUiWaitForLiquidLevelEmpty_SetState_g(eRunning);
       eState = LiquidLevelToEmpty_fill;
       break;
 
@@ -687,7 +709,7 @@ int iProcess_g(void)
       {
         // Wasser bereits auf 50 %
         eState = LiquidLevelToEmpty_wait;
-        vLiquidLevelStop();
+        vLiquidLevelStop_m();
         break;
       }
 
@@ -695,7 +717,7 @@ int iProcess_g(void)
       {
         // Wasserstand zu Tief
         eState = LiquidLevelToEmpty_wait;
-        vLiquidLevelEmpty();
+        vLiquidLevelEmpty_m();
         break;
       }
       break;
@@ -708,27 +730,27 @@ int iProcess_g(void)
       {
         // Wasser auf 0 %
         eState = LiquidLevelToEmpty_end;
-        vLiquidLevelStop();
+        vLiquidLevelStop_m();
         break;
       }
 
       if(fReferenzgeber > REFERENCE_LIQUID_LVL_EMPTY - REFERENCE_LIQUID_LVL_EMPTY_TOL)
       {
         // Wasserstand zu Hoch
-        vLiquidLevelEmpty();
+        vLiquidLevelEmpty_m();
         break;
       }
 
       if(fReferenzgeber < REFERENCE_LIQUID_LVL_EMPTY + REFERENCE_LIQUID_LVL_EMPTY_TOL)
       {
         // Wasserstand zu Tief
-        vLiquidLevelFill();
+        vLiquidLevelFill_m();
         break;
       }
       break;
     case LiquidLevelToEmpty_end:
       iUiWaitForLiquidLevelEmpty_SetState_g(ePass);
-      estate = CheckLiquidLevelEmpty_start;
+      eState = CheckLiquidLevelEmpty_start;
       break;
 
   /**
@@ -758,8 +780,11 @@ int iProcess_g(void)
       break;
 
     case CheckLiquidLevelEmpty_WaitForDut:
-      if(iGetIvcc_g > 45)
-        eState = CheckLiquidLevelEmpty_check;
+      if(iGetIvcc_g() > 45)
+        if(tagCurrentDeviceTyp_g.bAnalogSignal)
+          eState = CheckLiquidLevelEmpty_check;
+        else
+          eState = CheckLiquidLevelEmpty_check_req
       break;
 
     case CheckLiquidLevelEmpty_check_req:
@@ -768,13 +793,24 @@ int iProcess_g(void)
       break;
 
     case CheckLiquidLevelEmpty_check:
-      bDutCom_AnalogInputsReadSingle(&uiAnalogInputValue)
-      vUiCheckLiquidLevelEmpty_SetValue_g(uiAnalogInputValue);
+      if(tagCurrentDeviceTyp_g.bAnalogSignal)
+      {
+        // Analoger Tankfüllstandsgeber
+        fAnalogInputValue = fGetLiquidLevelDUT_m()
+        vUiCheckLiquidLevelEmpty_SetValue_g(fAnalogInputValue);
+      }
+      else
+      {
+        // Digitaler Tankfüllstandsgeber
+        bDutCom_AnalogInputsReadSingle(&uiAnalogInputValue);
+        vUiCheckLiquidLevelEmpty_SetValue_g(uiAnalogInputValue);
+      }
+
 
 
       if(iReadDI_g(&eStart))
       {
-        if(tagCurrentDeviceTyp_g.eWaterType == eWaterType_Fresh))
+        if(tagCurrentDeviceTyp_g.eWaterType == eWaterType_Fresh)
         {
           eState = CheckLiquidLevelEmpty_Check_Alarm;
         }
@@ -794,7 +830,7 @@ int iProcess_g(void)
       if(dStatusTime>2.0)
       {
         tagAppStatus_g.iErrorCode=ERR_ALARM_DUT;
-        vUiSetErrorText_g(tagAppStatus_g.iErrorCode,eState,"No Aralm on DUT at Full Liquid Level");
+        vUiSetErrorText_g(tagAppStatus_g.iErrorCode,eState,"No Aralm on DUT at Empty Liquid Level");
         iUiCheckLiquidLevelEmpty_SetState_g(eFail);
         eState=ignition_reset;
       }
@@ -1021,23 +1057,47 @@ int iProcess_g(void)
 } // iProcess_g()
 
 
-void vLiquidLevelFill()
+void vLiquidLevelFill_m()
 {
   vSetDO_g(&aVentilTankDruck, TRUE);
   vSetDO_g(&aVentilWasserAblassen, FALSE);
   vSetDO_g(&aVentilWasserhahn, TRUE);
 }
-void vLiquidLevelEmpty()
+void vLiquidLevelEmpty_m()
 {
   vSetDO_g(&aVentilTankDruck, FALSE);
   vSetDO_g(&aVentilWasserAblassen, TRUE);
   vSetDO_g(&aVentilWasserhahn, TRUE);
 }
-void vLiquidLevelStop()
+void vLiquidLevelStop_m()
 {
   vSetDO_g(&aVentilTankDruck, FALSE);
   vSetDO_g(&aVentilWasserAblassen, FALSE);
   vSetDO_g(&aVentilWasserhahn, FALSE);
+}
+
+float fGetLiquidLevelDUT_m()
+{
+  float fDUTLevel;
+
+  switch(tagCurrentDeviceTyp_g.iStecker)
+  {
+    case 2:
+      fDUTLevel = (fGetCH3 - fGetCH2)*10.0; // 100 Ohm / in mA
+      break;
+
+    case 4:
+      if(tagCurrentDeviceTyp_g.bSourceMode)
+      {
+        fDUTLevel = (fGetCH4 - fGetCH6)*10.0; // 100 Ohm / in mA
+      }
+      if(tagCurrentDeviceTyp_g.bSinkMode)
+      {
+        fDUTLevel = (fGetCH2 - fGetCH4)*10.0; // 100 Ohm / in mA
+      }
+      break;
+  }
+  return fDUTLevel;
 }
 
 #if 0
