@@ -116,8 +116,6 @@ void vResetTestOutputs_g(void);
 
 BOOL bInGrundstellung_m(void);
 
-void vWriteResultsToDisk_m(void);
-
 void vLiquidLevelFill_m(void);
 void vLiquidLevelEmpty_m(void);
 void vLiquidLevelStop_m(void);
@@ -191,17 +189,6 @@ int iProcess_g(void)
                             0);    // showLineNumbers
 #endif
 
-#ifdef USE_SLIP_PRINTER
-      if(!bTM88_Init_g())
-      {
-        tagAppStatus_g.iErrorCode=ERR_INTERNAL_HW;
-        vUiSetErrorText_g(tagAppStatus_g.iErrorCode,eState,"Initialisierung Drucker fehlgeschlagen! Drucker inaktiv.");
-      }
-  #if 0
-      else
-        vPrintErrorSlip("Test");
-  #endif
-#endif // USE_SLIP_PRINTER
       eState=warte_grundstellung;
       break;
 
@@ -335,7 +322,7 @@ int iProcess_g(void)
       //vUiSetUserText_g("Kontaktiere Gerät");
       //vSetDO_g(&aVentilKontakt,TRUE);
       vLibTesterGuiMgr_ProcessStart();
-      eState=kontakt_ein_wait;
+      eState=communication_init;
       break;
     case kontakt_ein_wait:
 #ifndef IGNORE_FLIL_EAS
@@ -524,7 +511,7 @@ int iProcess_g(void)
       if(tagCurrentDeviceTyp_g.bAnalogSignal)
       {
         // Analoger Tankfüllstandsgeber
-        fAnalogInputValue = fGetLiquidLevelDUT_m()
+        fAnalogInputValue = fGetLiquidLevelDUT_m();
         vUiCheckLiquidLevelFull_SetValue_g(fAnalogInputValue);
       }
       else
@@ -591,10 +578,20 @@ int iProcess_g(void)
 
       if(fReferenzgeber > REFERENCE_LIQUID_LVL_HALF - REFERENCE_LIQUID_LVL_HALF_TOL)
       {
-        // Wasserstand zu Tief
-        eState = LiquidLevelToHalf_wait;
+        // Wasserstand zu hoch
+        eState = LiquidLevelToHalf_empty;
         vLiquidLevelEmpty_m();
         break;
+      }
+      break;
+
+    case LiquidLevelToHalf_empty:
+      fReferenzgeber =  fGetLiquidLevelReferenz();
+
+      if(fRefernzgeber < (REFERENCE_LIQUID_LVL_HALF - (REFERENCE_LIQUID_LVL_HALF_TOL*2)))
+      {
+        vLiquidLevelFill_m();
+        eState = LiquidLevelToHalf_wait;
       }
       break;
 
@@ -672,7 +669,7 @@ int iProcess_g(void)
       if(tagCurrentDeviceTyp_g.bAnalogSignal)
       {
         // Analoger Tankfüllstandsgeber
-        fAnalogInputValue = fGetLiquidLevelDUT_m()
+        fAnalogInputValue = fGetLiquidLevelDUT_m();
         vUiCheckLiquidLevelHalf_SetValue_g(fAnalogInputValue);
       }
       else
@@ -784,7 +781,7 @@ int iProcess_g(void)
         if(tagCurrentDeviceTyp_g.bAnalogSignal)
           eState = CheckLiquidLevelEmpty_check;
         else
-          eState = CheckLiquidLevelEmpty_check_req
+          eState = CheckLiquidLevelEmpty_check_req;
       break;
 
     case CheckLiquidLevelEmpty_check_req:
@@ -796,7 +793,7 @@ int iProcess_g(void)
       if(tagCurrentDeviceTyp_g.bAnalogSignal)
       {
         // Analoger Tankfüllstandsgeber
-        fAnalogInputValue = fGetLiquidLevelDUT_m()
+        fAnalogInputValue = fGetLiquidLevelDUT_m();
         vUiCheckLiquidLevelEmpty_SetValue_g(fAnalogInputValue);
       }
       else
@@ -858,7 +855,6 @@ int iProcess_g(void)
       }
       else
         tagMesswerte_g.caErrorText[0]=0;
-      vWriteResultsToDisk_m();
 
       if(tagAppStatus_g.iErrorCode==ERR_NO_ERROR)
       {
@@ -1083,17 +1079,17 @@ float fGetLiquidLevelDUT_m()
   switch(tagCurrentDeviceTyp_g.iStecker)
   {
     case 2:
-      fDUTLevel = (fGetCH3 - fGetCH2)*10.0; // 100 Ohm / in mA
+      fDUTLevel = (fGetCH3() - fGetCH2())*10.0; // 100 Ohm / in mA
       break;
 
     case 4:
       if(tagCurrentDeviceTyp_g.bSourceMode)
       {
-        fDUTLevel = (fGetCH4 - fGetCH6)*10.0; // 100 Ohm / in mA
+        fDUTLevel = (fGetCH4() - fGetCH6())*10.0; // 100 Ohm / in mA
       }
       if(tagCurrentDeviceTyp_g.bSinkMode)
       {
-        fDUTLevel = (fGetCH2 - fGetCH4)*10.0; // 100 Ohm / in mA
+        fDUTLevel = (fGetCH2() - fGetCH4())*10.0; // 100 Ohm / in mA
       }
       break;
   }
@@ -1145,83 +1141,5 @@ BOOL bInGrundstellung_m(void)
   return(bGrundstellung);
 }
 
-
-
-void vWriteResultsToDisk_m(void)
-{
-  BOOL bWriteHeader=FALSE;
-  char *pcFileName;
-  char caFilePath[MAX_PATHNAME_LEN];
-  FILE *fp;
-
-  if(tagMesswerte_g.iErrorCode==ERR_NO_ERROR)
-    pcFileName="Results_pass.csv";
-  else
-    pcFileName="Results_fail.csv";
-  sprintf(caFilePath,"%s\\%s",tagAppConfig_g.caPathResults,pcFileName);
-
-  if(!FileExists(caFilePath,0))
-    bWriteHeader=TRUE;
-
-  DisableBreakOnLibraryErrors();
-  if((fp=fopen(caFilePath,"a"))==NULL)
-  {
-    printf("unable to open \"%s\"\n",caFilePath);
-    return;
-  }
-  if(bWriteHeader)
-  {
-    fprintf(fp,"Resultate für %s %s;\n",
-            tagAppConfig_g.pcProjectName,
-            tagAppConfig_g.pcApplicationName);
-    fprintf(fp,
-            "Gerät;"              // Gerät
-            "Serial;"             // Serialnumber
-            "Datum;"              // Datum
-            "Zeit;"               // Zeit
-            "U-Batt [mV];"        // U-Batt
-            "Iidle [mA];"         // Leerlaufstrom
-            "NFC UID;"            // NFC UID
-            "Error;"              // ErrorCode
-            "Error-Text;"         // ErrorText
-            "\n");
-  }
-
-  if(tagMesswerte_g.iErrorCode!=ERR_NO_ERROR)
-  {
-    // Aus dem Fehlertext alle nicht-druckbaren Zeichen durch Leerschläge ersetzen
-    int iIndex;
-    for(iIndex=0;
-       iIndex<strlen(tagMesswerte_g.caErrorText);
-       iIndex++)
-    {
-      if(!isprint(tagMesswerte_g.caErrorText[iIndex]))
-        tagMesswerte_g.caErrorText[iIndex]=' ';
-    }
-  }
-
-  fprintf(fp,
-          "%s;"              // Gerät
-          "%08d;"            // Serialnumber
-          "%s;"              // Datum
-          "%s;"              // Zeit
-          "%d;"              // U-Batt
-          "%d;"              // Leerlaufstrom
-          "%s;"              // NFC UID
-          "%d;"              // ErrorCode
-          "%s\n",            // ErrorText
-
-          tagCurrentDeviceTyp_g.caProdNrUnpacked,    // Gerät
-          uiDevSNr_m,                                // Serialnumber
-          cDateStr_g(),                              // Datum
-          TimeStr(),                                 // Zeit
-          tagMesswerte_g.iUbatt,                     // U-Batt
-          tagMesswerte_g.iCurrentIdleMa,             // Leerlaufstrom
-          tagMesswerte_g.caNfcUid,                   // NFC UID
-          tagMesswerte_g.iErrorCode,                 // ErrorCode
-          tagMesswerte_g.caErrorText                 // ErrorText
-         );
-  fclose(fp);
-} // vWriteResultsToDisk_m()
 
 

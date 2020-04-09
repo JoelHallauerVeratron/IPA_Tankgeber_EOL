@@ -62,7 +62,7 @@
 
 #define DEFAULT_BOOT_TIME                  1.0f                   // default für BootTime=2.0
 #define DEFAULT_VOLTAGE                   14.0f                   // default für Voltage=14.0
-#define DEFAULT_LIB_DUT_COM_NR            56                      // default für LibDutComNr=56
+#define DEFAULT_LIB_DUT_COM_NR            55                      // default für LibDutComNr=56
 #define DEFAULT_NMEA_CODE                 0x0000   // TODO: set NMEA Code
 #define DEFAULT_LABEL_DATE_FORMAT         "KW%V/%y"
 

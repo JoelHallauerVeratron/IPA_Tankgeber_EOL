@@ -41,6 +41,8 @@
  */
 #define REG_SECTION_CONFIG_NETWORK                "Network"
 
+#define REG_SECTION_CONFIG_PATH                   "Path"
+
 #define REG_KEY_CONFIG_NETWORK_USER               "User"
 #define REG_KEY_CONFIG_NETWORK_PWD                "Pwd"
 #define REG_KEY_CONFIG_NETWORK_MAP_DRIVE          "MapDrive"
@@ -55,12 +57,6 @@
 /**
  * Section Path
  */
-#define REG_SECTION_CONFIG_PATH                   "Path"
-#define REG_KEY_CONFIG_PATH_RESULTS               "PathResults"
-#define DEFAULT_CONFIG_PATH_RESULTS               "Results"
-
-#define REG_KEY_CONFIG_PATH_WORKORDERS            "PathWorkorders"
-#define DEFAULT_CONFIG_PATH_WORKORDERS            "Workorders"
 
 #define REG_KEY_CONFIG_PATH_SERIAL_NUMBERS        "PathSerialNumbers"
 #define DEFAULT_CONFIG_PATH_SERIAL_NUMBERS        "SerialNumbers"
@@ -82,8 +78,6 @@ void vAppConfig_Dump_g(void)
   printf("  %s = \"%s\"\n","pcProjectName       ",tagAppConfig_g.pcProjectName       );
   printf("  %s = \"%s\"\n","pcApplicationName   ",tagAppConfig_g.pcApplicationName   );
   printf("  %s = \"%s\"\n","caDutDatIniFileName ",tagAppConfig_g.caDutDatIniFileName );
-  printf("  %s = \"%s\"\n","caPathResults       ",tagAppConfig_g.caPathResults       );
-  printf("  %s = \"%s\"\n","caPathWorkOrders    ",tagAppConfig_g.caPathWorkOrders    );
   printf("  %s = \"%s\"\n","caPathSerialNumbers ",tagAppConfig_g.caPathSerialNumbers );
   printf("tagNetwork:\n");
   printf("  %s = \"%s\"\n","caUser              ",tagAppConfig_g.tagNetwork.caUser);
@@ -232,32 +226,6 @@ BOOL bAppConfig_Read_g(char *pcConfigFileName)
     strcpy(tagAppConfig_g.tagNetwork.caShareName,pcDefault);
   }
 
-  pcSection=REG_SECTION_CONFIG_PATH;
-  pcItem=REG_KEY_CONFIG_PATH_RESULTS;
-  if(Ini_GetStringIntoBuffer(iniHandle_m,pcSection,pcItem,tagAppConfig_g.caPathResults,MAX_PATHNAME_LEN+1)<1)
-  {
-    pcDefault=DEFAULT_CONFIG_PATH_RESULTS;
-#ifdef WARN_MISSING_CONFIG_ITEMS
-    printf("Item \"%s/%s\" not found!"
-           "   using default  \"%s\" instead\n",pcSection,pcItem,pcDefault);
-#endif // WARN_MISSING_CONFIG_ITEMS
-    strcpy(tagAppConfig_g.caPathWorkOrders,pcDefault);
-  }
-  strcpy(tagAppConfig_g.caPathResults,pcCorrectPath(tagAppConfig_g.tagNetwork.caMapDrive,tagAppConfig_g.caPathResults));
-
-
-  pcSection=REG_SECTION_CONFIG_PATH;
-  pcItem=REG_KEY_CONFIG_PATH_WORKORDERS;
-  if(Ini_GetStringIntoBuffer(iniHandle_m,pcSection,pcItem,tagAppConfig_g.caPathWorkOrders,MAX_PATHNAME_LEN+1)<1)
-  {
-    pcDefault=DEFAULT_CONFIG_PATH_WORKORDERS;
-#ifdef WARN_MISSING_CONFIG_ITEMS
-    printf("Item \"%s/%s\" not found!"
-           "   using default  \"%s\" instead\n",pcSection,pcItem,pcDefault);
-#endif // WARN_MISSING_CONFIG_ITEMS
-    strcpy(tagAppConfig_g.caPathWorkOrders,pcDefault);
-  }
-  strcpy(tagAppConfig_g.caPathWorkOrders,pcCorrectPath(tagAppConfig_g.tagNetwork.caMapDrive,tagAppConfig_g.caPathWorkOrders));
 
   pcSection=REG_SECTION_CONFIG_PATH;
   pcItem=REG_KEY_CONFIG_PATH_SERIAL_NUMBERS;
@@ -298,16 +266,6 @@ BOOL bAppConfig_Read_g(char *pcConfigFileName)
     strcpy(tagAppConfig_g.caDutDatIniFileName,DEFAULT_CONFIG_PATH_DUT_CONFIG_FILE);
   }
   strcpy(tagAppConfig_g.caDutDatIniFileName,pcCorrectPath(tagAppConfig_g.tagNetwork.caMapDrive,tagAppConfig_g.caDutDatIniFileName));
-
-
-  //Baudrate=19200
-  pcItem=REG_KEY_CONFIG_NFC_READER_BAUDRATE;
-  if(Ini_GetUInt(iniHandle_m,pcSection,pcItem,&(tagAppConfig_g.tagNfcReader.uiBaudrate))<1)
-  {
-    printf("Item \"%s/%s\" not found!",pcSection,pcItem);
-    bFaultsFound=TRUE;
-  }
-
 
 
 

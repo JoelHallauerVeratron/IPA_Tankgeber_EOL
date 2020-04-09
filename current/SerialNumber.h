@@ -51,13 +51,9 @@ int iSNr_NextFreeCommit_g(UINT uiSNr);
 
 void vSNr_Rollback_g(void);
 
-BOOL bSNrUnique_Init_g(char  *pcResultsPath, unsigned int iColumnIndex);
+
 BOOL bSNrUnique_CheckIfUnique_g(UINT uiSnr);
 BOOL bSNrUnique_SetCheck_m(unsigned int uiSerialNumber, BOOL bCheck);
-
-int iSerialNumberAlreadyUsed_g(UINT uiSnr,
-                               char *pcResultsPath,
-                               UINT uiColumnIndex);
 
 
 void vSNrUnique_Dump_g(FILE *pfp);

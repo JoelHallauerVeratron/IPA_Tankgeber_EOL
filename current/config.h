@@ -38,8 +38,6 @@ typedef struct
 
   // Aus Konfig-Datei
   char caDutDatIniFileName[MAX_PATHNAME_LEN+1];
-  char caPathWorkOrders[MAX_PATHNAME_LEN+1];
-  char caPathResults[MAX_PATHNAME_LEN+1];
   char caPathSerialNumbers[MAX_PATHNAME_LEN+1];
 
   struct
