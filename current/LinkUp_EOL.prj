@@ -4,7 +4,7 @@ Pathname = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LinkUp_EOL.prj"
 CVI Dir = "/c/program files/ni/cvi71"
 IVI Standard Root Dir = "/C/Program Files/IVI"
 VXIplug&play Framework Dir = "/C/VXIPNP/winnt"
-Number of Files = 79
+Number of Files = 67
 Target Type = "Executable"
 Flags = 16
 
@@ -99,19 +99,8 @@ Project Flags = 0
 Folder = "Include Files"
 
 [File 0009]
-File Type = "Include"
-Res Id = 9
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "EpsStmApi3.h"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/EpsStmApi3.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0010]
 File Type = "CSource"
-Res Id = 10
+Res Id = 9
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "global.c"
@@ -121,9 +110,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0011]
+[File 0010]
 File Type = "Include"
-Res Id = 11
+Res Id = 10
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "global.h"
@@ -132,9 +121,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0012]
+[File 0011]
 File Type = "CSource"
-Res Id = 12
+Res Id = 11
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "ibs.c"
@@ -144,9 +133,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0013]
+[File 0012]
 File Type = "Include"
-Res Id = 13
+Res Id = 12
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "ibs.h"
@@ -155,9 +144,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0014]
+[File 0013]
 File Type = "CSource"
-Res Id = 14
+Res Id = 13
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "ibs_cfg.c"
@@ -167,9 +156,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0015]
+[File 0014]
 File Type = "Include"
-Res Id = 15
+Res Id = 14
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "ibs_cfg.h"
@@ -178,9 +167,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0016]
+[File 0015]
 File Type = "Library"
-Res Id = 16
+Res Id = 15
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "DDI/WINNTLIB/IBSETH.lib"
@@ -189,9 +178,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0017]
+[File 0016]
 File Type = "CSource"
-Res Id = 17
+Res Id = 16
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "inifile.c"
@@ -201,9 +190,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0018]
+[File 0017]
 File Type = "Include"
-Res Id = 18
+Res Id = 17
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "inifile.h"
@@ -212,9 +201,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0019]
+[File 0018]
 File Type = "CSource"
-Res Id = 19
+Res Id = 18
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "IODiag.c"
@@ -224,9 +213,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0020]
+[File 0019]
 File Type = "Include"
-Res Id = 20
+Res Id = 19
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "IODiag.h"
@@ -235,9 +224,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0021]
+[File 0020]
 File Type = "User Interface Resource"
-Res Id = 21
+Res Id = 20
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "IODiag.uir"
@@ -246,9 +235,9 @@ Exclude = False
 Project Flags = 0
 Folder = "User Interface Files"
 
-[File 0022]
+[File 0021]
 File Type = "Include"
-Res Id = 22
+Res Id = 21
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "IODiag_funcs.h"
@@ -257,9 +246,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0023]
+[File 0022]
 File Type = "CSource"
-Res Id = 23
+Res Id = 22
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "KWP2000Diag.c"
@@ -269,9 +258,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0024]
+[File 0023]
 File Type = "Include"
-Res Id = 24
+Res Id = 23
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "KWP2000Diag.h"
@@ -280,9 +269,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0025]
+[File 0024]
 File Type = "User Interface Resource"
-Res Id = 25
+Res Id = 24
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "KWP2000Diag.uir"
@@ -291,9 +280,9 @@ Exclude = False
 Project Flags = 0
 Folder = "User Interface Files"
 
-[File 0026]
+[File 0025]
 File Type = "Include"
-Res Id = 26
+Res Id = 25
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "KWP2000Diag_Funcs.h"
@@ -302,43 +291,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0027]
-File Type = "CSource"
-Res Id = 27
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "LabelPrt09.c"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LabelPrt09.c"
-Exclude = False
-Compile Into Object File = False
-Project Flags = 0
-Folder = "Source Files"
-
-[File 0028]
+[File 0026]
 File Type = "Include"
-Res Id = 28
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "LabelPrt09.h"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LabelPrt09.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0029]
-File Type = "Include"
-Res Id = 29
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "LabelPrt09_Funcs.h"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LabelPrt09_Funcs.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0030]
-File Type = "Include"
-Res Id = 30
+Res Id = 26
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibDutCom_Import.h"
@@ -347,9 +302,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0031]
+[File 0027]
 File Type = "Include"
-Res Id = 31
+Res Id = 27
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibDutCom_Interface.h"
@@ -358,31 +313,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0032]
+[File 0028]
 File Type = "Include"
-Res Id = 32
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "LibIntermecPrinter.h"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibIntermecPrinter.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0033]
-File Type = "Library"
-Res Id = 33
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "LibIntermecPrinter.lib"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibIntermecPrinter.lib"
-Exclude = False
-Project Flags = 0
-Folder = "Library Files"
-
-[File 0034]
-File Type = "Include"
-Res Id = 34
+Res Id = 28
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibNetworking.h"
@@ -391,9 +324,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0035]
+[File 0029]
 File Type = "Library"
-Res Id = 35
+Res Id = 29
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibNetworking.lib"
@@ -402,20 +335,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0036]
-File Type = "Include"
-Res Id = 36
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "LibNfc.h"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibNfc.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0037]
+[File 0030]
 File Type = "Library"
-Res Id = 37
+Res Id = 30
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibTesterGui_0001.lib"
@@ -424,9 +346,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0038]
+[File 0031]
 File Type = "Include"
-Res Id = 38
+Res Id = 31
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibTesterGui_0001_export.h"
@@ -435,53 +357,31 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0039]
+[File 0032]
 File Type = "Library"
-Res Id = 39
+Res Id = 32
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0003.lib"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0003.lib"
+Path Rel Path = "LibTesterGui_0004.lib"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0004.lib"
 Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0040]
+[File 0033]
 File Type = "Include"
-Res Id = 40
+Res Id = 33
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0003_export.h"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0003_export.h"
+Path Rel Path = "LibTesterGui_0004_export.h"
+Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0004_export.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0041]
+[File 0034]
 File Type = "Library"
-Res Id = 41
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0007.lib"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0007.lib"
-Exclude = False
-Project Flags = 0
-Folder = "Library Files"
-
-[File 0042]
-File Type = "Include"
-Res Id = 42
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "LibTesterGui_0007_export.h"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/LibTesterGui_0007_export.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0043]
-File Type = "Library"
-Res Id = 43
+Res Id = 34
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibTesterGui_0009.lib"
@@ -490,9 +390,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0044]
+[File 0035]
 File Type = "Include"
-Res Id = 44
+Res Id = 35
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibTesterGui_0009_export.h"
@@ -501,9 +401,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0045]
+[File 0036]
 File Type = "Library"
-Res Id = 45
+Res Id = 36
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibTesterGui_Mgr.lib"
@@ -512,9 +412,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0046]
+[File 0037]
 File Type = "Include"
-Res Id = 46
+Res Id = 37
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibTesterGui_Mgr_export.h"
@@ -523,9 +423,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0047]
+[File 0038]
 File Type = "Include"
-Res Id = 47
+Res Id = 38
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "LibTesterGuis.h"
@@ -534,9 +434,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0048]
+[File 0039]
 File Type = "CSource"
-Res Id = 48
+Res Id = 39
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Main.c"
@@ -546,9 +446,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0049]
+[File 0040]
 File Type = "Include"
-Res Id = 49
+Res Id = 40
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Main.h"
@@ -557,9 +457,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0050]
+[File 0041]
 File Type = "User Interface Resource"
-Res Id = 50
+Res Id = 41
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Main.uir"
@@ -568,9 +468,9 @@ Exclude = False
 Project Flags = 0
 Folder = "User Interface Files"
 
-[File 0051]
+[File 0042]
 File Type = "Library"
-Res Id = 51
+Res Id = 42
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Mpr.Lib"
@@ -579,9 +479,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0052]
+[File 0043]
 File Type = "CSource"
-Res Id = 52
+Res Id = 43
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "NetworkState.c"
@@ -591,9 +491,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0053]
+[File 0044]
 File Type = "Include"
-Res Id = 53
+Res Id = 44
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "NetworkState.h"
@@ -602,9 +502,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0054]
+[File 0045]
 File Type = "User Interface Resource"
-Res Id = 54
+Res Id = 45
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "NetworkState.uir"
@@ -613,9 +513,9 @@ Exclude = False
 Project Flags = 0
 Folder = "User Interface Files"
 
-[File 0055]
+[File 0046]
 File Type = "Include"
-Res Id = 55
+Res Id = 46
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "NetworkState_Funcs.h"
@@ -624,20 +524,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0056]
+[File 0047]
 File Type = "Library"
-Res Id = 56
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "Nfc.lib"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/Nfc.lib"
-Exclude = False
-Project Flags = 0
-Folder = "Library Files"
-
-[File 0057]
-File Type = "Library"
-Res Id = 57
+Res Id = 47
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "NumPanel.lib"
@@ -646,9 +535,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0058]
+[File 0048]
 File Type = "Include"
-Res Id = 58
+Res Id = 48
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "NumPanel_Funcs.h"
@@ -657,9 +546,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0059]
+[File 0049]
 File Type = "Library"
-Res Id = 59
+Res Id = 49
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "PnlError.lib"
@@ -668,9 +557,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0060]
+[File 0050]
 File Type = "Include"
-Res Id = 60
+Res Id = 50
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "PnlError_Funcs.h"
@@ -679,9 +568,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0061]
+[File 0051]
 File Type = "CSource"
-Res Id = 61
+Res Id = 51
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "process.c"
@@ -691,9 +580,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0062]
+[File 0052]
 File Type = "Include"
-Res Id = 62
+Res Id = 52
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "process.h"
@@ -702,9 +591,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0063]
+[File 0053]
 File Type = "Library"
-Res Id = 63
+Res Id = 53
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "SelectorPanel.lib"
@@ -713,9 +602,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0064]
+[File 0054]
 File Type = "Include"
-Res Id = 64
+Res Id = 54
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "SelectorPanel_Funcs.h"
@@ -724,9 +613,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0065]
+[File 0055]
 File Type = "Include"
-Res Id = 65
+Res Id = 55
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "SerialNumber.h"
@@ -735,9 +624,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0066]
+[File 0056]
 File Type = "Library"
-Res Id = 66
+Res Id = 56
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "SerialNumber.lib"
@@ -746,9 +635,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Library Files"
 
-[File 0067]
+[File 0057]
 File Type = "Include"
-Res Id = 67
+Res Id = 57
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "status.h"
@@ -757,9 +646,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0068]
+[File 0058]
 File Type = "CSource"
-Res Id = 68
+Res Id = 58
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "strftime.c"
@@ -769,9 +658,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0069]
+[File 0059]
 File Type = "Include"
-Res Id = 69
+Res Id = 59
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "strftime.h"
@@ -780,9 +669,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0070]
+[File 0060]
 File Type = "CSource"
-Res Id = 70
+Res Id = 60
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "SvnIds.c"
@@ -792,9 +681,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0071]
+[File 0061]
 File Type = "Include"
-Res Id = 71
+Res Id = 61
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "SvnIds.h"
@@ -803,32 +692,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0072]
+[File 0062]
 File Type = "CSource"
-Res Id = 72
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "TM88.c"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/TM88.c"
-Exclude = False
-Compile Into Object File = False
-Project Flags = 0
-Folder = "Source Files"
-
-[File 0073]
-File Type = "Include"
-Res Id = 73
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "TM88.h"
-Path = "/c/Projects/NMEA2K/Kapazitiver_Tankgeber_EOL/current/TM88.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0074]
-File Type = "CSource"
-Res Id = 74
+Res Id = 62
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "UIMain.c"
@@ -838,9 +704,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0075]
+[File 0063]
 File Type = "Include"
-Res Id = 75
+Res Id = 63
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "UIMain.h"
@@ -849,9 +715,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0076]
+[File 0064]
 File Type = "CSource"
-Res Id = 76
+Res Id = 64
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Win32Prt.c"
@@ -861,9 +727,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0077]
+[File 0065]
 File Type = "Include"
-Res Id = 77
+Res Id = 65
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "Win32Prt.h"
@@ -872,9 +738,9 @@ Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
-[File 0078]
+[File 0066]
 File Type = "CSource"
-Res Id = 78
+Res Id = 66
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "zol.c"
@@ -884,9 +750,9 @@ Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
 
-[File 0079]
+[File 0067]
 File Type = "Include"
-Res Id = 79
+Res Id = 67
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "zol.h"

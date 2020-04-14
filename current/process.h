@@ -125,6 +125,7 @@ typedef enum
    */
   LiquidLevelToHalf_start             = 4000,
   LiquidLevelToHalf_fill              = LiquidLevelToHalf_start+10,
+  LiquidLevelToHalf_empty             = LiquidLevelToHalf_start+5,
   LiquidLevelToHalf_wait              = LiquidLevelToHalf_start+20,
   LiquidLevelToHalf_end               = LiquidLevelToHalf_start+99,
 

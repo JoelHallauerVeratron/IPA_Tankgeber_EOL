@@ -588,7 +588,7 @@ int iProcess_g(void)
     case LiquidLevelToHalf_empty:
       fReferenzgeber =  fGetLiquidLevelReferenz();
 
-      if(fRefernzgeber < (REFERENCE_LIQUID_LVL_HALF - (REFERENCE_LIQUID_LVL_HALF_TOL*2)))
+      if(fReferenzgeber < (REFERENCE_LIQUID_LVL_HALF - (REFERENCE_LIQUID_LVL_HALF_TOL*2)))
       {
         vLiquidLevelFill_m();
         eState = LiquidLevelToHalf_wait;

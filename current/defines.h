@@ -26,7 +26,7 @@
   #define PROGRAM_VERSION_MAJOR  0
   #define PROGRAM_VERSION_MINOR  801
 
-#define TEST_OFFLINE  // Software ohne Vorichtung testen
+//#define TEST_OFFLINE  // Software ohne Vorichtung testen
 
 //**
 // LibTester Gui Defines
@@ -34,10 +34,6 @@
   #define TESTER_GUI_DO_ANIMATION   TRUE
   #define TESTER_GUI_ANIMATION_TIME 1.0
 
-// Komponenten individuell aktivieren / deaktivieren
-
-#define USE_LABEL_PRINTER
-#define USE_NFC
 
 //#define USE_SLIP_PRINTER   // Bei Fehler einen Beleg drucken
 
